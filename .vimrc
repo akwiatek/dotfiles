@@ -1,12 +1,19 @@
+let os=substitute(system('uname'), '\n', '', '')
+let ismac=os == 'Darwin'
+let islinux=os == 'Linux'
+
 set noautochdir
 set autoindent
 set background=dark
 set backspace=indent,eol,start
 set nocompatible
-set completeopt=menuone,preview,noinsert,noselect
+set completeopt=menuone,preview
+if ismac
+    set completeopt+=noinsert,noselect
+endif
 set confirm
 set copyindent
-set directory=/Users/adamkw/.vim/swaps//
+set directory=~/.vim/swaps//
 set noequalalways
 set expandtab
 set hidden

@@ -1,7 +1,10 @@
 #!/bin/sh
 
-[ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle || exit 1
+cd ~
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+[ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
+[ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
 git clone https://github.com/pearofducks/ansible-vim
 git clone https://github.com/godlygeek/csapprox
