@@ -4,6 +4,14 @@ cd ~
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
+
+[ -d ~/.vim/opt/ ] || mkdir -p ~/.vim/opt/
+cd ~/.vim/opt/
+git clone https://github.com/tpope/vim-pathogen.git
+
+[ -d ~/.vim/autoload/ ] || mkdir -p ~/.vim/autoload/
+ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim
+
 [ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
 git clone https://github.com/pearofducks/ansible-vim
