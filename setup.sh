@@ -32,3 +32,4 @@ git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-git
 git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/pangloss/vim-javascript
+git clone https://github.com/vim-scripts/JavaDecompiler.vim.git
