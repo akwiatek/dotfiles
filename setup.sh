@@ -3,6 +3,7 @@
 cd ~
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+[ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
 
 [ -d ~/.vim/opt/ ] || mkdir -p ~/.vim/opt/
@@ -10,6 +11,7 @@ cd ~/.vim/opt/
 git clone https://github.com/tpope/vim-pathogen.git
 
 [ -d ~/.vim/autoload/ ] || mkdir -p ~/.vim/autoload/
+cd ~/.vim/autoload/
 ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim
 
 [ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/

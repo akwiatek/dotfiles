@@ -2,39 +2,61 @@ let os=substitute(system('uname'), '\n', '', '')
 let ismac=os == 'Darwin'
 let islinux=os == 'Linux'
 
+set nocompatible
 set noautochdir
 set autoindent
+set autoread
+set autowrite
 set background=dark
 set backspace=indent,eol,start
-set nocompatible
+set nobackup
 set completeopt=menuone,preview
 if ismac
     set completeopt+=noinsert,noselect
 endif
 set confirm
 set copyindent
+set diffopt=filler,iwhite,vertical
 set directory=~/.vim/swaps//
+set display+=uhex
 set noequalalways
 set expandtab
+set foldenable
+set foldlevelstart=99
+set foldmethod=indent
 set hidden
 set hlsearch
 set noignorecase
 set incsearch
+set laststatus=2
+set linebreak
+set matchtime=2
 set number
 set relativenumber
 set ruler
-set shiftwidth=4
+set shiftround
+" same as tabstop
+set shiftwidth=0
 set shortmess+=I
 set showbreak=>>
 set showcmd
 set showmatch
 set showtabline=2
+set smartcase
 set smartindent
+set smarttab
 set softtabstop=4
+set spelllang=en,pl
+set nospell
 set nostartofline
 set tabstop=4
+set undodir=~/.vim/undo//
 set wildmenu
 set wildmode=full
+set winheight=4
+set wrap
+
+let do_syntax_sel_menu=1
 
 syntax on
 filetype plugin on
@@ -42,6 +64,8 @@ filetype plugin on
 execute pathogen#infect()
 
 colorscheme af
+
+cnoreabbrev dt diffthis
 
 au BufRead,BufNewFile *.raml set syntax=yaml
 au BufRead,BufNewFile *.postman_dump set syntax=yaml
