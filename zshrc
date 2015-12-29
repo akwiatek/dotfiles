@@ -98,5 +98,7 @@ which vimpager > /dev/null 2> /dev/null && export PAGER="$(which vimpager)"
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
 [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
 
+setopt extendedglob
+
 bindkey '[D' backward-word
 bindkey '[C' forward-word
