@@ -12,7 +12,7 @@ git clone https://github.com/tpope/vim-pathogen.git
 
 [ -d ~/.vim/autoload/ ] || mkdir -p ~/.vim/autoload/
 cd ~/.vim/autoload/
-ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim
+[ -L ./pathogen.vim ] || ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim ./pathogen.vim
 
 [ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
