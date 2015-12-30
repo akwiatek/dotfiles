@@ -2,7 +2,9 @@ let os=substitute(system('uname'), '\n', '', '')
 let ismac=os == 'Darwin'
 let islinux=os == 'Linux'
 
+" disable VI mode
 set nocompatible
+
 set noautochdir
 set   autoindent
 set   autoread
