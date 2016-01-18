@@ -102,3 +102,6 @@ setopt extendedglob
 
 bindkey '[D' backward-word
 bindkey '[C' forward-word
+
+which jump    > /dev/null 2> /dev/null && eval "$(jump shell zsh)"
+which thefuck > /dev/null 2> /dev/null && eval "$(thefuck --alias)"
