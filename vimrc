@@ -67,6 +67,9 @@ execute pathogen#infect()
 
 colorscheme af
 
+highlight Guideline ctermbg=brown
+match Guideline /\%>80v.\+/
+
 cnoreabbrev dt diffthis
 
 au BufRead,BufNewFile *.raml set syntax=yaml
