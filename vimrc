@@ -87,6 +87,7 @@ map <F5> :edit<CR>
 map <F7> :marks<CR>
 map <F8> :buffers<CR>
 map <Esc><Esc> :nohlsearch<CR>
+map <F9>       :qa<CR>
 map [l :lprevious<CR>
 map ]l :lnext<CR>
 map [t :tabprevious<CR>
