@@ -4,6 +4,9 @@ cd ~
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 [ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
+cd ~/src/git-extensions/
+git clone https://github.com/mhagger/git-imerge
+
 [ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
 
