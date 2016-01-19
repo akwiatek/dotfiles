@@ -6,6 +6,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 [ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
 cd ~/src/git-extensions/
 git clone https://github.com/mhagger/git-imerge
+git clone https://github.com/tkrajina/git-plus
 
 [ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
