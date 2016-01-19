@@ -56,8 +56,6 @@ which vagrant > /dev/null 2> /dev/null && plugins+=(vagrant)
 
 # User configuration
 
-setopt extendedglob
-
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/adamkw/.rvm/gems/ruby-2.2.1/bin:/Users/adamkw/.rvm/gems/ruby-2.2.1@global/bin:/Users/adamkw/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/adamkw/.rvm/bin:/Users/adamkw/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin"
 # register local git extensions
 for ext in ~/src/git-extensions/*(/)
@@ -105,6 +103,8 @@ which vimpager > /dev/null 2> /dev/null && export PAGER="$(which vimpager)"
 # TERM inside tmux
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
 [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
+
+setopt extendedglob
 
 bindkey '[D' backward-word
 bindkey '[C' forward-word
