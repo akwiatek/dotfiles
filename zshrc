@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-navigation-tools)
+plugins=(git per-directory-history z zsh-navigation-tools)
 which bower   > /dev/null 2> /dev/null && plugins+=(bower)
 which brew > /dev/null 2> /dev/null && plugins+=(brew brew-cask)
 which gulp    > /dev/null 2> /dev/null && plugins+=(gulp)
