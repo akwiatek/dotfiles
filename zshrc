@@ -113,3 +113,9 @@ bindkey '[C' forward-word
 
 which jump    &> /dev/null && eval "$(jump shell zsh)"
 which thefuck &> /dev/null && eval "$(thefuck --alias)"
+
+if which pandoc &> /dev/null; then
+    md2man () {
+        pandoc --standalone --from=markdown --to=man $1 | groff -Tutf8 -man | $PAGER
+    }
+fi
