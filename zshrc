@@ -50,11 +50,11 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git per-directory-history z zsh-navigation-tools)
-which bower   > /dev/null 2> /dev/null && plugins+=(bower)
-which brew > /dev/null 2> /dev/null && plugins+=(brew brew-cask)
-which gulp    > /dev/null 2> /dev/null && plugins+=(gulp)
-which mvn > /dev/null 2> /dev/null && plugins+=(mvn)
-which vagrant > /dev/null 2> /dev/null && plugins+=(vagrant)
+which bower   &> /dev/null && plugins+=(bower)
+which brew    &> /dev/null && plugins+=(brew brew-cask)
+which gulp    &> /dev/null && plugins+=(gulp)
+which mvn     &> /dev/null && plugins+=(mvn)
+which vagrant &> /dev/null && plugins+=(vagrant)
 
 # User configuration
 
@@ -111,5 +111,5 @@ setopt extendedglob
 bindkey '[D' backward-word
 bindkey '[C' forward-word
 
-which jump    > /dev/null 2> /dev/null && eval "$(jump shell zsh)"
-which thefuck > /dev/null 2> /dev/null && eval "$(thefuck --alias)"
+which jump    &> /dev/null && eval "$(jump shell zsh)"
+which thefuck &> /dev/null && eval "$(thefuck --alias)"
