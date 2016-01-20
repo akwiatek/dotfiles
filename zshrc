@@ -100,7 +100,7 @@ autoload -U compinit && compinit
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
 #export MAVEN_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=8000 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true'
-which vimpager > /dev/null 2> /dev/null && export PAGER="$(which vimpager)"
+which vimpager &> /dev/null && export PAGER="$(which vimpager)"
 
 # TERM inside tmux
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
