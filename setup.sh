@@ -40,3 +40,5 @@ git clone https://github.com/tpope/vim-git
 git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/vim-scripts/JavaDecompiler.vim.git
+
+curl https://raw.githubusercontent.com/keith/tmux.vim/master/syntax/tmux.vim > ~/.vim/syntax/tmux.vim

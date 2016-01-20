@@ -88,6 +88,9 @@ au BufRead,BufNewFile *.ldif.j2 set filetype=ldif
 au BufRead,BufNewFile haproxy* set filetype=haproxy
 " TODO protractor
 au BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
+augroup filetypedetect
+	au BufNewFile,BufRead .tmux.conf,tmux.conf setfiletype tmux
+augroup END
 
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
