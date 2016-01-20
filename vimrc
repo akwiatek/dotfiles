@@ -58,6 +58,15 @@ set   wildmode=full
 set   winheight=4
 set   wrap
 
+" don't show files in these folders in Ctrl-P
+" Node.js
+set wildignore+=*/bower_components/*
+set wildignore+=*/dist/*
+set wildignore+=*/gulp/*
+set wildignore+=*/node_modules/*
+" Maven
+set wildignore+=*/target/*
+
 let do_syntax_sel_menu=1
 
 syntax on
@@ -80,14 +89,14 @@ au BufRead,BufNewFile haproxy* set filetype=haproxy
 " TODO protractor
 au BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 
-map <F2> :set wrap!<CR>:set wrap?<CR>
-map <F3> :set list!<CR>:set list?<CR>
-map <F4> :set paste!<CR>:set paste?<CR>
-map <F5> :edit<CR>
-map <F7> :marks<CR>
-map <F8> :buffers<CR>
+map <F2>  :set wrap!<CR>:set wrap?<CR>
+map <F3>  :set list!<CR>:set list?<CR>
+map <F4>  :set paste!<CR>:set paste?<CR>
+map <F5>  :edit<CR>
+map <F7>  :marks<CR>
+map <F8>  :buffers<CR>
+map <F10> :quitall<CR>
 map <Esc><Esc> :nohlsearch<CR>
-map <F9>       :qa<CR>
 map [l :lprevious<CR>
 map ]l :lnext<CR>
 map [t :tabprevious<CR>
