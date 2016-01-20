@@ -40,6 +40,6 @@ git clone https://github.com/tpope/vim-git
 git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/vim-scripts/JavaDecompiler.vim.git
+git clone https://github.com/keith/tmux.vim
 
 curl http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim
-curl https://raw.githubusercontent.com/keith/tmux.vim/master/syntax/tmux.vim > ~/.vim/syntax/tmux.vim
