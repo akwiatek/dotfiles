@@ -84,7 +84,6 @@ cnoreabbrev dt diffthis
 au BufRead,BufNewFile *.raml set syntax=yaml
 au BufRead,BufNewFile *.postman_dump set syntax=yaml
 au BufRead,BufNewFile *.ldif.j2 set filetype=ldif
-" http://www.haproxy.org/download/contrib/haproxy.vim
 au BufRead,BufNewFile haproxy* set filetype=haproxy
 " TODO protractor
 au BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
