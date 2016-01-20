@@ -50,7 +50,9 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z zsh-navigation-tools)
+which bower   > /dev/null 2> /dev/null && plugins+=(bower)
 which brew > /dev/null 2> /dev/null && plugins+=(brew brew-cask)
+which gulp    > /dev/null 2> /dev/null && plugins+=(gulp)
 which mvn > /dev/null 2> /dev/null && plugins+=(mvn)
 which vagrant > /dev/null 2> /dev/null && plugins+=(vagrant)
 
@@ -58,7 +60,7 @@ which vagrant > /dev/null 2> /dev/null && plugins+=(vagrant)
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/adamkw/.rvm/gems/ruby-2.2.1/bin:/Users/adamkw/.rvm/gems/ruby-2.2.1@global/bin:/Users/adamkw/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/adamkw/.rvm/bin:/Users/adamkw/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin"
 # register local git extensions
-for ext in ~/src/git-extensions/*(/)
+for ext in ~/src/git-extensions/*
 do
     export PATH=$PATH:$ext
 done
