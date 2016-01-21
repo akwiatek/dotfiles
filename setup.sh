@@ -21,11 +21,9 @@ cd ~/.vim/autoload/
 
 [ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
-git clone https://github.com/pearofducks/ansible-vim
 git clone https://github.com/godlygeek/csapprox
 git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/gregsexton/gitv
-git clone https://github.com/claco/jasmine.vim
 git clone https://github.com/othree/javascript-libraries-syntax.vim
 git clone https://github.com/scrooloose/nerdcommenter
 git clone https://github.com/scrooloose/nerdtree
@@ -38,8 +36,8 @@ git clone https://github.com/easymotion/vim-easymotion
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-git
 git clone https://github.com/airblade/vim-gitgutter
-git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/vim-scripts/JavaDecompiler.vim.git
 git clone https://github.com/keith/tmux.vim
+git clone https://github.com/sheerun/vim-polyglot
 
 curl http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim

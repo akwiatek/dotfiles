@@ -113,3 +113,6 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Disable syntax files in Polyglot which are handled by separate plugins
+let g:polyglot_disabled = ['tmux']
