@@ -5,8 +5,17 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 [ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
 cd ~/src/git-extensions/
+# install git plugins
 git clone https://github.com/mhagger/git-imerge
 git clone https://github.com/tkrajina/git-plus
+
+# upgrade git plugins
+for d in *; do
+    echo "$d"
+    cd "$d"
+    git pull
+    cd -
+done
 
 [ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
@@ -21,6 +30,7 @@ cd ~/.vim/autoload/
 
 [ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
 cd ~/.vim/bundle/
+# install vim plugins
 git clone https://github.com/godlygeek/csapprox
 git clone https://github.com/ctrlpvim/ctrlp.vim
 git clone https://github.com/gregsexton/gitv
@@ -42,5 +52,13 @@ git clone https://github.com/sheerun/vim-polyglot
 git clone https://github.com/skwp/greplace.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
 git clone https://github.com/vim-scripts/camelcasemotion
+
+# upgrade vim plugins
+for d in *; do
+    echo "$d"
+    cd "$d"
+    git pull
+    cd -
+done
 
 curl http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim
