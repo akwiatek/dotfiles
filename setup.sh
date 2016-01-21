@@ -41,5 +41,6 @@ git clone https://github.com/keith/tmux.vim
 git clone https://github.com/sheerun/vim-polyglot
 git clone https://github.com/skwp/greplace.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
+git clone https://github.com/vim-scripts/camelcasemotion
 
 curl http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim
