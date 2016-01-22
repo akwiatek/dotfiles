@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git per-directory-history z zsh-navigation-tools)
+plugins=(git z zsh-navigation-tools)
 which bower   &> /dev/null && plugins+=(bower)
 which brew    &> /dev/null && plugins+=(brew brew-cask)
 which gulp    &> /dev/null && plugins+=(gulp)
@@ -70,7 +70,6 @@ autoload -U compinit && compinit
 
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
-#export MAVEN_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=8000 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true'
 which vimpager &> /dev/null && export PAGER="$(which vimpager)"
 
 # TERM inside tmux
