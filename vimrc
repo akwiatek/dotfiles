@@ -1,7 +1,3 @@
-let os=substitute(system('uname'), '\n', '', '')
-let ismac=os == 'Darwin'
-let islinux=os == 'Linux'
-
 " disable VI mode
 set nocompatible
 
@@ -12,10 +8,7 @@ set   autowrite
 set   background=dark
 set   backspace=indent,eol,start
 set nobackup
-set   completeopt=menuone,preview
-if ismac
-    set   completeopt+=noinsert,noselect
-endif
+set   completeopt=menuone,preview,noinsert,noselect
 set   confirm
 set   copyindent
 set   diffopt=filler,iwhite,vertical
