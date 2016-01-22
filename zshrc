@@ -56,7 +56,23 @@ which gulp    &> /dev/null && plugins+=(gulp)
 which mvn     &> /dev/null && plugins+=(mvn)
 which vagrant &> /dev/null && plugins+=(vagrant)
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/Users/adamkw/.rvm/gems/ruby-2.2.1/bin:/Users/adamkw/.rvm/gems/ruby-2.2.1@global/bin:/Users/adamkw/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/adamkw/.rvm/bin:/Users/adamkw/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/sbin"
+export PATH=""
+export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/opt/local/bin"
+export PATH="$PATH:/opt/local/sbin"
+export PATH="$PATH:~/.rvm/gems/ruby-2.2.1/bin"
+export PATH="$PATH:~/.rvm/gems/ruby-2.2.1@global/bin"
+export PATH="$PATH:~/.rvm/rubies/ruby-2.2.1/bin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/bin"
+export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/sbin"
+export PATH="$PATH:~/.rvm/bin"
+export PATH="$PATH:/opt/local/bin"
+export PATH="$PATH:/opt/local/sbin"
+export PATH="$PATH:/usr/local/sbin"
+
 # register local git extensions
 for ext in ~/src/git-extensions/*
 do
