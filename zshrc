@@ -58,20 +58,20 @@ which vagrant &> /dev/null && plugins+=(vagrant)
 
 export PATH=""
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
+export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/local/sbin"
+export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:~/.rvm/gems/ruby-2.2.1/bin"
 export PATH="$PATH:~/.rvm/gems/ruby-2.2.1@global/bin"
 export PATH="$PATH:~/.rvm/rubies/ruby-2.2.1/bin"
-export PATH="$PATH:/usr/bin"
-export PATH="$PATH:/bin"
 export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/sbin"
+export PATH="$PATH:/bin"
 export PATH="$PATH:~/.rvm/bin"
-export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/local/sbin"
-export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/opt/local/bin"
 
 # register local git extensions
 for ext in ~/src/git-extensions/*
