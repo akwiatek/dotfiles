@@ -52,6 +52,7 @@ git clone https://github.com/sheerun/vim-polyglot
 git clone https://github.com/skwp/greplace.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
 git clone https://github.com/vim-scripts/camelcasemotion
+git clone https://github.com/rking/ag.vim
 
 # upgrade vim plugins
 for d in *; do
