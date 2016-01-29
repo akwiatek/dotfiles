@@ -84,6 +84,7 @@ map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
 map <F4>  :set paste!<CR>:set paste?<CR>
 map <F5>  :edit<CR>
+map <F6>  :registers<CR>
 map <F7>  :marks<CR>
 map <F8>  :buffers<CR>
 map <F10> :quitall<CR>
