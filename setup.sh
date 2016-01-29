@@ -62,4 +62,5 @@ for d in *; do
     cd -
 done
 
+[ -d ~/.vim/syntax/ ] || mkdir -p ~/.vim/syntax/
 curl http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim
