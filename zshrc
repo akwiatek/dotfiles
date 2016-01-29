@@ -92,8 +92,8 @@ which vimpager &> /dev/null && export PAGER="$(which vimpager)"
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
 [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
 
-# yellow color in grep output
-export GREP_COLOR='1;33'
+# red background color in grep output
+export GREP_COLOR='1;41'
 
 setopt extendedglob
 
