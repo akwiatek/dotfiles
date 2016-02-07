@@ -27,6 +27,8 @@ set   laststatus=2
 set   linebreak
 set   matchtime=2
 set   number
+" see <F4> mapping
+set   pastetoggle=<F4>
 set   relativenumber
 set   ruler
 set   shiftround
@@ -82,6 +84,7 @@ au BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
+" see pastetoggle
 map <F4>  :set paste!<CR>:set paste?<CR>
 map <F5>  :edit<CR>
 map <F6>  :registers<CR>
