@@ -23,6 +23,7 @@ set   hidden
 set   hlsearch
 set noignorecase
 set   incsearch
+set   infercase
 set   laststatus=2
 set   linebreak
 set   matchtime=2
@@ -71,6 +72,12 @@ filetype plugin on
 execute pathogen#infect()
 
 colorscheme af
+
+" vimdiff colors
+highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
+highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
+highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
+highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
 
 highlight Guideline ctermbg=brown
 match Guideline /\%>80v.\+/
