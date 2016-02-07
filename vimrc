@@ -48,6 +48,8 @@ set nospell
 set nostartofline
 set   tabstop=4
 set   undodir=~/.vim/undo//
+set   undofile
+set   undolevels=10000
 set   wildmenu
 set   wildmode=full
 set   winheight=4
