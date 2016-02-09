@@ -84,12 +84,12 @@ match Guideline /\%>80v.\+/
 
 cnoreabbrev dt diffthis
 
-au BufRead,BufNewFile *.raml set syntax=yaml
-au BufRead,BufNewFile *.postman_dump set syntax=yaml
-au BufRead,BufNewFile *.ldif.j2 set filetype=ldif
-au BufRead,BufNewFile haproxy* set filetype=haproxy
+autocmd BufRead,BufNewFile *.raml set syntax=yaml
+autocmd BufRead,BufNewFile *.postman_dump set syntax=yaml
+autocmd BufRead,BufNewFile *.ldif.j2 set filetype=ldif
+autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 " TODO protractor
-au BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
+autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
