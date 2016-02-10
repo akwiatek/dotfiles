@@ -79,8 +79,11 @@ highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold g
 highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
 highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
 
-highlight Guideline ctermbg=brown
-match Guideline /\%>80v.\+/
+" other colors
+highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
+highlight Guideline               ctermbg=blue             guibg=purple4
+
+match Guideline /\%>100v.\+/
 
 cnoreabbrev dt diffthis
 
