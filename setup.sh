@@ -64,6 +64,7 @@ git clone https://github.com/skwp/greplace.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
 git clone https://github.com/vim-scripts/camelcasemotion
 git clone https://github.com/mileszs/ack.vim
+git clone https://github.com/vim-scripts/argwrap.vim
 
 pull_git_repositories
 

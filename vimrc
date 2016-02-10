@@ -108,6 +108,7 @@ map [l :lprevious<CR>
 map ]l :lnext<CR>
 map [t :tabprevious<CR>
 map ]t :tabnext<CR>
+map <Leader>a :ArgWrap<CR>
 map <Leader>b :Gblame<CR>
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
