@@ -66,6 +66,7 @@ git clone https://github.com/vim-scripts/camelcasemotion
 git clone https://github.com/mileszs/ack.vim
 git clone https://github.com/vim-scripts/argwrap.vim
 git clone https://github.com/vim-scripts/Merginal
+git clone https://github.com/bronson/vim-trailing-whitespace
 
 pull_git_repositories
 
