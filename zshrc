@@ -54,6 +54,7 @@ which bower   &> /dev/null && plugins+=(bower)
 which brew    &> /dev/null && plugins+=(brew brew-cask)
 which gulp    &> /dev/null && plugins+=(gulp)
 which mvn     &> /dev/null && plugins+=(mvn)
+which thefuck &> /dev/null && plugins+=(thefuck)
 which vagrant &> /dev/null && plugins+=(vagrant)
 
 export PATH=""
