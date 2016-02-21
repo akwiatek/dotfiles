@@ -70,7 +70,9 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/bin"
 export PATH="$PATH:~/.rvm/bin"
+export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/local/sbin"
+export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/opt/local/bin"
 
 # register local git extensions
@@ -87,6 +89,7 @@ autoload -U compinit && compinit
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
 which vimpager &> /dev/null && export PAGER="$(which vimpager)"
+which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
@@ -102,6 +105,7 @@ bindkey '[C' forward-word
 
 which jump    &> /dev/null && eval "$(jump shell zsh)"
 which thefuck &> /dev/null && eval "$(thefuck --alias)"
+which pm2     &> /dev/null && eval "$(pm2 completion)"
 
 if which pandoc &> /dev/null; then
     md2man () {
