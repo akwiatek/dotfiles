@@ -78,6 +78,10 @@ amend_path '/usr/sbin'
 amend_path '/usr/bin'
 amend_path '/sbin'
 amend_path '/bin'
+amend_path '/usr/lib/jvm/default/bin'
+amend_path '/usr/bin/site_perl'
+amend_path '/usr/bin/vendor_perl'
+amend_path '/usr/bin/core_perl'
 
 # register local git extensions
 for ext in ~/src/git-extensions/*
