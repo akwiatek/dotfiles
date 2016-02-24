@@ -49,38 +49,45 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-navigation-tools)
+plugins=(z zsh-navigation-tools)
 which bower   &> /dev/null && plugins+=(bower)
 which brew    &> /dev/null && plugins+=(brew brew-cask)
+which git     &> /dev/null && plugins+=(git)
 which gulp    &> /dev/null && plugins+=(gulp)
 which mvn     &> /dev/null && plugins+=(mvn)
 which thefuck &> /dev/null && plugins+=(thefuck)
 which vagrant &> /dev/null && plugins+=(vagrant)
 
-export PATH=""
-export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
-export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/opt/local/sbin"
-export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:~/.rvm/gems/ruby-2.2.1/bin"
-export PATH="$PATH:~/.rvm/gems/ruby-2.2.1@global/bin"
-export PATH="$PATH:~/.rvm/rubies/ruby-2.2.1/bin"
-export PATH="$PATH:/usr/sbin"
-export PATH="$PATH:/usr/bin"
-export PATH="$PATH:/sbin"
-export PATH="$PATH:/bin"
-export PATH="$PATH:~/.rvm/bin"
-export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:/opt/local/sbin"
-export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:/opt/local/bin"
+PATH=''
+
+amend_path () {
+    [ -d "$1" ] || return
+    [ -z "$PATH" ] && PATH="$1" || PATH="$PATH:$1"
+}
+
+amend_path '~/.rvm/gems/ruby-2.2.1/bin'
+amend_path '~/.rvm/gems/ruby-2.2.1@global/bin'
+amend_path '~/.rvm/rubies/ruby-2.2.1/bin'
+amend_path '~/.rvm/bin'
+amend_path '/usr/local/opt/coreutils/libexec/gnubin'
+amend_path '/opt/local/sbin'
+amend_path '/opt/local/bin'
+amend_path '/usr/local/sbin'
+amend_path '/usr/local/bin'
+amend_path '/usr/sbin'
+amend_path '/usr/bin'
+amend_path '/sbin'
+amend_path '/bin'
 
 # register local git extensions
 for ext in ~/src/git-extensions/*
 do
-    export PATH=$PATH:$ext
+    amend_path "$ext"
 done
+
+unset -f amend_path
+
+export PATH
 
 source $ZSH/oh-my-zsh.sh
 
