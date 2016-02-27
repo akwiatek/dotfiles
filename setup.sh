@@ -9,23 +9,25 @@ pull_git_repositories() {
     done
 }
 
+[ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
+cd ~/src/git-extensions/
+git clone https://github.com/mhagger/git-imerge
+git clone https://github.com/tkrajina/git-plus
+git clone https://github.com/unixorn/git-extra-commands
+
+pull_git_repositories
+
 cd ~
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 [ -d ~/.oh-my-zsh/custom/plugins/ ] || mkdir -p ~/.oh-my-zsh/custom/plugins/
 cd ~/.oh-my-zsh/custom/plugins/
+ln -s ~/src/git-extensions/git-extra-commands
 git clone https://github.com/zsh-users/zsh-completions
 
 pull_git_repositories
 
 rm --force ~/.zcompdump*
-
-[ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
-cd ~/src/git-extensions/
-git clone https://github.com/mhagger/git-imerge
-git clone https://github.com/tkrajina/git-plus
-
-pull_git_repositories
 
 [ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
