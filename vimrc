@@ -83,7 +83,7 @@ highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold g
 highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
 highlight Guideline               ctermbg=blue             guibg=purple4
 
-match Guideline /\%>100v.\+/
+match Guideline /\%>125v.\+/
 
 cnoreabbrev dt diffthis
 
