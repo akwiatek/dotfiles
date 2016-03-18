@@ -8,7 +8,12 @@ set   autowrite
 set   background=dark
 set   backspace=indent,eol,start
 set nobackup
-set   completeopt=menuone,preview,noinsert,noselect
+set   completeopt=menuone,preview
+try
+    set completeopt+=noinsert,noselect
+catch E474
+    " do nothing
+endtry
 set   confirm
 set   copyindent
 set   diffopt=filler,iwhite,vertical
