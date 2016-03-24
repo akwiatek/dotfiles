@@ -117,6 +117,7 @@ setopt extendedglob
 bindkey '[D' backward-word
 bindkey '[C' forward-word
 
+which docker-machine &> /dev/null && eval "$(docker-machine env 2> /dev/null)"
 which jump    &> /dev/null && eval "$(jump shell zsh)"
 which thefuck &> /dev/null && eval "$(thefuck --alias)"
 which pm2     &> /dev/null && eval "$(pm2 completion)"
