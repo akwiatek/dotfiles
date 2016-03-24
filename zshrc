@@ -65,19 +65,21 @@ amend_path () {
     [ -z "$PATH" ] && PATH="$1" || PATH="$PATH:$1"
 }
 
-amend_path '/sbin'
-amend_path '/bin'
-amend_path '/usr/sbin'
-amend_path '/usr/bin'
-amend_path '/usr/local/sbin'
-amend_path '/usr/local/bin'
-amend_path '/opt/local/sbin'
-amend_path '/opt/local/bin'
+# /usr/local/opt/coreutils/libexec/gnubin is before /usr/bin so Homebrew GNU bins are preffered over OSX BSD bins
 amend_path '/usr/local/opt/coreutils/libexec/gnubin'
 amend_path '/usr/lib/jvm/default/bin'
+amend_path '/opt/local/sbin'
+amend_path '/opt/local/bin'
+# /usr/local/bin is before /usr/bin so Homebrew Vim is preffered over OSX Vim
+amend_path '/usr/local/sbin'
+amend_path '/usr/local/bin'
 amend_path '/usr/bin/site_perl'
 amend_path '/usr/bin/vendor_perl'
 amend_path '/usr/bin/core_perl'
+amend_path '/usr/sbin'
+amend_path '/usr/bin'
+amend_path '/sbin'
+amend_path '/bin'
 amend_path '~/.rvm/gems/ruby-2.2.1/bin'
 amend_path '~/.rvm/gems/ruby-2.2.1@global/bin'
 amend_path '~/.rvm/rubies/ruby-2.2.1/bin'
