@@ -130,6 +130,15 @@ fi
 weather () {
     curl "http://wttr.in/$1"
 }
+each_dir () {
+    for d in *(/); do
+        echo "$d"
+        cd "$d"
+        $@
+        cd -
+    done
+}
+
 
 alias grey-grep="GREP_COLOR='1;30' grep --color=always"
 alias red-grep="GREP_COLOR='1;31' grep --color=always"
