@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z zsh-navigation-tools)
+plugins=(z)
 which bower   &> /dev/null && plugins+=(bower)
 which brew    &> /dev/null && plugins+=(brew brew-cask)
 which git     &> /dev/null && plugins+=(git git-extra-commands)
@@ -102,6 +102,7 @@ autoload -U compinit && compinit
 
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
+export FZF_DEFAULT_OPTS='--color=16 --cycle --exact --reverse'
 which vimpager &> /dev/null && export PAGER="$(which vimpager)"
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
