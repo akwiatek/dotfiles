@@ -29,6 +29,12 @@ pull_git_repositories
 
 rm --force ~/.zcompdump*
 
+[ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+pull_git_repositories
+
+~/.fzf/install --completion --key-bindings --no-update-rc
+
 [ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
 [ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
 
