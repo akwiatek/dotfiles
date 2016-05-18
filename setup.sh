@@ -75,6 +75,7 @@ cd ~/.vim/bundle/
 [ -d argwrap.vim ] || git clone https://github.com/vim-scripts/argwrap.vim
 [ -d Merginal ] || git clone https://github.com/vim-scripts/Merginal
 [ -d vim-trailing-whitespace ] || git clone https://github.com/bronson/vim-trailing-whitespace
+[ -d vim-abolish ] || git clone https://github.com/tpope/vim-abolish
 
 pull_git_repositories
 
