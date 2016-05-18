@@ -1,6 +1,8 @@
 #!/bin/sh
 
-pull_git_repositories() {
+set -e
+
+git_pull_each() {
     for d in *; do
         echo "$d"
         cd "$d"
@@ -9,77 +11,83 @@ pull_git_repositories() {
     done
 }
 
-[ -d ~/src/git-extensions/ ] || mkdir -p ~/src/git-extensions/
-cd ~/src/git-extensions/
-[ -d git-imerge ] || git clone https://github.com/mhagger/git-imerge
-[ -d git-plus ] || git clone https://github.com/tkrajina/git-plus
-[ -d git-extra-commands ] || git clone https://github.com/unixorn/git-extra-commands
+safe_cd() {
+    [ -d "$1" ] || mkdir --parents "$1"
+    cd "$1"
+}
 
-pull_git_repositories
+try_git_clone() {
+    [ -d "$(basename "${1%.git}")" ] || git clone "$1"
+}
+
+safe_cd ~/src/git-extensions/
+try_git_clone https://github.com/mhagger/git-imerge
+try_git_clone https://github.com/tkrajina/git-plus
+try_git_clone https://github.com/unixorn/git-extra-commands
+
+git_pull_each
 
 cd ~
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-[ -d ~/.oh-my-zsh/custom/plugins/ ] || mkdir -p ~/.oh-my-zsh/custom/plugins/
-cd ~/.oh-my-zsh/custom/plugins/
+safe_cd ~/.oh-my-zsh/custom/plugins/
 [ -L git-extra-commands ] || ln --symbolic ~/src/git-extensions/git-extra-commands git-extra-commands
-[ -d zsh-completions ] || git clone https://github.com/zsh-users/zsh-completions
+try_git_clone https://github.com/zsh-users/zsh-completions
 
-pull_git_repositories
+git_pull_each
 
 rm --force ~/.zcompdump*
 
 [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
-pull_git_repositories
+git_pull_each
 
 ~/.fzf/install --completion --key-bindings --no-update-rc
 
-[ -d ~/.vim/undo/ ] || mkdir -p ~/.vim/undo/
-[ -d ~/.vim/swaps/ ] || mkdir -p ~/.vim/swaps/
+safe_cd ~/.vim/undo/
+safe_cd ~/.vim/swaps/
 
-[ -d ~/.vim/opt/ ] || mkdir -p ~/.vim/opt/
-cd ~/.vim/opt/
-[ -d vim-pathogen ] || git clone https://github.com/tpope/vim-pathogen.git
+safe_cd ~/.vim/opt/
+try_git_clone https://github.com/tpope/vim-pathogen.git
 
-pull_git_repositories
+git_pull_each
 
-[ -d ~/.vim/autoload/ ] || mkdir -p ~/.vim/autoload/
-cd ~/.vim/autoload/
+safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
-[ -d ~/.vim/bundle/ ] || mkdir -p ~/.vim/bundle/
-cd ~/.vim/bundle/
-[ -d csapprox ] || git clone https://github.com/godlygeek/csapprox
-[ -d ctrlp.vim ] || git clone https://github.com/ctrlpvim/ctrlp.vim
-[ -d gitv ] || git clone https://github.com/gregsexton/gitv
-[ -d javascript-libraries-syntax.vim ] || git clone https://github.com/othree/javascript-libraries-syntax.vim
-[ -d nerdcommenter ] || git clone https://github.com/scrooloose/nerdcommenter
-[ -d nerdtree ] || git clone https://github.com/scrooloose/nerdtree
-[ -d nerdtree-git-plugin ] || git clone https://github.com/Xuyuanp/nerdtree-git-plugin
-[ -d syntastic ] || git clone https://github.com/scrooloose/syntastic
-[ -d undotree ] || git clone https://github.com/mbbill/undotree
-[ -d vim-closetag ] || git clone https://github.com/alvan/vim-closetag
-[ -d vim-colorschemes ] || git clone https://github.com/flazz/vim-colorschemes
-[ -d vim-easymotion ] || git clone https://github.com/easymotion/vim-easymotion
-[ -d vim-fugitive ] || git clone https://github.com/tpope/vim-fugitive.git
-[ -d vim-git ] || git clone https://github.com/tpope/vim-git
-[ -d vim-gitgutter ] || git clone https://github.com/airblade/vim-gitgutter
-[ -d JavaDecompiler.vim ] || git clone https://github.com/vim-scripts/JavaDecompiler.vim.git
-[ -d tmux.vim ] || git clone https://github.com/keith/tmux.vim
-[ -d vim-polyglot ] || git clone https://github.com/sheerun/vim-polyglot
-[ -d greplace.vim ] || git clone https://github.com/skwp/greplace.vim
-[ -d vim-indent-guides ] || git clone https://github.com/nathanaelkane/vim-indent-guides
-[ -d camelcasemotion ] || git clone https://github.com/vim-scripts/camelcasemotion
-[ -d ack.vim ] || git clone https://github.com/mileszs/ack.vim
-[ -d argwrap.vim ] || git clone https://github.com/vim-scripts/argwrap.vim
-[ -d Merginal ] || git clone https://github.com/vim-scripts/Merginal
-[ -d vim-trailing-whitespace ] || git clone https://github.com/bronson/vim-trailing-whitespace
-[ -d vim-abolish ] || git clone https://github.com/tpope/vim-abolish
+safe_cd ~/.vim/bundle/
+try_git_clone https://github.com/airblade/vim-gitgutter
+try_git_clone https://github.com/alvan/vim-closetag
+try_git_clone https://github.com/bronson/vim-trailing-whitespace
+try_git_clone https://github.com/ctrlpvim/ctrlp.vim
+try_git_clone https://github.com/easymotion/vim-easymotion
+try_git_clone https://github.com/flazz/vim-colorschemes
+try_git_clone https://github.com/godlygeek/csapprox
+try_git_clone https://github.com/gregsexton/gitv
+try_git_clone https://github.com/keith/tmux.vim
+try_git_clone https://github.com/mbbill/undotree
+try_git_clone https://github.com/mileszs/ack.vim
+try_git_clone https://github.com/nathanaelkane/vim-indent-guides
+try_git_clone https://github.com/othree/javascript-libraries-syntax.vim
+try_git_clone https://github.com/scrooloose/nerdcommenter
+try_git_clone https://github.com/scrooloose/nerdtree
+try_git_clone https://github.com/scrooloose/syntastic
+try_git_clone https://github.com/sheerun/vim-polyglot
+try_git_clone https://github.com/skwp/greplace.vim
+try_git_clone https://github.com/tpope/vim-abolish
+try_git_clone https://github.com/tpope/vim-fugitive.git
+try_git_clone https://github.com/tpope/vim-git
+try_git_clone https://github.com/vim-scripts/argwrap.vim
+try_git_clone https://github.com/vim-scripts/camelcasemotion
+try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim.git
+try_git_clone https://github.com/vim-scripts/Merginal
+try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
-pull_git_repositories
+git_pull_each
 
-[ -d ~/.vim/syntax/ ] || mkdir -p ~/.vim/syntax/
-curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > ~/.vim/syntax/haproxy.vim
+safe_cd ~/.vim/syntax/
+curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
 
-unset -f pull_git_repositories
+unset -f git_pull_each
+unset -f safe_cd
+unset -f try_git_clone
