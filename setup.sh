@@ -2,6 +2,13 @@
 
 set -e
 
+check_command() {
+    if ! which $1 &> /dev/null; then
+        echo "$1 not available" >&2
+        exit 1
+    fi
+}
+
 git_pull_each() {
     for d in *; do
         echo "$d"
@@ -12,13 +19,17 @@ git_pull_each() {
 }
 
 safe_cd() {
-    [ -d "$1" ] || mkdir --parents "$1"
+    [ -d "$1" ] || mkdir -p "$1"
     cd "$1"
 }
 
 try_git_clone() {
     [ -d "$(basename "${1%.git}")" ] || git clone "$1"
 }
+
+check_command curl
+check_command git
+check_command go
 
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
@@ -31,12 +42,12 @@ cd ~
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 safe_cd ~/.oh-my-zsh/custom/plugins/
-[ -L git-extra-commands ] || ln --symbolic ~/src/git-extensions/git-extra-commands git-extra-commands
+[ -L git-extra-commands ] || ln -s ~/src/git-extensions/git-extra-commands git-extra-commands
 try_git_clone https://github.com/zsh-users/zsh-completions
 
 git_pull_each
 
-rm --force ~/.zcompdump*
+rm -f ~/.zcompdump*
 
 [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
@@ -53,7 +64,7 @@ try_git_clone https://github.com/tpope/vim-pathogen.git
 git_pull_each
 
 safe_cd ~/.vim/autoload/
-[ -L pathogen.vim ] || ln --symbolic ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
+[ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
 safe_cd ~/.vim/bundle/
 try_git_clone https://github.com/airblade/vim-gitgutter
@@ -88,6 +99,7 @@ git_pull_each
 safe_cd ~/.vim/syntax/
 curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
 
+unset -f check_command
 unset -f git_pull_each
 unset -f safe_cd
 unset -f try_git_clone
