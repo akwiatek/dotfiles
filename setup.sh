@@ -51,6 +51,8 @@ rm -f ~/.zcompdump*
 
 [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
+#TODO check if fzf updated before installing
+#TODO check if vimpager updated before installing
 git_pull_each
 
 ~/.fzf/install --completion --key-bindings --no-update-rc
@@ -59,9 +61,14 @@ safe_cd ~/.vim/undo/
 safe_cd ~/.vim/swaps/
 
 safe_cd ~/.vim/opt/
+try_git_clone https://github.com/rkitover/vimpager
 try_git_clone https://github.com/tpope/vim-pathogen.git
 
 git_pull_each
+
+safe_cd ~/.vim/opt/vimpager/
+#TODO install in an user local path
+sudo make install
 
 safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
