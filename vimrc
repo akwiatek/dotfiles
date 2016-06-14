@@ -99,6 +99,8 @@ autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 " TODO protractor
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 
+autocmd BufRead,BufNewFile *.ldif.j2 set shiftwidth=2
+
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
 " see pastetoggle
@@ -132,3 +134,5 @@ let g:syntastic_java_checkers=[]
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
+
+let g:ctrlp_cmd = 'CtrlPBuffer'
