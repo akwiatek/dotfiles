@@ -2,13 +2,6 @@
 
 set -e
 
-check_command() {
-    if ! which $1 &> /dev/null; then
-        echo "$1 not available" >&2
-        exit 1
-    fi
-}
-
 git_pull_each() {
     for d in *; do
         echo "$d"
@@ -26,10 +19,6 @@ safe_cd() {
 try_git_clone() {
     [ -d "$(basename "${1%.git}")" ] || git clone "$1"
 }
-
-check_command curl
-check_command git
-check_command go
 
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
@@ -67,8 +56,7 @@ try_git_clone https://github.com/tpope/vim-pathogen.git
 git_pull_each
 
 safe_cd ~/.vim/opt/vimpager/
-#TODO install in an user local path
-sudo make install
+make
 
 safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
@@ -106,7 +94,6 @@ git_pull_each
 safe_cd ~/.vim/syntax/
 curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
 
-unset -f check_command
 unset -f git_pull_each
 unset -f safe_cd
 unset -f try_git_clone

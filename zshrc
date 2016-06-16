@@ -103,7 +103,7 @@ autoload -U compinit && compinit
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
 export FZF_DEFAULT_OPTS='--color=16 --cycle --exact --reverse'
-which vimpager &> /dev/null && export PAGER="$(which vimpager)"
+export PAGER=~/.vim/opt/vimpager/vimpager
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
