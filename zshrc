@@ -80,10 +80,11 @@ amend_path '/usr/sbin'
 amend_path '/usr/bin'
 amend_path '/sbin'
 amend_path '/bin'
-amend_path '~/.rvm/gems/ruby-2.2.1/bin'
-amend_path '~/.rvm/gems/ruby-2.2.1@global/bin'
-amend_path '~/.rvm/rubies/ruby-2.2.1/bin'
-amend_path '~/.rvm/bin'
+amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
+amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
+amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
+amend_path "$HOME/.rvm/bin"
+amend_path "$HOME/git-extensions/bin"
 
 # register local git extensions
 for ext in ~/src/git-extensions/*
