@@ -80,6 +80,7 @@ amend_path '/usr/sbin'
 amend_path '/usr/bin'
 amend_path '/sbin'
 amend_path '/bin'
+which git &> /dev/null && amend_path "$(dirname $(readlink --canonicalize $(which git)))/share/git/git-jump"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
 amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
