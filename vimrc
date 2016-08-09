@@ -119,6 +119,7 @@ map <Leader>a :ArgWrap<CR>
 map <Leader>b :Gblame<CR>
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
+map <Leader>m :Magit<CR>
 " rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 map <Leader>t :tabnew<CR>
