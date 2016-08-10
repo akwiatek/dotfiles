@@ -136,4 +136,4 @@ let g:syntastic_java_checkers=[]
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
 
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
