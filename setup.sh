@@ -86,6 +86,7 @@ try_git_clone https://github.com/tpope/vim-git
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
 try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim.git
+try_git_clone https://github.com/vim-scripts/matrix.vim--Yang
 try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
