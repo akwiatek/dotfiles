@@ -56,6 +56,7 @@ which git     &> /dev/null && plugins+=(git git-extra-commands)
 which gulp    &> /dev/null && plugins+=(gulp)
 which mvn     &> /dev/null && plugins+=(mvn)
 which thefuck &> /dev/null && plugins+=(thefuck)
+which tmux    &> /dev/null && plugins+=(tmux)
 which vagrant &> /dev/null && plugins+=(vagrant)
 
 PATH=''
