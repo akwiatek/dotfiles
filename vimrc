@@ -8,6 +8,8 @@ set   autowrite
 set   background=dark
 set   backspace=indent,eol,start
 set nobackup
+" use dictionary files in autocompletion
+set   complete+=k
 set   completeopt=menuone,preview
 try
     set completeopt+=noinsert,noselect
@@ -16,6 +18,7 @@ catch E474
 endtry
 set   confirm
 set   copyindent
+set   dictionary=/usr/share/dict/words
 set   diffopt=filler,iwhite,vertical
 set   directory=~/.vim/swaps//
 set   display+=uhex
