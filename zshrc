@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 plugins+=(zsh-completions)
 autoload -U compinit && compinit
 
+export HOMEBREW_CASK_OPTS=--caskroom=/opt/homebrew-cask/Caskroom
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
 export FZF_DEFAULT_OPTS='--color=16 --cycle --exact --reverse'
@@ -115,6 +116,8 @@ which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # red background color in grep output
 export GREP_COLOR='1;41'
+
+export ANSIBLE_COW_SELECTION=moose
 
 setopt extendedglob
 
