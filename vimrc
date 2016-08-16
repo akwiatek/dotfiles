@@ -81,15 +81,19 @@ execute pathogen#infect()
 
 colorscheme af
 
-" vimdiff colors
+" vimdiff colours
 highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
 highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
 highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
 highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
 
-" other colors
+" other colours
 highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
 highlight Guideline               ctermbg=blue             guibg=purple4
+
+" Syntastic colours
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
 
 match Guideline /\%>125v.\+/
 
@@ -135,6 +139,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=[]
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_warning_symbol = '⭐️'
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
