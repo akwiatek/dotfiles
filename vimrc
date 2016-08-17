@@ -140,7 +140,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=[]
 let g:syntastic_error_symbol = '❌'
-let g:syntastic_warning_symbol = '⭐️'
+let g:syntastic_warning_symbol = '🍀'
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
