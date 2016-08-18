@@ -103,7 +103,6 @@ autocmd BufRead,BufNewFile *.raml set syntax=yaml
 autocmd BufRead,BufNewFile *.postman_dump set syntax=yaml
 autocmd BufRead,BufNewFile *.ldif.j2 set filetype=ldif
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
-" TODO protractor
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 
 autocmd BufRead,BufNewFile *.ldif.j2 set shiftwidth=2
