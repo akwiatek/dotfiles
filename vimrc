@@ -140,6 +140,16 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=[]
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
+let g:syntastic_html_tidy_blocklevel_tags = [
+    \ 'amt-navigation',
+    \ 'gov-notification',
+    \ 'gov-search',
+    \ 'next-steps',
+    \ 'organisation-summary',
+    \ 'technical-error'
+    \ ]
+let g:syntastic_html_tidy_inline_tags = []
+let g:syntastic_html_tidy_empty_tags = []
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
