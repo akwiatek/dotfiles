@@ -132,7 +132,7 @@ map <Leader>t :tabnew<CR>
 map <Leader>/ :Ack<Space>
 
 " Allow to close tags in the following XML-like files
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -154,4 +154,4 @@ let g:syntastic_html_tidy_empty_tags = []
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
 
-let g:ctrlp_cmd = 'CtrlPMRUFiles'
+let g:ctrlp_cmd = 'CtrlPLastMode'
