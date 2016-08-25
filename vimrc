@@ -144,6 +144,7 @@ let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'amt-navigation',
+    \ 'gov-dataset',
     \ 'gov-notification',
     \ 'gov-search',
     \ 'next-steps',
