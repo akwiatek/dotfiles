@@ -24,10 +24,12 @@ set   directory=~/.vim/swaps//
 set   display+=uhex
 set noequalalways
 set   expandtab
+set nofixendofline
 set   foldenable
 set   foldlevelstart=99
 set   foldmethod=indent
 set   hidden
+set   history=500
 set   hlsearch
 set noignorecase
 set   incsearch
@@ -145,7 +147,10 @@ let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'amt-navigation',
     \ 'gov-dataset',
+    \ 'gov-footer',
+    \ 'gov-header',
     \ 'gov-notification',
+    \ 'gov-phase-banner',
     \ 'gov-search',
     \ 'next-steps',
     \ 'organisation-summary',
