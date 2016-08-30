@@ -147,13 +147,17 @@ let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'amt-navigation',
     \ 'gov-dataset',
+    \ 'gov-digit-box',
     \ 'gov-footer',
     \ 'gov-header',
+    \ 'gov-notice',
     \ 'gov-notification',
     \ 'gov-phase-banner',
+    \ 'gov-progress-list',
     \ 'gov-search',
     \ 'next-steps',
     \ 'organisation-summary',
+    \ 'server-validation-error',
     \ 'technical-error'
     \ ]
 let g:syntastic_html_tidy_inline_tags = []
