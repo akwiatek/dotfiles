@@ -20,6 +20,15 @@ try_git_clone() {
     [ -d "$(basename "${1%.git}")" ] || git clone "$1"
 }
 
+vim_index_help_each() {
+    for d in */doc; do
+        echo "$d"
+        cd "$d"
+        vim -u NONE -c 'helptags .' -c quit
+        cd -
+    done
+}
+
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
 try_git_clone https://github.com/tkrajina/git-plus
@@ -92,6 +101,7 @@ try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
 git_pull_each
+vim_index_help_each
 
 safe_cd ~/.vim/syntax/
 curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
@@ -99,3 +109,4 @@ curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim >
 unset -f git_pull_each
 unset -f safe_cd
 unset -f try_git_clone
+unset -f vim_index_help_each
