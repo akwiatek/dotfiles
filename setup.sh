@@ -47,7 +47,7 @@ git_pull_each
 
 rm -f ~/.zcompdump*
 
-[ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+[ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
 
 #TODO check if fzf updated before installing
 #TODO check if vimpager updated before installing
@@ -90,11 +90,12 @@ try_git_clone https://github.com/scrooloose/syntastic
 try_git_clone https://github.com/sheerun/vim-polyglot
 try_git_clone https://github.com/skwp/greplace.vim
 try_git_clone https://github.com/tpope/vim-abolish
-try_git_clone https://github.com/tpope/vim-fugitive.git
+try_git_clone https://github.com/tpope/vim-fugitive
 try_git_clone https://github.com/tpope/vim-git
+try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
-try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim.git
+try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
 try_git_clone https://github.com/vim-scripts/matrix.vim--Yang
 try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/vimagit
