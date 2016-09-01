@@ -171,3 +171,9 @@ let g:syntastic_html_tidy_empty_tags = []
 let g:polyglot_disabled = ['tmux']
 
 let g:ctrlp_cmd = 'CtrlPLastMode'
+
+" transparent background
+let g:CSApprox_hook_post = [
+    \ 'highlight Normal  ctermbg=none',
+    \ 'highlight NonText ctermbg=none'
+    \ ]
