@@ -6,7 +6,7 @@ git_pull_each() {
     for d in *; do
         echo "$d"
         cd "$d"
-        git pull
+        [ -d .git ] && git pull
         cd -
     done
 }
@@ -57,18 +57,16 @@ rm -f ~/.zcompdump*
 
 [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
 
-#TODO check if fzf updated before installing
-#TODO check if vimpager updated before installing
-git_pull_each
-
-~/.fzf/install --completion --key-bindings --no-update-rc
+safe_cd ~/.fzf/
+git pull
+./install --completion --key-bindings --no-update-rc
 
 safe_cd ~/.vim/undo/
 safe_cd ~/.vim/swaps/
 
 safe_cd ~/.vim/opt/
 try_git_clone https://github.com/rkitover/vimpager
-try_git_clone https://github.com/tpope/vim-pathogen.git
+try_git_clone https://github.com/tpope/vim-pathogen
 
 git_pull_each
 
