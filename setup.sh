@@ -36,6 +36,14 @@ try_git_clone https://github.com/unixorn/git-extra-commands
 
 git_pull_each
 
+safe_cd ~/.tmux/plugins/
+try_git_clone https://github.com/tmux-plugins/tmux-continuum
+try_git_clone https://github.com/tmux-plugins/tmux-copycat
+try_git_clone https://github.com/tmux-plugins/tmux-resurrect
+try_git_clone https://github.com/tmux-plugins/tpm
+
+git_pull_each
+
 cd ~
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
