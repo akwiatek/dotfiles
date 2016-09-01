@@ -46,7 +46,11 @@ set   shiftround
 " same as tabstop
 set   shiftwidth=0
 set   shortmess+=I
-set   showbreak=↪\  " arrow + space
+try
+    set   showbreak=↪\  " arrow + space
+catch E595
+    set   showbreak=`->\  " arrow + space
+endtry
 set   showcmd
 set   showmatch
 set   showtabline=2
