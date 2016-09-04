@@ -2,31 +2,41 @@
 
 set -e
 
-git_pull_each() {
+for_each_dir() {
+    local action="$1"
     for d in *; do
         echo "$d"
         cd "$d"
-        [ -d .git ] && git pull
+        "$action"
         cd -
     done
+}
+
+try_git_pull() {
+    ! [ -d .git ] || git pull
+}
+
+try_git_pull_each() {
+    for_each_dir try_git_pull
 }
 
 safe_cd() {
-    [ -d "$1" ] || mkdir -p "$1"
-    cd "$1"
+    local target="$1"
+    [ -d "$target" ] || mkdir -p "$target"
+    cd "$target"
 }
 
 try_git_clone() {
-    [ -d "$(basename "${1%.git}")" ] || git clone "$1"
+    local url="$1"
+    [ -d "$(basename "${url%.git}")" ] || git clone "$url"
+}
+
+vim_index_help() {
+    vim -u NONE -c 'helptags .' -c quit
 }
 
 vim_index_help_each() {
-    for d in */doc; do
-        echo "$d"
-        cd "$d"
-        vim -u NONE -c 'helptags .' -c quit
-        cd -
-    done
+    for_each_dir vim_index_help
 }
 
 safe_cd ~/src/git-extensions/
@@ -34,13 +44,13 @@ try_git_clone https://github.com/mhagger/git-imerge
 try_git_clone https://github.com/tkrajina/git-plus
 try_git_clone https://github.com/unixorn/git-extra-commands
 
-git_pull_each
+try_git_pull_each
 
 safe_cd ~/.tmux/plugins/
 try_git_clone https://github.com/tmux-plugins/tmux-copycat
 try_git_clone https://github.com/tmux-plugins/tpm
 
-git_pull_each
+try_git_pull_each
 
 cd ~
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -49,7 +59,7 @@ safe_cd ~/.oh-my-zsh/custom/plugins/
 [ -L git-extra-commands ] || ln -s ~/src/git-extensions/git-extra-commands git-extra-commands
 try_git_clone https://github.com/zsh-users/zsh-completions
 
-git_pull_each
+try_git_pull_each
 
 rm -f ~/.zcompdump*
 
@@ -66,7 +76,7 @@ safe_cd ~/.vim/opt/
 try_git_clone https://github.com/rkitover/vimpager
 try_git_clone https://github.com/tpope/vim-pathogen
 
-git_pull_each
+try_git_pull_each
 
 safe_cd ~/.vim/opt/vimpager/
 make
@@ -105,13 +115,8 @@ try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
-git_pull_each
+try_git_pull_each
 vim_index_help_each
 
 safe_cd ~/.vim/syntax/
 curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
-
-unset -f git_pull_each
-unset -f safe_cd
-unset -f try_git_clone
-unset -f vim_index_help_each
