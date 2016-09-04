@@ -162,3 +162,5 @@ alias white-grep="GREP_COLOR='1;37' grep --color=always"
 alias noti='reattach-to-user-namespace noti'
 
 source ~/.fzf.zsh
+
+[ -r ~/.zshrc.private ] && source ~/.zshrc.private
