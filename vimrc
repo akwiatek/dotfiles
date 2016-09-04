@@ -172,6 +172,8 @@ let g:polyglot_disabled = ['tmux']
 
 let g:ctrlp_cmd = 'CtrlPLastMode'
 
+let g:ackprg = 'ag --vimgrep'
+
 " transparent background
 let g:CSApprox_hook_post = [
     \ 'highlight Normal  ctermbg=none',
