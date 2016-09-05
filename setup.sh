@@ -61,7 +61,7 @@ try_git_clone https://github.com/zsh-users/zsh-completions
 
 try_git_pull_each
 
-rm -f ~/.zcompdump*
+rm -f ~/.zcompdump* || :
 
 [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
 
