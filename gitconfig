@@ -1,0 +1,28 @@
+[include]
+	path = ~/.gitconfig.private
+[user]
+	name = Adam Kwiatek
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[color]
+	ui = true
+[gui]
+	gcwarning = false
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[mergetool]
+	writeToTemp = true
+[diff]
+	compactionHeuristic = true
+	renames = copy
+[alias]
+	browser = !tig
+	aliases = !git config --list | grep ^alias | sed s/alias.//
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold

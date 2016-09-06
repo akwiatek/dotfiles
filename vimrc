@@ -111,6 +111,7 @@ autocmd BufRead,BufNewFile *.ldif.j2 set filetype=ldif
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
+autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
 
 autocmd BufRead,BufNewFile *.ldif.j2 set shiftwidth=2
 
