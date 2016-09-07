@@ -85,6 +85,8 @@ safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
 safe_cd ~/.vim/bundle/
+try_git_clone https://github.com/Raimondi/delimitMate
+try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 try_git_clone https://github.com/airblade/vim-gitgutter
 try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/bronson/vim-trailing-whitespace
@@ -107,13 +109,12 @@ try_git_clone https://github.com/tpope/vim-abolish
 try_git_clone https://github.com/tpope/vim-fugitive
 try_git_clone https://github.com/tpope/vim-git
 try_git_clone https://github.com/tpope/vim-obsession
+try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
+try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
-try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
 try_git_clone https://github.com/vim-scripts/matrix.vim--Yang
-try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/vimagit
-try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
 try_git_pull_each
 vim_index_help_each
