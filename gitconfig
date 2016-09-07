@@ -1,28 +1,34 @@
 [include]
-	path = ~/.gitconfig.private
+    path = ~/.gitconfig.private
 [user]
-	name = Adam Kwiatek
+    name = Adam Kwiatek
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [color]
-	ui = true
+    ui = true
 [gui]
-	gcwarning = false
+    gcwarning = false
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
+    whitespace = trailing-space,space-before-tab,tab-in-indent
+    fileMode = true
 [mergetool]
-	writeToTemp = true
+    writeToTemp = true
+[rerere]
+    enabled = true
 [diff]
-	compactionHeuristic = true
-	renames = copy
+    compactionHeuristic = true
+    renames = copy
 [alias]
-	browser = !tig
-	aliases = !git config --list | grep ^alias | sed s/alias.//
+    browser = !tig
+    aliases = !git config --list | grep ^alias | sed s/alias.//
+    recent-branches = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+    test-merge = merge --no-commit --no-ff
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
