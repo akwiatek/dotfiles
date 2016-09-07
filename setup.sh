@@ -32,7 +32,7 @@ try_git_clone() {
 }
 
 vim_index_help() {
-    vim -u NONE -c 'helptags .' -c quit
+    ! [ -d docs ] || vim -u NONE -c 'helptags docs' -c quit
 }
 
 vim_index_help_each() {
