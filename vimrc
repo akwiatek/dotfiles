@@ -160,6 +160,7 @@ let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'gov-phase-banner',
     \ 'gov-progress-list',
     \ 'gov-search',
+    \ 'last-login',
     \ 'next-steps',
     \ 'organisation-summary',
     \ 'server-validation-error',
