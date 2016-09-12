@@ -8,6 +8,7 @@ set   autowrite
 set   background=dark
 set   backspace=indent,eol,start
 set nobackup
+set   breakindent
 " use dictionary files in autocompletion
 set   complete+=k
 set   completeopt=menuone,preview
