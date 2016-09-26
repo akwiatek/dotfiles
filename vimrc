@@ -106,8 +106,10 @@ match Guideline /\%>125v.\+/
 
 cnoreabbrev dt diffthis
 
+autocmd BufRead,BufNewFile *.bsh set syntax=java
 autocmd BufRead,BufNewFile *.raml set syntax=yaml
 autocmd BufRead,BufNewFile *.postman_dump set syntax=yaml
+autocmd BufRead,BufNewFile *.groovy.j2 set filetype=groovy
 autocmd BufRead,BufNewFile *.ldif.j2 set filetype=ldif
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
