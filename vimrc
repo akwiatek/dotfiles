@@ -163,6 +163,8 @@ let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'gov-phase-banner',
     \ 'gov-progress-list',
     \ 'gov-search',
+    \ 'idam-frontend',
+    \ 'idam-poa',
     \ 'last-login',
     \ 'next-steps',
     \ 'organisation-summary',
