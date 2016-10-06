@@ -141,6 +141,7 @@ map <Leader>m :Magit<CR>
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 map <Leader>t :tabnew<CR>
 map <Leader>/ :Ack<Space>
+map g :GoldenRatioToggle<CR>=
 
 " Allow to close tags in the following XML-like files
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
