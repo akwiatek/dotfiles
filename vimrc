@@ -76,6 +76,7 @@ set   wrap
 set wildignore+=*/bower_components/*
 set wildignore+=*/dist/*
 set wildignore+=*/node_modules/*
+set wildignore+=*/reports/*
 " Maven
 set wildignore+=*/target/*
 
@@ -169,6 +170,8 @@ let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'next-steps',
     \ 'organisation-summary',
     \ 'server-validation-error',
+    \ 'side-nav-other',
+    \ 'side-nav-other-cpp',
     \ 'technical-error'
     \ ]
 let g:syntastic_html_tidy_inline_tags = []
