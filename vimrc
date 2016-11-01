@@ -19,7 +19,7 @@ catch E474
 endtry
 set   confirm
 set   copyindent
-set   dictionary=/usr/share/dict/words
+"set   dictionary=/usr/share/dict/words
 set   diffopt=filler,iwhite,vertical
 set   directory=~/.vim/swaps//
 set   display+=uhex
