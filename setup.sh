@@ -80,8 +80,10 @@ try_git_clone https://github.com/tpope/vim-pathogen
 
 try_git_pull_each
 
-safe_cd ~/.vim/opt/vimpager/
-make
+if which make &> /dev/null; then
+    safe_cd ~/.vim/opt/vimpager/
+    make
+fi
 
 safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
