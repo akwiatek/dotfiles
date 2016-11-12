@@ -158,3 +158,6 @@ source ~/.fzf.zsh
 if [ -r ~/.zshrc.private ]; then
     source ~/.zshrc.private
 fi
+if [ -r ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
