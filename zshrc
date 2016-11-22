@@ -50,16 +50,18 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(copybuffer z)
-which bower   &> /dev/null && plugins+=(bower)
-which git     &> /dev/null && plugins+=(git git-extra-commands git-extras)
-which gradle  &> /dev/null && plugins+=(gradle)
-which gulp    &> /dev/null && plugins+=(gulp)
-which mvn     &> /dev/null && plugins+=(mvn)
-which npm     &> /dev/null && plugins+=(npm)
-which pip     &> /dev/null && plugins+=(pip)
-which thefuck &> /dev/null && plugins+=(thefuck)
-which tmux    &> /dev/null && plugins+=(tmux)
-which vagrant &> /dev/null && plugins+=(vagrant)
+which bower           &> /dev/null && plugins+=(bower)
+which docker          &> /dev/null && plugins+=(docker)
+which docker-compose  &> /dev/null && plugins+=(docker-compose)
+which git             &> /dev/null && plugins+=(git git-extra-commands git-extras)
+which gradle          &> /dev/null && plugins+=(gradle)
+which gulp            &> /dev/null && plugins+=(gulp)
+which mvn             &> /dev/null && plugins+=(mvn)
+which npm             &> /dev/null && plugins+=(npm)
+which pip             &> /dev/null && plugins+=(pip)
+which thefuck         &> /dev/null && plugins+=(thefuck)
+which tmux            &> /dev/null && plugins+=(tmux)
+which vagrant         &> /dev/null && plugins+=(vagrant)
 
 PATH=''
 
