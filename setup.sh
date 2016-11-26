@@ -63,11 +63,13 @@ try_git_pull_each
 
 rm -f ~/.zcompdump* || :
 
-[ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
+if which go &> /dev/null; then
+    [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
 
-safe_cd ~/.fzf/
-git pull
-./install --completion --key-bindings --no-update-rc
+    safe_cd ~/.fzf/
+    git pull
+    ./install --completion --key-bindings --no-update-rc
+fi
 
 safe_cd ~/.vim/undo/
 safe_cd ~/.vim/swaps/
