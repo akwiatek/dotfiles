@@ -62,6 +62,7 @@ which pip             &> /dev/null && plugins+=(pip)
 which thefuck         &> /dev/null && plugins+=(thefuck)
 which tmux            &> /dev/null && plugins+=(tmux)
 which vagrant         &> /dev/null && plugins+=(vagrant)
+which yarn            &> /dev/null && plugins+=(yarn)
 
 PATH=''
 
