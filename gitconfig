@@ -21,6 +21,7 @@
     enabled = true
 [diff]
     compactionHeuristic = true
+    indentHeuristic = true
     renames = copy
 [alias]
     browser = !tig
