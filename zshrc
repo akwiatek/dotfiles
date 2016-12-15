@@ -126,7 +126,16 @@ export ANSIBLE_COW_SELECTION=moose
 export FZF_DEFAULT_COMMAND='find * -type d \( -name node_modules -o -name dist -o -name bower_components -o -name reports -o -name target \) -prune -o -type f -print'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 
-setopt extendedglob
+# Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
+setopt EXTENDED_GLOB
+# The pattern ‘**/*’ can be abbreviated to ‘**’ and the pattern ‘***/*’ can be abbreviated to *** .
+setopt GLOB_STAR_SHORT
+# Append a trailing ‘/’ to all directory names resulting from filename generation (globbing).
+setopt MARK_DIRS
+# Print the exit value of programs with non-zero exit status.
+setopt PRINT_EXIT_VALUE
+# All options are shown, marked ‘on’ / ‘off’.
+setopt KSH_OPTION_PRINT
 
 bindkey '[D' backward-word
 bindkey '[C' forward-word
