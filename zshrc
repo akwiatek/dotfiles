@@ -163,6 +163,9 @@ alias magenta-grep="GREP_COLOR='1;35' grep --color=always"
 alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
 alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
+alias grep='grep --color'
+alias ls='ls --color'
+
 alias noti='reattach-to-user-namespace noti'
 
 source ~/.fzf.zsh
