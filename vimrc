@@ -169,10 +169,11 @@ let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'last-login',
     \ 'next-steps',
     \ 'organisation-summary',
+    \ 'qrcode',
     \ 'server-validation-error',
     \ 'side-nav-other',
     \ 'side-nav-other-cpp',
-    \ 'technical-error'
+    \ 'technical-error',
     \ ]
 let g:syntastic_html_tidy_inline_tags = []
 let g:syntastic_html_tidy_empty_tags = []
