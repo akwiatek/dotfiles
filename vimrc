@@ -79,6 +79,8 @@ set wildignore+=*/node_modules/*
 set wildignore+=*/reports/*
 " Maven
 set wildignore+=*/target/*
+" Ansible galaxy
+set wildignore+=*/roles/*
 
 let do_syntax_sel_menu=1
 
