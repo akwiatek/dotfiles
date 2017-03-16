@@ -157,6 +157,7 @@ let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'amt-navigation',
+    \ 'gov-action-bar',
     \ 'gov-dataset',
     \ 'gov-digit-box',
     \ 'gov-footer',
@@ -173,12 +174,17 @@ let g:syntastic_html_tidy_blocklevel_tags = [
     \ 'organisation-summary',
     \ 'qrcode',
     \ 'server-validation-error',
+    \ 'side-nav-org',
     \ 'side-nav-other',
     \ 'side-nav-other-cpp',
+    \ 'side-nav-other-org',
     \ 'technical-error',
     \ ]
 let g:syntastic_html_tidy_inline_tags = []
 let g:syntastic_html_tidy_empty_tags = []
+let g:syntastic_html_tidy_ignore_errors = [
+    \ '<div> proprietary attribute "technical-error"'
+    \ ]
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
