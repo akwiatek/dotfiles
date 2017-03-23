@@ -96,6 +96,7 @@ try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/flazz/vim-colorschemes
 try_git_clone https://github.com/godlygeek/csapprox
+try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/keith/tmux.vim
 try_git_clone https://github.com/mbbill/undotree
