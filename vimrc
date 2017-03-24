@@ -200,3 +200,5 @@ let g:CSApprox_hook_post = [
     \ 'highlight Normal  ctermbg=none',
     \ 'highlight NonText ctermbg=none'
     \ ]
+
+let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
