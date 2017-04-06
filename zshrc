@@ -125,6 +125,7 @@ export GREP_COLOR='1;41'
 export ANSIBLE_COW_SELECTION=moose
 export FZF_DEFAULT_COMMAND='find * -type d \( -name node_modules -o -name dist -o -name bower_components -o -name reports -o -name target -o -name roles \) -prune -o -type f -print'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export FZF_TMUX=1
 
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
