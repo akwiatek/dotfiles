@@ -133,8 +133,8 @@ setopt EXTENDED_GLOB
 setopt GLOB_STAR_SHORT
 # Append a trailing ‘/’ to all directory names resulting from filename generation (globbing).
 setopt MARK_DIRS
-# Print the exit value of programs with non-zero exit status.
-setopt PRINT_EXIT_VALUE
+# Do not print the exit value of programs with non-zero exit status.
+setopt NO_PRINT_EXIT_VALUE
 # All options are shown, marked ‘on’ / ‘off’.
 setopt KSH_OPTION_PRINT
 
