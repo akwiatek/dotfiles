@@ -77,6 +77,8 @@ set wildignore+=*/bower_components/*
 set wildignore+=*/dist/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/reports/*
+" Gradle
+set wildignore+=*/build/*
 " Maven
 set wildignore+=*/target/*
 " Ansible galaxy
