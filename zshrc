@@ -137,6 +137,8 @@ setopt MARK_DIRS
 setopt NO_PRINT_EXIT_VALUE
 # All options are shown, marked ‘on’ / ‘off’.
 setopt KSH_OPTION_PRINT
+# When writing out the history file, older commands that duplicate newer ones are omitted.
+setopt HIST_SAVE_NO_DUPS
 
 bindkey '[D' backward-word
 bindkey '[C' forward-word
