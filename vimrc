@@ -38,6 +38,8 @@ set   infercase
 set   laststatus=2
 set   linebreak
 set   matchtime=2
+" Never handle mouse selection in the editor
+set   mouse=
 set   number
 " see <F4> mapping
 set   pastetoggle=<F4>
