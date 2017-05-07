@@ -1,5 +1,5 @@
 \set ECHO_HIDDEN on
 \set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%# '
 \pset null '<NULL>'
-\timing
+\timing on
 \x auto
