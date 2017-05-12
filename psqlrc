@@ -3,3 +3,5 @@
 \pset null '<NULL>'
 \timing on
 \x auto
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
