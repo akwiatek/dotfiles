@@ -147,6 +147,8 @@ map <Leader>m :Magit<CR>
 " rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 map <Leader>t :tabnew<CR>
+" UUID generator
+map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
 map <Leader>/ :Ack<Space>
 
 " Allow to close tags in the following XML-like files
