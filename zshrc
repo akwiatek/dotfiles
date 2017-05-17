@@ -125,7 +125,7 @@ which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 export GREP_COLOR='1;41'
 
 export ANSIBLE_COW_SELECTION=moose
-export FZF_DEFAULT_COMMAND='find * -type d \( -name node_modules -o -name dist -o -name bower_components -o -name reports -o -name build -o -name target -o -name roles \) -prune -o -type f -print'
+export FZF_DEFAULT_COMMAND='find * -type d \( -name node_modules -o -name dist -o -name bower_components -o -name reports -o -name build -o -name target -o -name roles -o -name libs -o -name .idea -o -name .idea_modules \) -prune -o -type f -print'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_TMUX=1
 
@@ -159,7 +159,7 @@ weather () {
     curl "http://wttr.in/$1"
 }
 
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,bower_components,dist,node_modules,reports,build,target,roles}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,bower_components,dist,node_modules,reports,build,target,roles,libs,.idea,.idea_modules}'
 
 alias grey-grep="GREP_COLOR='1;30' grep --color=always"
 alias red-grep="GREP_COLOR='1;31' grep --color=always"

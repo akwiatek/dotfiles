@@ -85,6 +85,9 @@ set wildignore+=*/build/*
 set wildignore+=*/target/*
 " Ansible galaxy
 set wildignore+=*/roles/*
+" IntelliJ
+set wildignore+=*/.idea/*
+set wildignore+=*/.idea_modules/*
 
 let do_syntax_sel_menu=1
 
