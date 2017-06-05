@@ -60,7 +60,8 @@ set   showtabline=2
 set   smartcase
 set   smartindent
 set   smarttab
-set   softtabstop=4
+" same as shiftwidth
+set   softtabstop=-1
 set   spelllang=en,pl
 set nospell
 set nostartofline
@@ -126,7 +127,10 @@ autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
 
-autocmd BufRead,BufNewFile *.ldif.j2 set shiftwidth=2
+autocmd BufRead,BufNewFile *.ldif.j2 set tabstop=2
+autocmd BufRead,BufNewFile *.json set tabstop=2
+
+autocmd filetype crontab setlocal nobackup nowritebackup
 
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
