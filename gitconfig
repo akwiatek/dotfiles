@@ -28,7 +28,6 @@
     aliases = !git config --list | grep ^alias | sed s/alias.//
     recent-branches = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
     test-merge = merge --no-commit --no-ff
-    make-change-request = !git push azure HEAD:refs/for/develop%topic=$(git rev-parse --abbrev-ref HEAD) && git tag --force $(git rev-parse --abbrev-ref HEAD)-published
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
