@@ -42,7 +42,6 @@ vim_index_help_each() {
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
 try_git_clone https://github.com/tkrajina/git-plus
-try_git_clone https://github.com/unixorn/git-extra-commands
 
 try_git_pull_each
 
@@ -56,7 +55,7 @@ cd ~
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 safe_cd ~/.oh-my-zsh/custom/plugins/
-[ -L git-extra-commands ] || ln -s ~/src/git-extensions/git-extra-commands git-extra-commands
+try_git_clone https://github.com/unixorn/git-extra-commands
 try_git_clone https://github.com/zsh-users/zsh-completions
 
 try_git_pull_each
