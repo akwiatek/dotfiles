@@ -25,7 +25,7 @@
     renames = copy
 [alias]
     browser = !tig
-    aliases = !git config --list | grep ^alias | sed s/alias.//
+    aliases = "!git config --list | sed --quiet '/^alias[.]/ { s/^alias[.]//; p }'"
     recent-branches = !git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
     test-merge = merge --no-commit --no-ff
 [color "diff"]
