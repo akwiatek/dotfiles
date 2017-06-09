@@ -50,21 +50,25 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(copybuffer z)
-which bower           &> /dev/null && plugins+=(bower)
-which docker          &> /dev/null && plugins+=(docker)
-which docker-compose  &> /dev/null && plugins+=(docker-compose)
-which git             &> /dev/null && plugins+=(git git-extra-commands git-extras)
-which gradle          &> /dev/null && plugins+=(gradle)
-which gulp            &> /dev/null && plugins+=(gulp)
-which mvn             &> /dev/null && plugins+=(mvn)
-which npm             &> /dev/null && plugins+=(npm)
-which pip             &> /dev/null && plugins+=(pip)
-which sbt             &> /dev/null && plugins+=(sbt)
-which scala           &> /dev/null && plugins+=(scala)
-which thefuck         &> /dev/null && plugins+=(thefuck)
-which tmux            &> /dev/null && plugins+=(tmux)
-which vagrant         &> /dev/null && plugins+=(vagrant)
-which yarn            &> /dev/null && plugins+=(yarn)
+plugins+=($(which \
+        adb             \
+        bower           \
+        docker          \
+        docker-compose  \
+        gradle          \
+        gulp            \
+        mvn             \
+        npm             \
+        pip             \
+        sbt             \
+        scala           \
+        thefuck         \
+        tmux            \
+        vagrant         \
+        yarn            \
+        2> /dev/null | sed 's:.*/::'
+    ))
+which git &> /dev/null && plugins+=(git-extra-commands git-extras)
 
 PATH=''
 
@@ -146,9 +150,9 @@ bindkey '[D' backward-word
 bindkey '[C' forward-word
 
 which docker-machine &> /dev/null && eval "$(docker-machine env 2> /dev/null)"
-which jump    &> /dev/null && eval "$(jump shell zsh)"
-which thefuck &> /dev/null && eval "$(thefuck --alias)"
-which pm2     &> /dev/null && eval "$(pm2 completion)"
+which jump           &> /dev/null && eval "$(jump shell zsh)"
+which thefuck        &> /dev/null && eval "$(thefuck --alias)"
+which pm2            &> /dev/null && eval "$(pm2 completion)"
 
 if which pandoc &> /dev/null; then
     md2man () {
