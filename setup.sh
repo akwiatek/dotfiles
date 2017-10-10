@@ -13,7 +13,10 @@ for_each_dir() {
 }
 
 try_git_pull() {
-    ! [ -d .git ] || git pull
+    if [ -d .git ]; then
+        git fetch
+        git reset --hard @{u}
+    fi
 }
 
 try_git_pull_each() {
