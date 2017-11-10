@@ -203,6 +203,18 @@ let g:syntastic_html_tidy_ignore_errors = [
 let g:polyglot_disabled = ['tmux']
 
 let g:ctrlp_cmd = 'CtrlPLastMode'
+" Look up by both directory and file names
+let g:ctrlp_by_filename = 0
+" Persisent cache
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
+" Unlimited number of files
+let g:ctrlp_max_files = 0
+" Faster caching in git repositories
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+" Delayed pattern matching of typed filename
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_line_prefix = ' »--► '
 
 let g:ack_use_cword_for_empty_search = 1
 let g:ackhighlight = 1
