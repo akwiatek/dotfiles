@@ -119,15 +119,11 @@ cnoreabbrev dt diffthis
 
 autocmd BufRead,BufNewFile *.bsh set syntax=java
 autocmd BufRead,BufNewFile *.raml set syntax=yaml
-autocmd BufRead,BufNewFile *.postman_dump set syntax=yaml
-autocmd BufRead,BufNewFile *.groovy.j2 set filetype=groovy
-autocmd BufRead,BufNewFile *.ldif.j2 set filetype=ldif
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
 
-autocmd BufRead,BufNewFile *.ldif.j2 set tabstop=2
 autocmd BufRead,BufNewFile *.json set tabstop=2
 
 autocmd filetype crontab setlocal nobackup nowritebackup
@@ -169,34 +165,10 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
-    \ 'amt-navigation',
-    \ 'gov-action-bar',
-    \ 'gov-dataset',
-    \ 'gov-digit-box',
-    \ 'gov-footer',
-    \ 'gov-header',
-    \ 'gov-notice',
-    \ 'gov-notification',
-    \ 'gov-phase-banner',
-    \ 'gov-progress-list',
-    \ 'gov-search',
-    \ 'idam-frontend',
-    \ 'idam-poa',
-    \ 'last-login',
-    \ 'next-steps',
-    \ 'organisation-summary',
-    \ 'qrcode',
-    \ 'server-validation-error',
-    \ 'side-nav-org',
-    \ 'side-nav-other',
-    \ 'side-nav-other-cpp',
-    \ 'side-nav-other-org',
-    \ 'technical-error',
     \ ]
 let g:syntastic_html_tidy_inline_tags = []
 let g:syntastic_html_tidy_empty_tags = []
 let g:syntastic_html_tidy_ignore_errors = [
-    \ '<div> proprietary attribute "technical-error"'
     \ ]
 
 " Disable syntax files in Polyglot which are handled by separate plugins
