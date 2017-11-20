@@ -184,8 +184,6 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
 " Faster caching in git repositories
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-" Delayed pattern matching of typed filename
-let g:ctrlp_lazy_update = 1
 let g:ctrlp_line_prefix = ' »--► '
 
 let g:ack_use_cword_for_empty_search = 1
