@@ -143,16 +143,25 @@ map [l :lprevious<CR>
 map ]l :lnext<CR>
 map [t :tabprevious<CR>
 map ]t :tabnext<CR>
+" a - argument wrap
 map <Leader>a :ArgWrap<CR>
+" b - blame
 map <Leader>b :Gblame<CR>
+" d - declared methods / values
+map <Leader>d :TlistOpen<CR>
+" f - file manager
 map <Leader>f :NERDTreeFind<CR>
+" m - git index manager
+map <Leader>g :Magit<CR>
+" h - history of changes
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
-map <Leader>m :Magit<CR>
-" rename current word
+" r - rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
+" t - tab creation
 map <Leader>t :tabnew<CR>
-" UUID generator
+" u - UUID generator
 map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
+" / - search in files
 map <Leader>/ :Ack<Space>
 
 " Allow to close tags in the following XML-like files
@@ -174,6 +183,9 @@ let g:syntastic_html_tidy_ignore_errors = [
 
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = ['tmux']
+" Do not change filetype of .js files to javascript.jsx (React)
+" javascript.jsx filetype is not supported by taglist.vim plugin
+let g:jsx_pragma_required = 1
 
 let g:ctrlp_cmd = 'CtrlPLastMode'
 " Look up by both directory and file names
@@ -198,3 +210,8 @@ let g:CSApprox_hook_post = [
     \ ]
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
+
+" Sort entries by name rather than by chronological order
+let Tlist_Sort_Type = 'name'
+let Tlist_WinWidth = 45
+let Tlist_Close_On_Select = 1
