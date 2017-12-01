@@ -78,6 +78,7 @@ set   wrap
 " Node.js
 set wildignore+=*/bower_components/*
 set wildignore+=*/dist/*
+set wildignore+=*/release/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/reports/*
 " Gradle
