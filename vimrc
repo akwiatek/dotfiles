@@ -129,6 +129,12 @@ autocmd BufRead,BufNewFile *.json set tabstop=2
 
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+" swap ctrl-] with g ctrl-] (use :tjump instead of :tag)
+nnoremap <c-]> g<c-]>
+vnoremap <c-]> g<c-]>
+nnoremap g<c-]> <c-]>
+vnoremap g<c-]> <c-]>
+
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
 " see pastetoggle

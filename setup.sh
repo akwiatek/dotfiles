@@ -94,6 +94,7 @@ safe_cd ~/.vim/bundle/
 try_git_clone https://github.com/airblade/vim-gitgutter
 try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/bronson/vim-trailing-whitespace
+try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/flazz/vim-colorschemes
