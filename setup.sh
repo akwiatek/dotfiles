@@ -135,4 +135,7 @@ try_git_pull_each
 vim_index_help_each
 
 safe_cd ~/.vim/syntax/
-curl --silent --show-error http://www.haproxy.org/download/contrib/haproxy.vim > haproxy.vim
+curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
+
+safe_cd ~/
+curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,java,ruby,node,maven,macos,linux,scala,gradle,eclipse,intellij%2biml,libreoffice' > .gitignore_global
