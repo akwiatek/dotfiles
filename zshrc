@@ -163,6 +163,9 @@ weather () {
 }
 
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,bower_components,dist,node_modules,reports,build,target,roles,libs,.idea,.idea_modules}'
+# fzf does not co-operate with 256 color terminals nicely.
+alias fzf='TERM=xterm fzf'
+alias fzf-tmux='TERM=xterm fzf-tmux'
 
 alias grey-grep="GREP_COLOR='1;30' grep --color=always"
 alias red-grep="GREP_COLOR='1;31' grep --color=always"
