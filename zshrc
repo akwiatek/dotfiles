@@ -52,6 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(copybuffer z)
 plugins+=($(which \
         adb             \
+        aws             \
         bower           \
         docker          \
         docker-compose  \
