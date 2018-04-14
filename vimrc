@@ -119,6 +119,8 @@ match Guideline /\%>125v.\+/
 cnoreabbrev dt diffthis
 
 autocmd BufRead,BufNewFile *.bsh set syntax=java
+autocmd BufRead,BufNewFile *.g set filetype=antlr3
+autocmd BufRead,BufNewFile *.g4 set filetype=antlr4
 autocmd BufRead,BufNewFile *.raml set syntax=yaml
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
