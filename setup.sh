@@ -123,6 +123,7 @@ try_git_clone https://github.com/vim-scripts/Align
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
 try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
+try_git_clone https://github.com/vim-scripts/matchit.zip
 try_git_clone https://github.com/vim-scripts/matrix.vim--Yang
 try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/SQLUtilities
