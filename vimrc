@@ -70,6 +70,9 @@ set   tabstop=4
 set   undodir=~/.vim/undo//
 set   undofile
 set   undolevels=10000
+" delay to save a swap file.
+" delay before Tagbar gets updated.
+set   updatetime=500
 set   wildmenu
 set   wildmode=full
 set   winheight=4
@@ -168,7 +171,7 @@ map <Leader>g :Magit<CR>
 " h - history of changes
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
 " m - file members
-map <Leader>m :TagbarOpenAutoClose<CR>
+map <Leader>m :TagbarOpen fj<CR>
 " r - rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 " t - tab creation
@@ -223,6 +226,14 @@ let g:CSApprox_hook_post = [
     \ 'highlight Normal     ctermbg=none',
     \ 'highlight NonText    ctermbg=none'
     \ ]
+
+let g:tagbar_width = 50
+" 0: Use the width of the longest currently visible tag.
+let g:tagbar_zoomwidth = 0
+" 1: Show absolute line numbers.
+let g:tagbar_show_linenumbers = 1
+let g:tagbar_autopreview = 1
+let g:tagbar_previewwin_pos = "rightbelow"
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
 
