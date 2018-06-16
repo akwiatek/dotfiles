@@ -19,7 +19,8 @@ catch E474
 endtry
 set   confirm
 set   copyindent
-"set   dictionary=/usr/share/dict/words
+" see 'highlight CursorLine'
+set   cursorline
 set   diffopt=filler,iwhite,vertical
 set   directory=~/.vim/swaps//
 set   display+=uhex
@@ -100,17 +101,20 @@ execute pathogen#infect()
 
 colorscheme af
 
-" vimdiff colours
+" for the list of all available named colors see ':runtime syntax/colortest.vim'
+" some colors have to changed later, after CSApprox is loaded. See 'CSApprox_hook_post'
+
+" vimdiff colors
 highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
 highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
 highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
 highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
 
-" other colours
+" other colors
 highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
 highlight Guideline               ctermbg=blue             guibg=purple4
 
-" Syntastic colours
+" Syntastic colors
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 
@@ -159,10 +163,12 @@ map <Leader>b :Gblame<CR>
 map <Leader>d :TlistOpen<CR>
 " f - file manager
 map <Leader>f :NERDTreeFind<CR>
-" m - git index manager
+" g - git index manager
 map <Leader>g :Magit<CR>
 " h - history of changes
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
+" m - file members
+map <Leader>m :TagbarOpenAutoClose<CR>
 " r - rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 " t - tab creation
@@ -213,8 +219,9 @@ let g:ackprg = 'ag --vimgrep'
 
 " transparent background
 let g:CSApprox_hook_post = [
-    \ 'highlight Normal  ctermbg=none',
-    \ 'highlight NonText ctermbg=none'
+    \ 'highlight CursorLine ctermbg=17   cterm=bold',
+    \ 'highlight Normal     ctermbg=none',
+    \ 'highlight NonText    ctermbg=none'
     \ ]
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'

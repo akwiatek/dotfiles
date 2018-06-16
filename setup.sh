@@ -104,6 +104,7 @@ try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/j5shi/SearchComplete
 try_git_clone https://github.com/keith/tmux.vim
+try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
 try_git_clone https://github.com/mileszs/ack.vim
 try_git_clone https://github.com/nathanaelkane/vim-indent-guides
