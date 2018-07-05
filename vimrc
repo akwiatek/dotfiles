@@ -94,6 +94,10 @@ set wildignore+=*/roles/*
 " IntelliJ
 set wildignore+=*/.idea/*
 set wildignore+=*/.idea_modules/*
+" 3rd party dependencies
+set wildignore+=*/fonts/*
+set wildignore+=*/images/*
+set wildignore+=*/libs/*
 
 let do_syntax_sel_menu=1
 
