@@ -136,6 +136,7 @@ autocmd BufRead,BufNewFile *.raml set syntax=yaml
 autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
 autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
+autocmd BufRead,BufNewFile messages set filetype=jproperties
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
 
 autocmd BufRead,BufNewFile *.json set tabstop=2
