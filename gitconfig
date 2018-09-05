@@ -2,6 +2,8 @@
     path = ~/.gitconfig.private
 [user]
     name = Adam Kwiatek
+[clean]
+    requireForce = false
 [merge]
     tool = vimdiff
     conflictstyle = diff3
