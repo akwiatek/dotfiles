@@ -163,12 +163,16 @@ map [l :lprevious<CR>
 map ]l :lnext<CR>
 map [t :tabprevious<CR>
 map ]t :tabnext<CR>
+map [e :cprevious<CR>
+map ]e :cnext<CR>
 " a - argument wrap
 map <Leader>a :ArgWrap<CR>
 " b - blame
 map <Leader>b :Gblame<CR>
 " d - declared methods / values
 map <Leader>d :TlistOpen<CR>
+" e - errors shown in the quickfix window
+map <Leader>e :copen<CR>
 " f - file manager
 map <Leader>f :NERDTreeFind<CR>
 " g - git index manager
