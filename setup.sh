@@ -113,6 +113,7 @@ try_git_clone https://github.com/scrooloose/nerdcommenter
 try_git_clone https://github.com/scrooloose/nerdtree
 try_git_clone https://github.com/scrooloose/syntastic
 try_git_clone https://github.com/sheerun/vim-polyglot
+try_git_clone https://github.com/Shougo/vimproc.vim
 try_git_clone https://github.com/skwp/greplace.vim
 try_git_clone https://github.com/tpope/vim-abolish
 try_git_clone https://github.com/tpope/vim-fugitive
@@ -130,12 +131,18 @@ try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/SQLUtilities
 try_git_clone https://github.com/vim-scripts/taglist.vim
 try_git_clone https://github.com/vim-scripts/The-Old-Ones
-try_git_clone https://github.com/vim-scripts/vim-human-dates
+try_git_clone https://github.com/vim-scripts/tsuquyomi
 try_git_clone https://github.com/vim-scripts/vimagit
+try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
 try_git_pull_each
 vim_index_help_each
+
+if which make &> /dev/null; then
+    safe_cd ~/.vim/bundle/vimproc.vim/
+    make
+fi
 
 safe_cd ~/.vim/syntax/
 curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
