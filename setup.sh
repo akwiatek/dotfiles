@@ -6,9 +6,11 @@ for_each_dir() {
     local action="$1"
     for d in *; do
         echo "$d"
-        cd "$d"
-        "$action"
-        cd -
+        if [ -d "$d" ]; then
+            cd "$d"
+            "$action"
+            cd -
+        fi
     done
 }
 
@@ -54,7 +56,7 @@ try_git_clone https://github.com/tmux-plugins/tpm
 
 try_git_pull_each
 
-cd ~
+safe_cd ~/
 [ -d .oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 safe_cd ~/.oh-my-zsh/custom/plugins/
@@ -81,11 +83,6 @@ try_git_clone https://github.com/rkitover/vimpager
 try_git_clone https://github.com/tpope/vim-pathogen
 
 try_git_pull_each
-
-if which make &> /dev/null; then
-    safe_cd ~/.vim/opt/vimpager/
-    make
-fi
 
 safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
@@ -140,6 +137,8 @@ try_git_pull_each
 vim_index_help_each
 
 if which make &> /dev/null; then
+    safe_cd ~/.vim/opt/vimpager/
+    make
     safe_cd ~/.vim/bundle/vimproc.vim/
     make
 fi
