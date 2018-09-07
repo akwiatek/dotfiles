@@ -42,6 +42,8 @@ set   matchtime=2
 " Never handle mouse selection in the editor
 set   mouse=
 set   number
+" Search for files recursively in the current folder
+set   path+=**
 " see <F4> mapping
 set   pastetoggle=<F4>
 set   relativenumber
@@ -190,6 +192,9 @@ map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
 " / - search in files
 map <Leader>/ :Ack<Space>
 
+map <Leader><C-^> :TsuquyomiReferences<CR>
+map <Leader><C-]> :TsuquyomiDefinition<CR>
+
 " Allow to close tags in the following XML-like files
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
 
@@ -245,6 +250,8 @@ let g:tagbar_autopreview = 1
 let g:tagbar_previewwin_pos = "rightbelow"
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
+
+let g:tsuquyomi_disable_default_mappings = 1
 
 " Sort entries by name rather than by chronological order
 let Tlist_Sort_Type = 'name'
