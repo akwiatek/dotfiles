@@ -118,6 +118,7 @@ try_git_clone https://github.com/tpope/vim-git
 try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/tpope/vim-rhubarb
 try_git_clone https://github.com/tpope/vim-surround
+try_git_clone https://github.com/Valloric/YouCompleteMe
 try_git_clone https://github.com/vim-scripts/Align
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
@@ -142,6 +143,10 @@ if which make &> /dev/null; then
     safe_cd ~/.vim/bundle/vimproc.vim/
     make
 fi
+
+safe_cd YouCompleteMe/
+git submodule update --init --recursive
+./install.py --system-libclang --clang-completer
 
 safe_cd ~/.vim/syntax/
 curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
