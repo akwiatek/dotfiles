@@ -111,6 +111,7 @@ try_git_clone https://github.com/scrooloose/nerdtree
 try_git_clone https://github.com/scrooloose/syntastic
 try_git_clone https://github.com/sheerun/vim-polyglot
 try_git_clone https://github.com/Shougo/vimproc.vim
+try_git_clone https://github.com/sirver/ultisnips
 try_git_clone https://github.com/skwp/greplace.vim
 try_git_clone https://github.com/tpope/vim-abolish
 try_git_clone https://github.com/tpope/vim-fugitive

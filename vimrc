@@ -257,3 +257,6 @@ let g:tsuquyomi_disable_default_mappings = 1
 let Tlist_Sort_Type = 'name'
 let Tlist_WinWidth = 45
 let Tlist_Close_On_Select = 1
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_key_detailed_diagnostics = ''
