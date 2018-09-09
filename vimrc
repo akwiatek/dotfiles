@@ -110,14 +110,19 @@ execute pathogen#infect()
 
 colorscheme af
 
-" for the list of all available named colors see ':runtime syntax/colortest.vim'
-" some colors have to changed later, after CSApprox is loaded. See 'CSApprox_hook_post'
+" For a list of all available named colors see ':runtime syntax/colortest.vim'
+" Some colors have to changed later, after CSApprox is loaded. See 'CSApprox_hook_post'
+" For a list of all available highlight colors see ':help highlight-groups'
 
 " vimdiff colors
 highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
 highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
 highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
 highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
+
+" pop up menu
+highlight Pmenu    ctermfg=white ctermbg=brown  guifg=white guibg=brown
+highlight PmenuSel ctermfg=black ctermbg=yellow guifg=black guibg=yellow
 
 " other colors
 highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
