@@ -145,7 +145,7 @@ if which make &> /dev/null; then
     make
 fi
 
-safe_cd YouCompleteMe/
+safe_cd ~/.vim/bundle/YouCompleteMe/
 git submodule update --init --recursive
 ./install.py --system-libclang --clang-completer
 
