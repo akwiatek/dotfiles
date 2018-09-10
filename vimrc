@@ -242,6 +242,7 @@ let g:ackprg = 'ag --vimgrep'
 " transparent background
 let g:CSApprox_hook_post = [
     \ 'highlight CursorLine ctermbg=17   cterm=bold',
+    \ 'highlight Pmenu      ctermbg=brown',
     \ 'highlight Normal     ctermbg=none',
     \ 'highlight NonText    ctermbg=none'
     \ ]
