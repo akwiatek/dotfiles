@@ -140,7 +140,7 @@ vim_index_help_each
 
 if which make &> /dev/null; then
     safe_cd ~/.vim/opt/vimpager/
-    make
+    make vimpager vimcat
     safe_cd ~/.vim/bundle/vimproc.vim/
     make
 fi
