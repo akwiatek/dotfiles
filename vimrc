@@ -147,6 +147,7 @@ autocmd BufRead,BufNewFile messages set filetype=jproperties
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
 
 autocmd BufRead,BufNewFile *.json set tabstop=2
+autocmd BufRead,BufNewFile *.js set tabstop=4
 
 autocmd filetype crontab setlocal nobackup nowritebackup
 
