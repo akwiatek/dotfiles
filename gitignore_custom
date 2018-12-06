@@ -1,0 +1,3 @@
+# dotfiles/gitignore_custom
+yarn.lock
+!tags/

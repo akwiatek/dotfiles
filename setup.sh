@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 set -e
 
@@ -43,6 +43,8 @@ vim_index_help() {
 vim_index_help_each() {
     for_each_dir vim_index_help
 }
+
+SCRIPT_DIR="$0:A:h"
 
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
@@ -154,3 +156,4 @@ curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim
 
 safe_cd ~/
 curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,java,ruby,node,maven,macos,linux,scala,gradle,eclipse,intellij%2biml,intellij%2ball,libreoffice' > .gitignore_global
+cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
