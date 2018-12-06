@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 
 plugins+=(zsh-completions)
 autoload -U compinit && compinit
+autoload -U zsh-mime-setup && zsh-mime-setup
 
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
