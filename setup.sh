@@ -149,7 +149,7 @@ fi
 
 safe_cd ~/.vim/bundle/YouCompleteMe/
 git submodule update --init --recursive
-./install.py --system-libclang --clang-completer
+./install.py --clang-completer --ts-completer
 
 safe_cd ~/.vim/syntax/
 curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
