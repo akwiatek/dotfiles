@@ -1,0 +1,3 @@
+$if psql
+    "\C-x\C-e": "\C-e\\e\C-m"
+$endif
