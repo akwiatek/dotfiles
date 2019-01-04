@@ -52,7 +52,16 @@ export ZSH_TMUX_AUTOSTART=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(copybuffer z)
+plugins=( \
+        autoenv \
+        dircycle \
+        fancy-ctrl-z \
+        git \
+        git-extra-commands \
+        git-extras \
+        globalias \
+        z \
+    )
 plugins+=($(which \
         adb             \
         aws             \
@@ -62,31 +71,28 @@ plugins+=($(which \
         gradle          \
         gulp            \
         mvn             \
+        ng              \
         npm             \
+        npx             \
         pip             \
         sbt             \
         scala           \
         thefuck         \
         tmux            \
-        vagrant         \
         yarn            \
         2> /dev/null | sed 's:.*/::'
     ))
-which git &> /dev/null && plugins+=(git-extra-commands git-extras)
 
-PATH=''
-
+amend_path_content=''
 amend_path () {
-    [ -d "$1" ] || return
-    [ -z "$PATH" ] && PATH="$1" || PATH="$PATH:$1"
+    if [ -d "$1" ]; then
+        amend_path_content="$amend_path_content:$1"
+    fi
 }
 
-# /usr/local/opt/coreutils/libexec/gnubin is before /usr/bin so Homebrew GNU bins are preffered over OSX BSD bins
-amend_path '/usr/local/opt/coreutils/libexec/gnubin'
 amend_path '/usr/lib/jvm/default/bin'
 amend_path '/opt/local/sbin'
 amend_path '/opt/local/bin'
-# /usr/local/bin is before /usr/bin so Homebrew Vim is preffered over OSX Vim
 amend_path '/usr/local/sbin'
 amend_path '/usr/local/bin'
 amend_path '/usr/bin/site_perl'
@@ -96,7 +102,7 @@ amend_path '/usr/sbin'
 amend_path '/usr/bin'
 amend_path '/sbin'
 amend_path '/bin'
-which git &> /dev/null && amend_path "$(dirname $(readlink -f $(which git)))/share/git/git-jump"
+amend_path "$(dirname $(readlink -f $(which git)))/share/git/git-jump"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
 amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
@@ -109,9 +115,10 @@ do
     amend_path "$ext"
 done
 
-unset -f amend_path
+export PATH="${amend_path_content/:}"
 
-export PATH
+unset -f amend_path
+unset amend_path_content
 
 source $ZSH/oh-my-zsh.sh
 
@@ -155,18 +162,7 @@ bindkey '[C' forward-word
 
 which docker-machine &> /dev/null && eval "$(docker-machine env 2> /dev/null)"
 which gulp           &> /dev/null && eval "$(gulp --completion=zsh)"
-which jump           &> /dev/null && eval "$(jump shell zsh)"
 which thefuck        &> /dev/null && eval "$(thefuck --alias)"
-which pm2            &> /dev/null && eval "$(pm2 completion)"
-
-if which pandoc &> /dev/null; then
-    md2man () {
-        pandoc --standalone --from=markdown --to=man $1 | groff -Tutf8 -man | $PAGER
-    }
-fi
-weather () {
-    curl "http://wttr.in/$1"
-}
 
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,bower_components,dist,node_modules,reports,build,target,roles,libs,.idea,.idea_modules}'
 # fzf does not co-operate with 256 color terminals nicely.
@@ -183,8 +179,6 @@ alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
 alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
 alias ls='ls --color'
-
-alias noti='reattach-to-user-namespace noti'
 
 source ~/.fzf.zsh
 
