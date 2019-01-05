@@ -59,7 +59,6 @@ plugins=( \
         git \
         git-extra-commands \
         git-extras \
-        globalias \
         z \
     )
 plugins+=($(which \
