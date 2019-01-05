@@ -96,6 +96,7 @@ try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/bronson/vim-trailing-whitespace
 try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
+try_git_clone https://github.com/djdt/pyparens.nvim
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/flazz/vim-colorschemes
@@ -136,6 +137,7 @@ try_git_clone https://github.com/vim-scripts/The-Old-Ones
 try_git_clone https://github.com/vim-scripts/tsuquyomi
 try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/vim-scripts/vim-human-dates
+try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 
 try_git_pull_each

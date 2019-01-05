@@ -189,6 +189,8 @@ map <Leader>g :Magit<CR>
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
 " m - file members
 map <Leader>m :TagbarOpen fj<CR>
+" n - npm package info ( package.json files )
+map <Leader>n :PackageInfo<CR>
 " r - rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 " t - tab creation
