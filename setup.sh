@@ -97,6 +97,7 @@ try_git_clone https://github.com/bronson/vim-trailing-whitespace
 try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/djdt/pyparens.nvim
+try_git_clone https://github.com/dominikduda/vim_current_word
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/flazz/vim-colorschemes
