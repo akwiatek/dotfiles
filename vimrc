@@ -177,6 +177,8 @@ map ]e :cnext<CR>
 map <Leader>a :ArgWrap<CR>
 " b - blame
 map <Leader>b :Gblame<CR>
+" c - checkout a branch
+map <Leader>c :Twiggy<CR>
 " d - declared methods / values
 map <Leader>d :TlistOpen<CR>
 " e - errors shown in the quickfix window
