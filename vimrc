@@ -129,19 +129,18 @@ highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
 highlight Guideline               ctermbg=blue             guibg=purple4
 
 " Syntastic colors
-highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticErrorSign   SignColumn
 highlight link SyntasticWarningSign SignColumn
+
+" filestyle plugin requires this color to be defined
+highlight Normal ctermbg=black
 
 match Guideline /\%>125v.\+/
 
 cnoreabbrev dt diffthis
 
-autocmd BufRead,BufNewFile *.bsh set syntax=java
 autocmd BufRead,BufNewFile *.g set filetype=antlr3
 autocmd BufRead,BufNewFile *.g4 set filetype=antlr4
-autocmd BufRead,BufNewFile *.raml set syntax=yaml
-autocmd BufRead,BufNewFile haproxy* set filetype=haproxy
-autocmd BufRead,BufNewFile *Tests.js set filetype=jasmine.javascript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
 autocmd BufRead,BufNewFile messages set filetype=jproperties
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
@@ -191,14 +190,14 @@ map <Leader>g :Magit<CR>
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
 " m - file members
 map <Leader>m :TagbarOpen fj<CR>
-" n - npm package info ( package.json files )
-map <Leader>n :PackageInfo<CR>
 " r - rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 " t - tab creation
 map <Leader>t :tabnew<CR>
 " u - UUID generator
 map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
+" x - fiX whitespaces
+map <Leader>x :FileStyleFix<CR>
 " / - search in files
 map <Leader>/ :Ack<Space>
 
