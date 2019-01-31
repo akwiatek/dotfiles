@@ -90,6 +90,7 @@ amend_path () {
 }
 
 amend_path '/usr/lib/jvm/default/bin'
+amend_path '/opt/gradle/bin'
 amend_path '/opt/local/sbin'
 amend_path '/opt/local/bin'
 amend_path '/usr/local/sbin'
