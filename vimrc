@@ -11,7 +11,7 @@ set nobackup
 set   breakindent
 " use dictionary files in autocompletion
 set   complete+=k
-set   completeopt=menuone,preview
+set   completeopt=menuone
 try
     set completeopt+=noinsert,noselect
 catch E474
