@@ -144,6 +144,9 @@ export ANSIBLE_COW_SELECTION=moose
 export FZF_DEFAULT_COMMAND='find . -type d \( -name .git -o -name node_modules -o -name dist -o -name release -o -name bower_components -o -name reports -o -name build -o -name target -o -name roles -o -name libs -o -name .idea -o -name .idea_modules \) -prune -o -type f -print'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_TMUX=1
+export JSGC_DISABLE_POISONING=1
+export MOZ_ACCELERATED=1
+export MOZ_WEBRENDER=1
 
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
