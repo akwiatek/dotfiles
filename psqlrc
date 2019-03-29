@@ -1,12 +1,15 @@
-\set ECHO_HIDDEN on
-\set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%# '
-\pset null '<NULL>'
 \timing on
-\x auto
+\x off
+
+\set COMP_KEYWORD_CASE upper
+\set ECHO_HIDDEN on
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
+\set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%# '
 
 \pset linestyle unicode
+\pset null '<NULL>'
+\pset pager always
 \pset unicode_border_linestyle single
 \pset unicode_column_linestyle single
 \pset unicode_header_linestyle double
