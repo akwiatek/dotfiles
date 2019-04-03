@@ -62,24 +62,18 @@ plugins=( \
         z \
     )
 plugins+=($(which \
-        adb             \
-        aws             \
-        bower           \
-        docker          \
-        docker-compose  \
         gradle          \
         gulp            \
         mvn             \
         ng              \
         npm             \
         npx             \
-        pip             \
         sbt             \
         scala           \
         thefuck         \
         tmux            \
         yarn            \
-        2> /dev/null | sed 's:.*/::'
+        | sed '/not found$/d;s:.*/::'
     ))
 
 amend_path_content=''
