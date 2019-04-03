@@ -76,6 +76,10 @@ plugins+=($(which \
         | sed '/not found$/d;s:.*/::'
     ))
 
+aws_prompt_info() {
+    # dummy implementation
+}
+
 amend_path_content=''
 amend_path () {
     if [ -d "$1" ]; then
