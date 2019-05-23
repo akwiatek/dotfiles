@@ -5,7 +5,7 @@
 \set ECHO_HIDDEN on
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
-\set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%# '
+\set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%#%012'
 
 \pset linestyle unicode
 \pset null '<NULL>'
