@@ -139,6 +139,7 @@ match Guideline /\%>125v.\+/
 
 cnoreabbrev dt diffthis
 
+autocmd BufRead,BufNewFile *.dump set filetype=sql
 autocmd BufRead,BufNewFile *.g set filetype=antlr3
 autocmd BufRead,BufNewFile *.g4 set filetype=antlr4
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
