@@ -44,7 +44,7 @@ vim_index_help_each() {
     for_each_dir vim_index_help
 }
 
-SCRIPT_DIR="$0:A:h"
+SCRIPT_DIR="$(dirname $(realpath $0))"
 
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
