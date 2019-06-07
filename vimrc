@@ -273,3 +273,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_detailed_diagnostics = ''
 
 let g:vim_current_word#highlight_current_word = 0
+
+let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.html,*.js,*.scss Prettier
