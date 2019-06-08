@@ -197,6 +197,8 @@ map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
 map <Leader>t :tabnew<CR>
 " u - UUID generator
 map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
+" w - window interactive mode
+map <leader>w :InteractiveWindow<CR>
 " x - fiX whitespaces
 map <Leader>x :FileStyleFix<CR>
 " / - search in files
