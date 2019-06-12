@@ -139,7 +139,7 @@ which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 export GREP_COLOR='1;41'
 
 export ANSIBLE_COW_SELECTION=moose
-export FZF_DEFAULT_COMMAND='find . -type d \( -name .git -o -name node_modules -o -name dist -o -name release -o -name bower_components -o -name reports -o -name build -o -name target -o -name roles -o -name libs -o -name .idea -o -name .idea_modules \) -prune -o -type f -print'
+export FZF_DEFAULT_COMMAND='find . -type d \( -name .git -o -name node_modules -o -name dist -o -name release -o -name reports -o -name bin -o -name build -o -name target -o -name roles -o -name libs -o -name .idea -o -name .idea_modules \) -prune -o -type f -print'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_TMUX=1
 export JSGC_DISABLE_POISONING=1
@@ -166,7 +166,7 @@ which docker-machine &> /dev/null && eval "$(docker-machine env 2> /dev/null)"
 which gulp           &> /dev/null && eval "$(gulp --completion=zsh)"
 which thefuck        &> /dev/null && eval "$(thefuck --alias)"
 
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,bower_components,dist,node_modules,reports,build,target,roles,libs,.idea,.idea_modules}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,dist,node_modules,reports,bin,build,target,roles,libs,.idea,.idea_modules}'
 # fzf does not co-operate with 256 color terminals nicely.
 alias fzf='TERM=xterm fzf'
 alias fzf-tmux='TERM=xterm fzf-tmux'

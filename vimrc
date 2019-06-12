@@ -82,12 +82,12 @@ set   wrap
 
 " don't show files in these folders in Ctrl-P
 " Node.js
-set wildignore+=*/bower_components/*
 set wildignore+=*/dist/*
 set wildignore+=*/release/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/reports/*
 " Gradle
+set wildignore+=*/bin/*
 set wildignore+=*/build/*
 " Maven
 set wildignore+=*/target/*
