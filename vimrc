@@ -244,7 +244,7 @@ let g:ctrlp_line_prefix = ' »--► '
 
 let g:ack_use_cword_for_empty_search = 1
 let g:ackhighlight = 1
-let g:ackprg = 'ag --vimgrep'
+let g:ackprg = 'rg --vimgrep'
 
 " transparent background
 let g:CSApprox_hook_post = [
