@@ -135,8 +135,8 @@ which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 [ "$TERM" = 'screen' ] && export TERM=screen-256color
 [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
 
-# red background color in grep output
-export GREP_COLORS='1;41'
+# red foreground color in grep output
+export GREP_COLORS='1;31:ln=1;33:fn=1;32'
 
 export ANSIBLE_COW_SELECTION=moose
 export FZF_DEFAULT_COMMAND='find . -type d \( -name .git -o -name node_modules -o -name dist -o -name release -o -name reports -o -name bin -o -name build -o -name target -o -name roles -o -name libs -o -name .idea -o -name .idea_modules \) -prune -o -type f -print'
@@ -166,19 +166,12 @@ which docker-machine &> /dev/null && eval "$(docker-machine env 2> /dev/null)"
 which gulp           &> /dev/null && eval "$(gulp --completion=zsh)"
 which thefuck        &> /dev/null && eval "$(thefuck --alias)"
 
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,dist,node_modules,reports,bin,build,target,roles,libs,.idea,.idea_modules}'
+alias ag='ag --no-heading --color-match="1;31"'
+alias rg='rg --no-heading --colors="line:fg:11" --colors="line:style:bold" --colors="path:fg:10" --colors="path:style:bold"'
+alias grep='grep --color=auto --line-number --exclude-dir={.bzr,CVS,.git,.hg,.svn,dist,node_modules,reports,bin,build,target,roles,libs,.idea,.idea_modules}'
 # fzf does not co-operate with 256 color terminals nicely.
 alias fzf='TERM=xterm fzf'
 alias fzf-tmux='TERM=xterm fzf-tmux'
-
-alias grey-grep="GREP_COLORS='1;30' grep --color=always"
-alias red-grep="GREP_COLORS='1;31' grep --color=always"
-alias green-grep="GREP_COLORS='1;32' grep --color=always"
-alias yellow-grep="GREP_COLORS='1;33' grep --color=always"
-alias blue-grep="GREP_COLORS='1;34' grep --color=always"
-alias magenta-grep="GREP_COLORS='1;35' grep --color=always"
-alias cyan-grep="GREP_COLORS='1;36' grep --color=always"
-alias white-grep="GREP_COLORS='1;37' grep --color=always"
 
 alias ls='ls --color'
 
