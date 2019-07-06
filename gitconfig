@@ -38,3 +38,6 @@
     new = green bold
 [gerrit]
     createChangeId = true
+[color "grep"]
+	linenumber = yellow bold
+	filename = green bold
