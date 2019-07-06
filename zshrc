@@ -168,7 +168,7 @@ which thefuck        &> /dev/null && eval "$(thefuck --alias)"
 
 alias ag='ag --no-heading --color-match="1;31"'
 alias rg='rg --no-heading --colors="line:fg:11" --colors="line:style:bold" --colors="path:fg:10" --colors="path:style:bold"'
-alias grep='grep --color=auto --line-number --exclude-dir={.bzr,CVS,.git,.hg,.svn,dist,node_modules,reports,bin,build,target,roles,libs,.idea,.idea_modules}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,dist,node_modules,reports,bin,build,target,roles,libs,.idea,.idea_modules}'
 # fzf does not co-operate with 256 color terminals nicely.
 alias fzf='TERM=xterm fzf'
 alias fzf-tmux='TERM=xterm fzf-tmux'
