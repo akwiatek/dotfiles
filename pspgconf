@@ -1,0 +1,16 @@
+ascii_menu = false
+bold_labels = true
+bold_cursor = true
+ignore_case = false
+ignore_lower_case = false
+no_cursor = false
+no_sound = false
+no_mouse = true
+less_status_bar = false
+no_highlight_search = false
+no_highlight_lines = false
+force_uniborder = false
+show_rownum = false
+theme = 5
+without_commandbar = true
+without_topbar = true
