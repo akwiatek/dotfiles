@@ -46,6 +46,11 @@ vim_index_help_each() {
 
 SCRIPT_DIR="$(dirname $(realpath $0))"
 
+safe_cd ~/src/
+try_git_clone https://github.com/okbob/pspg
+
+try_git_pull_each
+
 safe_cd ~/src/git-extensions/
 try_git_clone https://github.com/mhagger/git-imerge
 try_git_clone https://github.com/tkrajina/git-plus
@@ -154,6 +159,10 @@ if which make &> /dev/null; then
     safe_cd ~/.vim/opt/vimpager/
     make vimpager vimcat
     safe_cd ~/.vim/bundle/vimproc.vim/
+    make
+
+    safe_cd ~/src/pspg/
+    ./configure
     make
 fi
 

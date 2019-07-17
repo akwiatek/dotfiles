@@ -1,3 +1,5 @@
+\setenv PAGER '~/src/pspg/pspg --quit-if-one-screen'
+
 \timing on
 \x off
 
@@ -5,8 +7,10 @@
 \set ECHO_HIDDEN on
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
-\set PROMPT1 '%[%033[1;33;40m%]%n@%M in %~%R%[%033[0m%]%#%012'
+\set HISTSIZE 100000
+\set PROMPT1 '%[%033[1;33;40m%]%n in %~%R%[%033[0m%]%#%012'
 
+\pset border 2
 \pset linestyle unicode
 \pset null '<NULL>'
 \pset pager always
