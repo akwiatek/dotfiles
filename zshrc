@@ -48,6 +48,9 @@ DISABLE_AUTO_TITLE="true"
 # tmux plugin: Automatically start tmux
 export ZSH_TMUX_AUTOSTART=true
 
+# Required by autoenv
+autoload -U add-zsh-hook
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
