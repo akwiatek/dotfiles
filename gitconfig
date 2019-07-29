@@ -39,5 +39,7 @@
 [gerrit]
     createChangeId = true
 [color "grep"]
-	linenumber = yellow bold
-	filename = green bold
+    linenumber = yellow bold
+    filename = green bold
+[credential]
+    helper = store
