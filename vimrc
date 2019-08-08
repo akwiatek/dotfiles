@@ -48,6 +48,8 @@ set   path+=**
 set   pastetoggle=<F4>
 set   relativenumber
 set   ruler
+" padding around current line
+set   scrolloff=2
 set   shiftround
 " same as tabstop
 set   shiftwidth=0
@@ -68,6 +70,7 @@ set   softtabstop=-1
 set   spelllang=en,pl
 set nospell
 set nostartofline
+set   synmaxcol=500
 set   tabstop=4
 set   undodir=~/.vim/undo//
 set   undofile
@@ -82,6 +85,7 @@ set   wrap
 
 " don't show files in these folders in Ctrl-P
 " Node.js
+set wildignore+=*/compiledts/*
 set wildignore+=*/dist/*
 set wildignore+=*/release/*
 set wildignore+=*/node_modules/*
