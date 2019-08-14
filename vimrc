@@ -11,7 +11,7 @@ set nobackup
 set   breakindent
 " use dictionary files in autocompletion
 set   complete+=k
-set   completeopt=menuone
+set   completeopt=longest,menuone,preview
 try
     set completeopt+=noinsert,noselect
 catch E474
@@ -69,6 +69,8 @@ set   smarttab
 set   softtabstop=-1
 set   spelllang=en,pl
 set nospell
+" used mostly to position the preview window coming from completeopt
+set   splitbelow
 set nostartofline
 set   synmaxcol=500
 set   tabstop=4
