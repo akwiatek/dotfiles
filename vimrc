@@ -207,6 +207,8 @@ map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
 map <leader>w :InteractiveWindow<CR>
 " x - fiX whitespaces
 map <Leader>x :FileStyleFix<CR>
+" YouCompleteMe FixIt
+map <Leader>yf :YcmCompleter FixIt<CR>
 " / - search in files
 map <Leader>/ :Ack<Space>
 
