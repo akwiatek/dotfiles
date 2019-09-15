@@ -133,7 +133,7 @@ try_git_clone https://github.com/tpope/vim-git
 try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/tpope/vim-rhubarb
 try_git_clone https://github.com/tpope/vim-surround
-try_git_clone https://github.com/Valloric/YouCompleteMe
+try_git_clone https://github.com/ycm-core/YouCompleteMe
 try_git_clone https://github.com/vim-scripts/Align
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
