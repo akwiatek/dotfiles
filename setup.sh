@@ -173,5 +173,5 @@ safe_cd ~/.vim/syntax/
 curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
 
 safe_cd ~/
-curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,java,ruby,node,maven,macos,linux,scala,gradle,eclipse,intellij%2biml,intellij%2ball,libreoffice' > .gitignore_global
+curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
 cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
