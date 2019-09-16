@@ -70,7 +70,6 @@ plugins+=($(which \
         mvn             \
         ng              \
         npm             \
-        npx             \
         sbt             \
         scala           \
         thefuck         \
