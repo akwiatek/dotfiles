@@ -105,6 +105,7 @@ try_git_clone https://github.com/dominikduda/vim_current_word
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/flazz/vim-colorschemes
+try_git_clone https://github.com/FooSoft/vim-argwrap
 try_git_clone https://github.com/godlygeek/csapprox
 try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/google/vim-searchindex
@@ -133,7 +134,6 @@ try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/tpope/vim-rhubarb
 try_git_clone https://github.com/tpope/vim-surround
 try_git_clone https://github.com/vim-scripts/Align
-try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
 try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
 try_git_clone https://github.com/vim-scripts/matchit.zip
