@@ -117,8 +117,8 @@ try_git_clone https://github.com/mileszs/ack.vim
 try_git_clone https://github.com/nathanaelkane/vim-indent-guides
 try_git_clone https://github.com/othree/javascript-libraries-syntax.vim
 try_git_clone https://github.com/prettier/vim-prettier
+try_git_clone https://github.com/Quramy/tsuquyomi
 try_git_clone https://github.com/romgrk/winteract.vim
-try_git_clone https://github.com/sodapopcan/vim-twiggy
 try_git_clone https://github.com/scrooloose/nerdcommenter
 try_git_clone https://github.com/scrooloose/nerdtree
 try_git_clone https://github.com/scrooloose/syntastic
@@ -126,13 +126,13 @@ try_git_clone https://github.com/sheerun/vim-polyglot
 try_git_clone https://github.com/Shougo/vimproc.vim
 try_git_clone https://github.com/sirver/ultisnips
 try_git_clone https://github.com/skwp/greplace.vim
+try_git_clone https://github.com/sodapopcan/vim-twiggy
 try_git_clone https://github.com/tpope/vim-abolish
 try_git_clone https://github.com/tpope/vim-fugitive
 try_git_clone https://github.com/tpope/vim-git
 try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/tpope/vim-rhubarb
 try_git_clone https://github.com/tpope/vim-surround
-try_git_clone https://github.com/ycm-core/YouCompleteMe
 try_git_clone https://github.com/vim-scripts/Align
 try_git_clone https://github.com/vim-scripts/argwrap.vim
 try_git_clone https://github.com/vim-scripts/camelcasemotion
@@ -143,11 +143,11 @@ try_git_clone https://github.com/vim-scripts/Merginal
 try_git_clone https://github.com/vim-scripts/SQLUtilities
 try_git_clone https://github.com/vim-scripts/taglist.vim
 try_git_clone https://github.com/vim-scripts/The-Old-Ones
-try_git_clone https://github.com/vim-scripts/tsuquyomi
 try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
+try_git_clone https://github.com/ycm-core/YouCompleteMe
 
 try_git_clone https://sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
 
