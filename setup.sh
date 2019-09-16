@@ -112,6 +112,7 @@ try_git_clone https://github.com/google/vim-searchindex
 try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
 try_git_clone https://github.com/j5shi/SearchComplete
+try_git_clone https://github.com/jreybert/vimagit
 try_git_clone https://github.com/keith/tmux.vim
 try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
@@ -141,7 +142,6 @@ try_git_clone https://github.com/vim-scripts/matchit.zip
 try_git_clone https://github.com/vim-scripts/SQLUtilities
 try_git_clone https://github.com/vim-scripts/taglist.vim
 try_git_clone https://github.com/vim-scripts/The-Old-Ones
-try_git_clone https://github.com/vim-scripts/vimagit
 try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
