@@ -272,8 +272,6 @@ let g:tagbar_previewwin_pos = "rightbelow"
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
 
-let g:tsuquyomi_disable_default_mappings = 1
-
 " Sort entries by name rather than by chronological order
 let Tlist_Sort_Type = 'name'
 let Tlist_WinWidth = 45
