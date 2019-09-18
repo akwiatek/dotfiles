@@ -252,7 +252,7 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep --invert-match /libs/']
 let g:ctrlp_line_prefix = ' »--► '
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_extensions = ['yankring']
+let g:ctrlp_extensions = ['smarttabs', 'yankring']
 
 let g:ack_use_cword_for_empty_search = 1
 let g:ackhighlight = 1
