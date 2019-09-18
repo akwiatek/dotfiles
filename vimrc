@@ -239,6 +239,8 @@ let g:polyglot_disabled = ['tmux']
 let g:jsx_pragma_required = 1
 
 let g:ctrlp_cmd = 'CtrlPLastMode'
+" Set delay to prevent extra search
+let g:ctrlp_lazy_update = 350
 " Look up by both directory and file names
 let g:ctrlp_by_filename = 0
 " Persisent cache
@@ -249,6 +251,7 @@ let g:ctrlp_max_files = 0
 " Faster caching in git repositories
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep --invert-match /libs/']
 let g:ctrlp_line_prefix = ' »--► '
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_extensions = ['yankring']
 
 let g:ack_use_cword_for_empty_search = 1

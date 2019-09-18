@@ -104,6 +104,7 @@ try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/dominikduda/vim_current_word
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
+try_git_clone https://github.com/FelikZ/ctrlp-py-matcher
 try_git_clone https://github.com/flazz/vim-colorschemes
 try_git_clone https://github.com/FooSoft/vim-argwrap
 try_git_clone https://github.com/godlygeek/csapprox
