@@ -113,6 +113,7 @@ try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/google/vim-searchindex
 try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
+try_git_clone https://github.com/ivalkeen/vim-ctrlp-tjump
 try_git_clone https://github.com/j5shi/SearchComplete
 try_git_clone https://github.com/jreybert/vimagit
 try_git_clone https://github.com/keith/tmux.vim
