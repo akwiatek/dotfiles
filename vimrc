@@ -256,7 +256,8 @@ let g:ctrlp_extensions = [
     \ 'smarttabs',
     \ 'history/cmd',
     \ 'history/search',
-    \ 'yankring'
+    \ 'yankring',
+    \ 'tag'
     \ ]
 
 let g:ack_use_cword_for_empty_search = 1
