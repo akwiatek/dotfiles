@@ -257,7 +257,8 @@ let g:ctrlp_extensions = [
     \ 'history/cmd',
     \ 'history/search',
     \ 'yankring',
-    \ 'tag'
+    \ 'tag',
+    \ 'tjump'
     \ ]
 
 let g:ack_use_cword_for_empty_search = 1
