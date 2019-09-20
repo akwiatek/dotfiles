@@ -172,7 +172,6 @@ map <F4>  :set paste!<CR>:set paste?<CR>
 map <F5>  :edit<CR>
 map <F6>  :registers<CR>
 map <F7>  :marks<CR>
-map <F8>  :buffers<CR>
 map <F10> :quitall<CR>
 map <Esc><Esc> :nohlsearch<CR>
 map [l :lprevious<CR>
