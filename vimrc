@@ -30,6 +30,8 @@ set nofixendofline
 set   foldenable
 set   foldlevelstart=99
 set   foldmethod=indent
+" same as g:ackprg
+set   grepprg=rg\ --vimgrep
 set   hidden
 set   history=500
 set   hlsearch
@@ -264,6 +266,7 @@ let g:ctrlp_extensions = [
 
 let g:ack_use_cword_for_empty_search = 1
 let g:ackhighlight = 1
+" same as grepprg
 let g:ackprg = 'rg --vimgrep'
 
 " transparent background
