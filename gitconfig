@@ -17,6 +17,8 @@
     excludesfile = ~/.gitignore_global
     whitespace = trailing-space,space-before-tab,tab-in-indent
     fileMode = true
+    untrackedCache = true
+    commitGraph = true
 [mergetool]
     writeToTemp = true
 [rerere]
