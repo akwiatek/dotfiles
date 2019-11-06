@@ -45,3 +45,5 @@
     filename = green bold
 [credential]
     helper = store
+[fetch]
+	writeCommitGraph = true
