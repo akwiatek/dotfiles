@@ -96,7 +96,6 @@ safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
 safe_cd ~/.vim/bundle/
-try_git_clone https://github.com/airblade/vim-gitgutter
 try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/aserebryakov/filestyle
 try_git_clone https://github.com/christoomey/vim-conflicted
