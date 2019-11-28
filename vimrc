@@ -225,6 +225,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=[]
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_args = '--cache --cache-location ~'
 let g:syntastic_typescript_eslint_args = '--cache --cache-location ~'
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
