@@ -116,7 +116,7 @@ do
     amend_path "$ext"
 done
 
-export PATH="${amend_path_content/:}"
+export PATH="${amend_path_content/:}:node_modules/.bin"
 
 unset -f amend_path
 unset amend_path_content
