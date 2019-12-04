@@ -108,6 +108,7 @@ amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
 amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
 amend_path "$HOME/.rvm/bin"
+amend_path "$HOME/go/bin"
 amend_path "$HOME/git-extensions/bin"
 
 # register local git extensions
