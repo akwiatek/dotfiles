@@ -180,35 +180,37 @@ map [t :tabprevious<CR>
 map ]t :tabnext<CR>
 map [e :cprevious<CR>
 map ]e :cnext<CR>
-" a - argument wrap
+" a - Argument wrap
 map <Leader>a :ArgWrap<CR>
-" b - blame
+" b - Blame
 map <Leader>b :Gblame<CR>
-" c - checkout a branch
+" c - Checkout a branch
 map <Leader>c :Twiggy<CR>
-" d - declared methods / values
+" d - Declared methods / values
 map <Leader>d :TlistOpen<CR>
-" e - errors shown in the quickfix window
+" e - Errors shown in the quickfix window
 map <Leader>e :copen<CR>
-" f - file manager
+" f - File manager
 map <Leader>f :NERDTreeFind<CR>
-" g - git index manager
+" g - Git index manager
 map <Leader>g :Magit<CR>
-" h - history of changes
+" h - History of changes
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
-" m - file members
+" m - file Members
 map <Leader>m :TagbarOpen fj<CR>
-" r - rename current word
+" r - Rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-" t - tab creation
+" st - Syntastic Toggle mode
+map <Leader>st :SyntasticToggleMode<CR>
+" t - Tab creation
 map <Leader>t :tabnew<CR>
 " u - UUID generator
 map <Leader>u di""=systemlist('uuidgen')[0]<CR>P
-" w - window interactive mode
+" w - Window interactive mode
 map <leader>w :InteractiveWindow<CR>
 " x - fiX whitespaces
 map <Leader>x :FileStyleFix<CR>
-" YouCompleteMe FixIt
+" yf - YouCompleteMe FixIt
 map <Leader>yf :YcmCompleter FixIt<CR>
 " / - search in files
 map <Leader>/ :Ack<Space>
@@ -225,8 +227,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_java_checkers=[]
 let g:syntastic_javascript_checkers = []
 let g:syntastic_typescript_checkers = []
-let g:syntastic_javascript_eslint_args = '--cache --cache-location ~'
-let g:syntastic_typescript_eslint_args = '--cache --cache-location ~'
+let g:syntastic_javascript_eslint_args = '--cache --cache-location node_modules/.eslint/'
+let g:syntastic_typescript_eslint_args = '--cache --cache-location node_modules/.eslint/'
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_warning_symbol = '🍀'
 let g:syntastic_html_tidy_blocklevel_tags = [
