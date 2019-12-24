@@ -1,4 +1,5 @@
 # dotfiles/gitignore_custom
+!app/**/*.js
 !tags/
 .in
 .vscode/
