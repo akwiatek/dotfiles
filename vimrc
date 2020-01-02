@@ -76,6 +76,8 @@ set   splitbelow
 set nostartofline
 set   synmaxcol=500
 set   tabstop=4
+" as in Prettier for Smart
+set   textwidth=150
 set   undodir=~/.vim/undo//
 set   undofile
 set   undolevels=10000
@@ -275,7 +277,8 @@ let g:ackprg = 'rg --vimgrep'
 
 " transparent background
 let g:CSApprox_hook_post = [
-    \ 'highlight CursorLine ctermbg=17   cterm=bold',
+    \ 'highlight Comment    ctermfg=lightGrey ctermbg=darkGrey',
+    \ 'highlight CursorLine ctermbg=17        cterm=bold',
     \ 'highlight PreProc    ctermfg=11',
     \ 'highlight Pmenu      ctermbg=brown',
     \ 'highlight Normal     ctermbg=none',
