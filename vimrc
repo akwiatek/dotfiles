@@ -215,7 +215,7 @@ map <Leader>x :FileStyleFix<CR>
 " yf - YouCompleteMe FixIt
 map <Leader>yf :YcmCompleter FixIt<CR>
 " / - search in files
-map <Leader>/ :Ack<Space>
+map <Leader>/ :Ack!<Space>
 
 map <Leader><C-^> :TsuquyomiReferences<CR>
 map <Leader><C-]> :TsuquyomiDefinition<CR>
