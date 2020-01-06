@@ -278,7 +278,7 @@ let g:ackprg = 'rg --vimgrep'
 " transparent background
 let g:CSApprox_hook_post = [
     \ 'highlight Comment    ctermfg=lightGrey ctermbg=darkGrey',
-    \ 'highlight CursorLine ctermbg=17        cterm=bold',
+    \ 'highlight CursorLine ctermbg=58        cterm=bold',
     \ 'highlight PreProc    ctermfg=11',
     \ 'highlight Pmenu      ctermbg=brown',
     \ 'highlight Normal     ctermbg=none',
