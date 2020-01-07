@@ -116,7 +116,7 @@ try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
 try_git_clone https://github.com/ivalkeen/vim-ctrlp-tjump
 try_git_clone https://github.com/j5shi/SearchComplete
-try_git_clone https://github.com/JazzCore/ctrlp-cmatcher
+try_git_clone https://github.com/akwiatek/ctrlp-cmatcher
 try_git_clone https://github.com/jeetsukumaran/vim-markology
 try_git_clone https://github.com/jreybert/vimagit
 try_git_clone https://github.com/majutsushi/tagbar
@@ -173,6 +173,7 @@ if which make &> /dev/null; then
 fi
 
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
+git checkout --track origin/python3 || git checkout python3
 ./install.sh
 
 safe_cd ~/.vim/bundle/YouCompleteMe/
