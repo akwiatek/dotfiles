@@ -24,6 +24,7 @@ set   cursorline
 set   diffopt=filler,iwhite,vertical
 set   directory=~/.vim/swaps//
 set   display+=uhex
+set   encoding=utf-8
 set noequalalways
 set   expandtab
 set nofixendofline
