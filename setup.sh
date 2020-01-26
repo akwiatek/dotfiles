@@ -137,7 +137,6 @@ try_git_clone https://github.com/scrooloose/syntastic
 try_git_clone https://github.com/sgur/ctrlp-extensions.vim
 try_git_clone https://github.com/sheerun/vim-polyglot
 try_git_clone https://github.com/Shougo/vimproc.vim
-try_git_clone https://github.com/sirver/ultisnips
 try_git_clone https://github.com/skwp/greplace.vim
 try_git_clone https://github.com/sodapopcan/vim-twiggy
 try_git_clone https://github.com/terryma/vim-expand-region
