@@ -65,6 +65,7 @@ endtry
 set   showcmd
 set   showmatch
 set   showtabline=2
+set   signcolumn=yes
 set   smartcase
 set   smartindent
 set   smarttab
@@ -89,6 +90,7 @@ set   wildmenu
 set   wildmode=full
 set   winheight=4
 set   wrap
+set nowritebackup
 
 " don't show files in these folders in Ctrl-P
 " Node.js
@@ -278,13 +280,16 @@ let g:ackprg = 'rg --vimgrep'
 
 " transparent background
 let g:CSApprox_hook_post = [
-    \ 'highlight Comment    ctermfg=lightGrey ctermbg=darkGrey',
-    \ 'highlight CursorLine ctermbg=58        cterm=bold',
-    \ 'highlight PreProc    ctermfg=11',
-    \ 'highlight Pmenu      ctermbg=brown',
-    \ 'highlight Normal     ctermbg=none',
-    \ 'highlight NonText    ctermbg=none',
-    \ 'highlight SignColumn ctermbg=none'
+    \ 'highlight Comment          ctermfg=lightGrey ctermbg=darkGrey',
+    \ 'highlight CocErrorFloat    ctermfg=209',
+    \ 'highlight CocInfoFloat     ctermfg=190',
+    \ 'highlight CocWarningFloat  ctermfg=214',
+    \ 'highlight CursorLine       ctermbg=58        cterm=bold',
+    \ 'highlight PreProc          ctermfg=11',
+    \ 'highlight Pmenu            ctermbg=239',
+    \ 'highlight Normal           ctermbg=none',
+    \ 'highlight NonText          ctermbg=none',
+    \ 'highlight SignColumn       ctermbg=none'
     \ ]
 
 let g:tagbar_width = 50

@@ -40,6 +40,10 @@ vim_index_help() {
     ! [ -d doc ] || vim -u NONE -c 'helptags doc' -c quit
 }
 
+vim_update_coc() {
+    vim -u NONE -c CocUpdate -c quit
+}
+
 vim_index_help_each() {
     for_each_dir vim_index_help
 }
@@ -154,12 +158,17 @@ try_git_clone https://github.com/vim-scripts/The-Old-Ones
 try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
-try_git_clone https://github.com/ycm-core/YouCompleteMe
 
 try_git_clone https://sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
 
 try_git_pull_each
+
+if ! [ -d coc.nvim-release ]; then
+    curl --location https://github.com/neoclide/coc.nvim/archive/release.tar.gz | tar xzfv -
+fi
+
 vim_index_help_each
+vim_update_coc
 
 if which make &> /dev/null; then
     safe_cd ~/.vim/opt/vimpager/
@@ -175,13 +184,6 @@ fi
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
 git checkout --track origin/python3 || git checkout python3
 ./install.sh
-
-safe_cd ~/.vim/bundle/YouCompleteMe/
-git submodule update --init --recursive
-./install.py --clang-completer --ts-completer
-
-safe_cd ~/.vim/syntax/
-curl --silent --show-error 'https://www.haproxy.org/download/contrib/haproxy.vim' > haproxy.vim
 
 safe_cd ~/
 curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
