@@ -27,7 +27,7 @@ set   display+=uhex
 set   encoding=utf-8
 set noequalalways
 set   expandtab
-set nofixendofline
+set   fixendofline
 set   foldenable
 set   foldlevelstart=99
 set   foldmethod=indent
