@@ -106,6 +106,7 @@ try_git_clone https://github.com/christoomey/vim-conflicted
 try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/DavidEGx/ctrlp-smarttabs
+try_git_clone https://github.com/dense-analysis/ale
 try_git_clone https://github.com/dominikduda/vim_current_word
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
