@@ -46,4 +46,4 @@
 [credential]
     helper = store
 [fetch]
-	writeCommitGraph = true
+    writeCommitGraph = true
