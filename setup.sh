@@ -188,3 +188,5 @@ git checkout --track origin/python3 || git checkout python3
 safe_cd ~/
 curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
 cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
+
+echo 'Done.'
