@@ -104,6 +104,7 @@ amend_path '/usr/bin'
 amend_path '/sbin'
 amend_path '/bin'
 amend_path "$(dirname $(readlink -f $(which git)))/share/git/git-jump"
+amend_path "$HOME/go/bin"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
 amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
 amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
