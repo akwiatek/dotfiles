@@ -8,7 +8,7 @@
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \set HISTSIZE 100000
-\set PROMPT1 '%[%033[1;33;40m%](date %`date '+%I:%M:%S.%N%p'`) %n@%m in %~%x%033[0m%]%#%012'
+\set PROMPT1 '%[%033[1;33;40m%]%n@%m in %~%x%033[0m%]%#%012'
 
 \pset border 2
 \pset linestyle unicode
