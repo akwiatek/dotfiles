@@ -201,6 +201,8 @@ map <Leader>f :NERDTreeFind<CR>
 map <Leader>g :Magit<CR>
 " h - History of changes
 map <Leader>h :UndotreeShow<CR>:UndotreeFocus<CR>
+" k - doKumentation for Go
+map <Leader>k :GoDoc <C-r><C-w><CR>
 " m - file Members
 map <Leader>m :TagbarOpen fj<CR>
 " r - Rename current word
