@@ -62,6 +62,7 @@ plugins=( \
         git \
         git-extra-commands \
         git-extras \
+        golang \
         z \
     )
 plugins+=($(which \
