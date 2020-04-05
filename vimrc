@@ -225,6 +225,8 @@ map <Leader>/ :Ack!<Space>
 map <Leader><C-^> :TsuquyomiReferences<CR>
 map <Leader><C-]> :TsuquyomiDefinition<CR>
 
+map <C-K> :GoRun<CR>
+
 " Allow to close tags in the following XML-like files
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml'
 
