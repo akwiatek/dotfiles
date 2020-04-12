@@ -138,8 +138,8 @@ highlight Pmenu    ctermfg=white ctermbg=brown  guifg=white guibg=brown
 highlight PmenuSel ctermfg=black ctermbg=yellow guifg=black guibg=yellow
 
 " other colors
-highlight Visual    ctermfg=white ctermbg=blue guifg=white guibg=DodgerBlue4
-highlight Guideline               ctermbg=blue             guibg=purple4
+highlight Visual    ctermfg=white  ctermbg=blue  guifg=white  guibg=DodgerBlue4
+highlight Guideline                ctermbg=blue               guibg=purple4
 
 " Syntastic colors
 highlight link SyntasticErrorSign   SignColumn
@@ -293,7 +293,8 @@ let g:CSApprox_hook_post = [
     \ 'highlight Pmenu            ctermbg=239',
     \ 'highlight Normal           ctermbg=none',
     \ 'highlight NonText          ctermbg=none',
-    \ 'highlight SignColumn       ctermbg=none'
+    \ 'highlight SignColumn       ctermbg=none',
+    \ 'highlight SpellBad         ctermfg=yellow'
     \ ]
 
 let g:tagbar_width = 50
