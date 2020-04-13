@@ -173,11 +173,11 @@ try_git_pull_each
 
 vim_index_help_each
 
-if which make &> /dev/null; then
+if which gmake &> /dev/null; then
     safe_cd ~/.vim/opt/vimpager/
-    make vimpager vimcat
+    gmake vimpager vimcat
     safe_cd ~/.vim/bundle/vimproc.vim/
-    make
+    gmake
 
     safe_cd ~/src/pspg/
     ./configure
