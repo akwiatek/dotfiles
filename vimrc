@@ -314,6 +314,9 @@ let Tlist_Close_On_Select = 1
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_detailed_diagnostics = ''
+let g:ycm_filetype_whitelist = {
+    \ 'go': 1
+    \ }
 
 let g:vim_current_word#highlight_current_word = 0
 
