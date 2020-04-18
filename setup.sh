@@ -40,10 +40,6 @@ vim_index_help() {
     ! [ -d doc ] || vim -u NONE -c 'helptags doc' -c quit
 }
 
-vim_update_coc() {
-    vim -u NONE -c CocUpdate -c quit
-}
-
 vim_index_help_each() {
     for_each_dir vim_index_help
 }
@@ -164,12 +160,7 @@ try_git_clone https://sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
 
 try_git_pull_each
 
-if ! [ -d coc.nvim-release ]; then
-    curl --location https://github.com/neoclide/coc.nvim/archive/release.tar.gz | tar xzfv -
-fi
-
 vim_index_help_each
-vim_update_coc
 
 if which make &> /dev/null; then
     safe_cd ~/.vim/opt/vimpager/

@@ -326,3 +326,5 @@ let g:prettier#autoformat = 0
 autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 
 let g:go_auto_type_info = 1
+
+let g:ale_completion_enabled = 1
