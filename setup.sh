@@ -96,10 +96,11 @@ safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
 safe_cd ~/.vim/bundle/
+try_git_clone https://github.com/akwiatek/ctrlp-cmatcher
 try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/aserebryakov/filestyle
 try_git_clone https://github.com/christoomey/vim-conflicted
-#try_git_clone https://github.com/craigemery/vim-autotag
+try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
 try_git_clone https://github.com/DavidEGx/ctrlp-smarttabs
 try_git_clone https://github.com/dense-analysis/ale
@@ -117,9 +118,10 @@ try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
 try_git_clone https://github.com/ivalkeen/vim-ctrlp-tjump
 try_git_clone https://github.com/j5shi/SearchComplete
-try_git_clone https://github.com/akwiatek/ctrlp-cmatcher
 try_git_clone https://github.com/jeetsukumaran/vim-markology
 try_git_clone https://github.com/jreybert/vimagit
+try_git_clone https://github.com/kana/vim-textobj-indent
+try_git_clone https://github.com/kana/vim-textobj-user
 try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
 try_git_clone https://github.com/mileszs/ack.vim
