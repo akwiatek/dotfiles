@@ -14,7 +14,7 @@ set   complete+=k
 set   completeopt=longest,menuone,preview
 try
     set completeopt+=noinsert,noselect
-catch E474
+catch /^E474:/
     " do nothing
 endtry
 set   confirm
@@ -59,7 +59,7 @@ set   shiftwidth=0
 set   shortmess+=I
 try
     set   showbreak=↪\  " arrow + space
-catch E595
+catch /^E595:/
     set   showbreak=`->\  " arrow + space
 endtry
 set   showcmd
