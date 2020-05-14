@@ -179,12 +179,21 @@ map <F6>  :registers<CR>
 map <F7>  :marks<CR>
 map <F10> :quitall<CR>
 map <Esc><Esc> :nohlsearch<CR>
+" args - command line file names
+map [a :previous<CR>
+map ]a :next<CR>
+" buffers
+map [b :bprevious<CR>
+map ]b :bnext<CR>
+" errors from quickfix list
+map [c :cprevious<CR>
+map ]c :cnext<CR>
+" errors from window local list
 map [l :lprevious<CR>
 map ]l :lnext<CR>
+" tabs
 map [t :tabprevious<CR>
 map ]t :tabnext<CR>
-map [e :cprevious<CR>
-map ]e :cnext<CR>
 " a - Argument wrap
 map <Leader>a :ArgWrap<CR>
 " b - Blame
