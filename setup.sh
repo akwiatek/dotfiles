@@ -125,6 +125,7 @@ try_git_clone https://github.com/kana/vim-textobj-indent
 try_git_clone https://github.com/kana/vim-textobj-user
 try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
+try_git_clone https://github.com/mhinz/vim-startify
 try_git_clone https://github.com/mileszs/ack.vim
 try_git_clone https://github.com/nathanaelkane/vim-indent-guides
 try_git_clone https://github.com/ompugao/ctrlp-history
