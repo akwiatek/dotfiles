@@ -107,6 +107,7 @@ try_git_clone https://github.com/dense-analysis/ale
 try_git_clone https://github.com/dominikduda/vim_current_word
 try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
+try_git_clone https://github.com/farmergreg/vim-lastplace
 try_git_clone https://github.com/fatih/vim-go
 try_git_clone https://github.com/FelikZ/ctrlp-py-matcher
 try_git_clone https://github.com/flazz/vim-colorschemes
