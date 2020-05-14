@@ -294,7 +294,8 @@ let g:CSApprox_hook_post = [
     \ 'highlight Normal           ctermbg=none',
     \ 'highlight NonText          ctermbg=none',
     \ 'highlight SignColumn       ctermbg=none',
-    \ 'highlight SpellBad         ctermfg=yellow'
+    \ 'highlight SpellBad         ctermfg=red',
+    \ 'highlight SpellCap         ctermfg=yellow'
     \ ]
 
 let g:tagbar_width = 50
