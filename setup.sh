@@ -175,7 +175,7 @@ if which make &> /dev/null; then
 
     safe_cd ~/src/pspg/
     ./configure
-    make
+    #make
 fi
 
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
