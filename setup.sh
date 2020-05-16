@@ -190,4 +190,42 @@ safe_cd ~/
 curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
 cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
 
+amend_path_content=''
+amend_path () {
+    if [ -d "$1" ]; then
+        amend_path_content="$amend_path_content:$1"
+    fi
+}
+
+amend_path '/usr/lib/jvm/default/bin'
+amend_path '/opt/node/bin'
+amend_path '/opt/gradle/bin'
+amend_path '/opt/local/sbin'
+amend_path '/opt/local/bin'
+amend_path '/usr/local/sbin'
+amend_path '/usr/local/bin'
+amend_path '/usr/bin/site_perl'
+amend_path '/usr/bin/vendor_perl'
+amend_path '/usr/bin/core_perl'
+amend_path '/usr/sbin'
+amend_path '/usr/bin'
+amend_path '/sbin'
+amend_path '/bin'
+amend_path "$(dirname $(readlink -f $(which git)))/share/git/git-jump"
+amend_path "$HOME/go/bin"
+amend_path "$HOME/.rvm/gems/ruby-2.2.1/bin"
+amend_path "$HOME/.rvm/gems/ruby-2.2.1@global/bin"
+amend_path "$HOME/.rvm/rubies/ruby-2.2.1/bin"
+amend_path "$HOME/.rvm/bin"
+amend_path "$HOME/go/bin"
+amend_path "$HOME/git-extensions/bin"
+
+# register local git extensions
+for ext in ~/src/git-extensions/*
+do
+    amend_path "$ext"
+done
+
+echo "export PATH=${amend_path_content/:}:node_modules/.bin" > ~/.zsh_path
+
 echo 'Done.'
