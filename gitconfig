@@ -7,7 +7,7 @@
 [merge]
     tool = vimdiff
     conflictstyle = diff3
-    log = true
+    log = 3
 [color]
     ui = true
 [gui]
