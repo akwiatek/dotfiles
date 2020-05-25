@@ -124,6 +124,7 @@ try_git_clone https://github.com/jreybert/vimagit
 try_git_clone https://github.com/kana/vim-textobj-indent
 try_git_clone https://github.com/kana/vim-textobj-user
 try_git_clone https://github.com/machakann/vim-highlightedyank
+try_git_clone https://github.com/machakann/vim-swap
 try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
 try_git_clone https://github.com/mhinz/vim-startify
