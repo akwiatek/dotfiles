@@ -341,3 +341,5 @@ autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 let g:go_auto_type_info = 0
 
 let g:ale_completion_enabled = 1
+
+let g:highlightedyank_highlight_duration = 400
