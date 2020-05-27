@@ -111,7 +111,6 @@ export FZF_TMUX=1
 export JSGC_DISABLE_POISONING=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
-export CHROME_BIN=/usr/sbin/chromium
 
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
