@@ -155,6 +155,7 @@ cnoreabbrev dt diffthis
 autocmd BufRead,BufNewFile *.dump set filetype=sql
 autocmd BufRead,BufNewFile *.g set filetype=antlr3
 autocmd BufRead,BufNewFile *.g4 set filetype=antlr4
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
 autocmd BufRead,BufNewFile .eslintrc set filetype=yaml
 autocmd BufRead,BufNewFile messages set filetype=jproperties
 autocmd BufRead,BufNewFile .gitconfig.private set filetype=gitconfig
