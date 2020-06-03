@@ -54,3 +54,5 @@
     stat = true
 [status]
     showStash = true
+[pull]
+	rebase = true
