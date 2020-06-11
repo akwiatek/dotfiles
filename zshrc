@@ -64,6 +64,9 @@ plugins=( \
         git-extras \
         golang \
         z \
+        zsh-autosuggestions \
+        zsh-completions \
+        zsh-syntax-highlighting \
     )
 plugins+=($(which \
         gradle          \
@@ -78,8 +81,6 @@ plugins+=($(which \
         yarn            \
         | sed '/not found$/d;s:.*/::'
     ))
-
-plugins+=(zsh-completions zsh-syntax-highlighting)
 
 aws_prompt_info() {
     # dummy implementation

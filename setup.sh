@@ -68,6 +68,7 @@ safe_cd ~/
 
 safe_cd ~/.oh-my-zsh/custom/plugins/
 try_git_clone https://github.com/unixorn/git-extra-commands
+try_git_clone https://github.com/zsh-users/zsh-autosuggestions
 try_git_clone https://github.com/zsh-users/zsh-completions
 try_git_clone https://github.com/zsh-users/zsh-syntax-highlighting
 try_git_clone https://github.com/zpm-zsh/autoenv
