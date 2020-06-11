@@ -56,3 +56,5 @@
     showStash = true
 [pull]
 	rebase = true
+[help]
+	autocorrect = 3
