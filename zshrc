@@ -79,6 +79,8 @@ plugins+=($(which \
         | sed '/not found$/d;s:.*/::'
     ))
 
+plugins+=(zsh-completions zsh-syntax-highlighting)
+
 aws_prompt_info() {
     # dummy implementation
 }
@@ -87,7 +89,6 @@ source ~/.zsh_path
 
 source $ZSH/oh-my-zsh.sh
 
-plugins+=(zsh-completions)
 autoload -U compinit && compinit
 autoload -U zsh-mime-setup && zsh-mime-setup
 
