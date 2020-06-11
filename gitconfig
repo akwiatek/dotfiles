@@ -57,4 +57,4 @@
 [pull]
 	rebase = true
 [help]
-	autocorrect = 3
+	autocorrect = 30
