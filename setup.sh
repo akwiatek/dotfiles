@@ -191,7 +191,7 @@ git submodule update --init --recursive
 ./install.py --go-completer
 
 safe_cd ~/
-curl --silent --show-error 'https://www.gitignore.io/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
+curl --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
 cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
 
 amend_path_content=''
