@@ -66,7 +66,6 @@ plugins=( \
         z \
         zsh-autosuggestions \
         zsh-completions \
-        zsh-syntax-highlighting \
     )
 plugins+=($(which \
         gradle          \
