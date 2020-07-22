@@ -187,7 +187,8 @@ git checkout --track origin/python3 || git checkout python3
 
 safe_cd ~/.vim/bundle/YouCompleteMe/
 git submodule update --init --recursive
-./install.py --go-completer
+#./install.py --go-completer
+./install.py
 
 safe_cd ~/
 curl --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
