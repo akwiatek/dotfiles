@@ -4,3 +4,4 @@
 .in
 .vscode/
 RUNNING_PID
+.attach_pid*
