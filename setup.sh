@@ -189,6 +189,7 @@ fi
 
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
 git checkout --track origin/python3 || git checkout python3
+rm -rf autoload/build || :
 ./install.sh
 
 safe_cd ~/.vim/bundle/YouCompleteMe/
