@@ -58,3 +58,5 @@
 	rebase = true
 [help]
 	autocorrect = 30
+[gc]
+	writeCommitGraph = true
