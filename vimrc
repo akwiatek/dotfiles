@@ -119,6 +119,9 @@ let do_syntax_sel_menu=1
 syntax on
 filetype plugin on
 
+" Disable syntax files in Polyglot which are handled by separate plugins
+let g:polyglot_disabled = ['tmux']
+
 execute pathogen#infect()
 
 colorscheme af
@@ -256,8 +259,6 @@ let g:syntastic_html_tidy_empty_tags = []
 let g:syntastic_html_tidy_ignore_errors = [
     \ ]
 
-" Disable syntax files in Polyglot which are handled by separate plugins
-let g:polyglot_disabled = ['tmux']
 " Do not change filetype of .js files to javascript.jsx (React)
 " javascript.jsx filetype is not supported by taglist.vim plugin
 let g:jsx_pragma_required = 1
