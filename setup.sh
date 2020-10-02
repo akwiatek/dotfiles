@@ -47,6 +47,7 @@ vim_index_help_each() {
 SCRIPT_DIR="$(dirname $(realpath $0))"
 
 safe_cd ~/src/
+try_git_clone https://github.com/darold/pgFormatter
 try_git_clone https://github.com/okbob/pspg
 
 try_git_pull_each
@@ -179,6 +180,11 @@ if which make &> /dev/null; then
     safe_cd ~/src/pspg/
     ./configure
     #make
+fi
+
+if which docker &> /dev/null; then
+    safe_cd ~/src/pgFormatter/
+    docker build -t darold.net/pgformatter .
 fi
 
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
