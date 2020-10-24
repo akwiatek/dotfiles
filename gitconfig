@@ -55,8 +55,8 @@
 [status]
     showStash = true
 [pull]
-	rebase = true
+    rebase = true
 [help]
-	autocorrect = 30
+    autocorrect = 30
 [gc]
-	writeCommitGraph = true
+    writeCommitGraph = true

@@ -46,7 +46,9 @@ DISABLE_AUTO_TITLE="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # tmux plugin: Automatically start tmux
-export ZSH_TMUX_AUTOSTART=true
+if [[ -z "$SSH_CONNECTION" ]]; then
+        export ZSH_TMUX_AUTOSTART=true
+fi
 
 # Required by autoenv
 autoload -U add-zsh-hook
