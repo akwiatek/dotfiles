@@ -101,8 +101,10 @@ export PAGER=~/.vim/opt/vimpager/vimpager
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
-[ "$TERM" = 'screen' ] && export TERM=screen-256color
-[ "$TERM" = 'xterm' ] && export TERM=xterm-256color
+if [[ $terminfo[colors] == 256 ]]; then
+        [ "$TERM" = 'screen' ] && export TERM=screen-256color
+        [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
+fi
 
 # red foreground color in grep output
 export GREP_COLORS='1;31:ln=1;33:fn=1;32'
