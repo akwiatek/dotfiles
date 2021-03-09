@@ -159,3 +159,12 @@ fi
 if [ -r ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
+
+alias grey-grep="GREP_COLOR='1;30' grep --color=always"
+alias red-grep="GREP_COLOR='1;31' grep --color=always"
+alias green-grep="GREP_COLOR='1;32' grep --color=always"
+alias yellow-grep="GREP_COLOR='1;33' grep --color=always"
+alias blue-grep="GREP_COLOR='1;34' grep --color=always"
+alias magenta-grep="GREP_COLOR='1;35' grep --color=always"
+alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
+alias white-grep="GREP_COLOR='1;37' grep --color=always"
