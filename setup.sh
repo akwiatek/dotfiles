@@ -121,6 +121,7 @@ try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
 try_git_clone https://github.com/ivalkeen/vim-ctrlp-tjump
 try_git_clone https://github.com/j5shi/SearchComplete
+try_git_clone https://github.com/jiangmiao/auto-pairs
 try_git_clone https://github.com/jeetsukumaran/vim-markology
 try_git_clone https://github.com/jreybert/vimagit
 try_git_clone https://github.com/kana/vim-textobj-indent
