@@ -184,7 +184,7 @@ if which make &> /dev/null; then
     #make
 fi
 
-if which docker &> /dev/null; then
+if which docker &> /dev/null && docker info &> /dev/null; then
     safe_cd ~/src/pgFormatter/
     docker build -t darold.net/pgformatter .
 fi
