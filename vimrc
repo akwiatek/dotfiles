@@ -78,8 +78,6 @@ set   splitbelow
 set nostartofline
 set   synmaxcol=500
 set   tabstop=4
-" as in Prettier for Smart
-set   textwidth=150
 set   undodir=~/.vim/undo//
 set   undofile
 set   undolevels=10000
@@ -150,8 +148,6 @@ highlight link SyntasticWarningSign SignColumn
 
 " filestyle plugin requires this color to be defined
 highlight Normal ctermbg=black
-
-match Guideline /\%>125v.\+/
 
 cnoreabbrev dt diffthis
 
