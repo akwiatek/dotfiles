@@ -62,3 +62,5 @@
     autocorrect = 30
 [gc]
     writeCommitGraph = true
+[advice]
+	addEmptyPathspec = false
