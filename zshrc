@@ -149,7 +149,7 @@ alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,compiledts,d
 # fzf does not co-operate with 256 color terminals nicely.
 alias fzf='TERM=xterm fzf'
 alias fzf-tmux='TERM=xterm fzf-tmux'
-alias pgformatter='docker run --rm --attach={stdin,stdout} --interactive darold.net/pgformatter'
+alias pgformatter='docker run --rm --attach={stdin,stdout,stderr} --interactive darold.net/pgformatter'
 alias ls='ls --color'
 
 source ~/.fzf.zsh
