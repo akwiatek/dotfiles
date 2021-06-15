@@ -3,7 +3,7 @@
 \timing on
 \x off
 
-\set AUTOCOMMIT off
+\set AUTOCOMMIT on
 \set COMP_KEYWORD_CASE upper
 \set ECHO_HIDDEN on
 \set HISTFILE ~/.psql_history- :DBNAME
