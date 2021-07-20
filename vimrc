@@ -82,7 +82,7 @@ set   swapsync=''
 set   synmaxcol=500
 set   tabstop=4
 set   undodir=~/.vim/undo//
-set   undofile
+set noundofile
 set   undolevels=10000
 " delay to save a swap file.
 " delay before Tagbar gets updated.
