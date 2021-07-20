@@ -76,6 +76,9 @@ set nospell
 " used mostly to position the preview window coming from completeopt
 set   splitbelow
 set nostartofline
+set noswapfile
+" async swapping
+set   swapsync=''
 set   synmaxcol=500
 set   tabstop=4
 set   undodir=~/.vim/undo//
