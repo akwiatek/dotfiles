@@ -121,7 +121,10 @@ syntax on
 filetype plugin on
 
 " Disable syntax files in Polyglot which are handled by separate plugins
-let g:polyglot_disabled = ['tmux']
+let g:polyglot_disabled = [
+    \ 'java',
+    \ 'tmux'
+    \ ]
 
 execute pathogen#infect()
 
