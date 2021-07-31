@@ -347,12 +347,17 @@ let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_typescript_eslint_options = ''
 let g:ale_javascript_eslint_options = ''
-" Fails in JS files anyway. It tries to start Deno
-let g:ale_history_enabled = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
-" Disable execution of NodeJS+ESLint on each file save
 let g:ale_lint_on_save = 0
+let g:ale_linters = {
+            \     'javascript': [
+            \         'tsserver'
+            \     ],
+            \     'typescript': [
+            \         'tsserver'
+            \     ]
+            \ }
 
 let g:highlightedyank_highlight_duration = 400
