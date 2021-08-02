@@ -316,7 +316,7 @@ let g:tagbar_zoomwidth = 0
 " 1: Show absolute line numbers.
 let g:tagbar_show_linenumbers = 1
 let g:tagbar_autopreview = 1
-let g:tagbar_previewwin_pos = "rightbelow"
+let g:tagbar_previewwin_pos = 'rightbelow'
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
 
