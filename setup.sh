@@ -167,7 +167,9 @@ try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
 try_git_clone https://github.com/ycm-core/YouCompleteMe
 
-try_git_clone https://sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
+try_git_clone https://dev.sanctum.geek.nz/code/vim-cursorline-current.git/
+try_git_clone https://dev.sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git/
+try_git_clone https://dev.sanctum.geek.nz/code/vim-write-mkpath.git/
 
 try_git_pull_each
 

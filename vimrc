@@ -76,10 +76,13 @@ set nospell
 " used mostly to position the preview window coming from completeopt
 set   splitbelow
 set nostartofline
+set noswapfile
+" async swapping
+set   swapsync=''
 set   synmaxcol=500
 set   tabstop=4
 set   undodir=~/.vim/undo//
-set   undofile
+set noundofile
 set   undolevels=10000
 " delay to save a swap file.
 " delay before Tagbar gets updated.
@@ -118,7 +121,10 @@ syntax on
 filetype plugin on
 
 " Disable syntax files in Polyglot which are handled by separate plugins
-let g:polyglot_disabled = ['tmux']
+let g:polyglot_disabled = [
+    \ 'java',
+    \ 'tmux'
+    \ ]
 
 execute pathogen#infect()
 
@@ -310,7 +316,7 @@ let g:tagbar_zoomwidth = 0
 " 1: Show absolute line numbers.
 let g:tagbar_show_linenumbers = 1
 let g:tagbar_autopreview = 1
-let g:tagbar_previewwin_pos = "rightbelow"
+let g:tagbar_previewwin_pos = 'rightbelow'
 
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,jasmine'
 
@@ -337,11 +343,21 @@ autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 
 let g:go_auto_type_info = 0
 
+let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_typescript_eslint_options = ''
 let g:ale_javascript_eslint_options = ''
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+let g:ale_linters = {
+            \     'javascript': [
+            \         'tsserver'
+            \     ],
+            \     'typescript': [
+            \         'tsserver'
+            \     ]
+            \ }
 
 let g:highlightedyank_highlight_duration = 400
