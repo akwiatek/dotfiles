@@ -202,7 +202,7 @@ map ]t :tabnext<CR>
 " a - Argument wrap
 map <Leader>a :ArgWrap<CR>
 " b - Blame
-map <Leader>b :Gblame<CR>
+map <Leader>b :Git blame<CR>
 " c - Checkout a branch
 map <Leader>c :Twiggy<CR>
 " d - Declared methods / values
