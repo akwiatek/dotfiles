@@ -342,6 +342,8 @@ let g:prettier#config#trailing_comma = 'es5'
 autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 
 let g:go_auto_type_info = 0
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
@@ -352,6 +354,9 @@ let g:ale_javascript_eslint_options = ''
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 0
 let g:ale_linters = {
+            \     'go': [
+            \         'gopls'
+            \     ],
             \     'javascript': [
             \         'tsserver'
             \     ],
