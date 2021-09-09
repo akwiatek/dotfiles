@@ -165,7 +165,6 @@ try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/wellle/tmux-complete.vim
 try_git_clone https://github.com/whatever555/npm-package-info
 try_git_clone https://github.com/Xuyuanp/nerdtree-git-plugin
-try_git_clone https://github.com/ycm-core/YouCompleteMe
 
 try_git_clone https://dev.sanctum.geek.nz/code/vim-cursorline-current.git
 try_git_clone https://dev.sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
@@ -195,11 +194,6 @@ safe_cd ~/.vim/bundle/ctrlp-cmatcher/
 git checkout --track origin/python3 || git checkout python3
 rm -rf autoload/build || :
 ./install.sh
-
-safe_cd ~/.vim/bundle/YouCompleteMe/
-git submodule update --init --recursive
-#./install.py --go-completer
-./install.py
 
 safe_cd ~/
 curl --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
