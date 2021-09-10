@@ -89,7 +89,6 @@ safe_cd ~/.vim/undo/
 safe_cd ~/.vim/swaps/
 
 safe_cd ~/.vim/opt/
-try_git_clone https://github.com/rkitover/vimpager
 try_git_clone https://github.com/tpope/vim-pathogen
 
 try_git_pull_each
@@ -175,11 +174,6 @@ try_git_pull_each
 vim_index_help_each
 
 if which make &> /dev/null; then
-    safe_cd ~/.vim/opt/vimpager/
-    make vimpager vimcat
-    safe_cd ~/.vim/bundle/vimproc.vim/
-    make
-
     safe_cd ~/src/pspg/
     ./configure
     #make
