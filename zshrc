@@ -116,6 +116,7 @@ export FZF_TMUX=1
 export JSGC_DISABLE_POISONING=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
+export PAGER='less --quit-if-one-screen'
 
 # IBUS
 export GTK_IM_MODULE=ibus
