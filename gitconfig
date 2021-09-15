@@ -20,6 +20,10 @@
     fileMode = true
     untrackedCache = true
     commitGraph = true
+[delta]
+    line-numbers = true
+    relative-paths = true
+    diff-so-fancy = true
 [mergetool]
     writeToTemp = true
 [rerere]
