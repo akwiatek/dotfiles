@@ -174,6 +174,7 @@ nnoremap <c-]> g<c-]>
 vnoremap <c-]> g<c-]>
 nnoremap g<c-]> <c-]>
 vnoremap g<c-]> <c-]>
+map <c-]> :ALEGoToDefinition<CR>
 
 map <F2>  :set wrap!<CR>:set wrap?<CR>
 map <F3>  :set list!<CR>:set list?<CR>
