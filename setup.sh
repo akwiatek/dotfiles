@@ -123,6 +123,7 @@ try_git_clone https://github.com/j5shi/SearchComplete
 try_git_clone https://github.com/jiangmiao/auto-pairs
 try_git_clone https://github.com/jeetsukumaran/vim-markology
 try_git_clone https://github.com/jreybert/vimagit
+try_git_clone https://github.com/kana/vim-narrow
 try_git_clone https://github.com/kana/vim-textobj-indent
 try_git_clone https://github.com/kana/vim-textobj-user
 try_git_clone https://github.com/machakann/vim-highlightedyank
