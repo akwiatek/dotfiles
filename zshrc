@@ -123,6 +123,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
+setopt AUTO_CONTINUE
 setopt NO_AUTO_REMOVE_SLASH
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
