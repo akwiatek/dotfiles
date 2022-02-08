@@ -191,9 +191,12 @@ map ]a :next<CR>
 " buffers
 map [b :bprevious<CR>
 map ]b :bnext<CR>
-" errors from quickfix list
+" items from quickfix list
 map [c :cprevious<CR>
 map ]c :cnext<CR>
+" quickfix lists
+map [C :colder<CR>
+map ]C :cnewer<CR>
 " errors from window local list
 map [l :lprevious<CR>
 map ]l :lnext<CR>
