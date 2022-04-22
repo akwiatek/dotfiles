@@ -68,4 +68,6 @@
 [gc]
     writeCommitGraph = true
 [advice]
-	addEmptyPathspec = false
+    addEmptyPathspec = false
+[init]
+    defaultBranch = main
