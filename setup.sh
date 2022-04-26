@@ -100,6 +100,7 @@ safe_cd ~/.vim/bundle/
 try_git_clone https://github.com/akwiatek/ctrlp-cmatcher
 try_git_clone https://github.com/alvan/vim-closetag
 try_git_clone https://github.com/aserebryakov/filestyle
+try_git_clone https://github.com/ConradIrwin/vim-bracketed-paste
 try_git_clone https://github.com/christoomey/vim-conflicted
 try_git_clone https://github.com/craigemery/vim-autotag
 try_git_clone https://github.com/ctrlpvim/ctrlp.vim
