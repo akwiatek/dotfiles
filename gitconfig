@@ -13,6 +13,7 @@
 [gui]
     gcwarning = false
 [push]
+    autoSetupRemote = true
     default = simple
 [core]
     excludesfile = ~/.gitignore_global
