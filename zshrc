@@ -72,6 +72,8 @@ plugins=( \
 plugins+=($(which \
         gradle          \
         gulp            \
+        kubectl         \
+        minikube        \
         mvn             \
         ng              \
         npm             \
