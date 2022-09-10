@@ -78,7 +78,9 @@ set   splitbelow
 set nostartofline
 set noswapfile
 " async swapping
-set   swapsync=''
+if !has('nvim')
+    set   swapsync=''
+endif
 set   synmaxcol=500
 set   tabstop=4
 set   undodir=~/.vim/undo//
