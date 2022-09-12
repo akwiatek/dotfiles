@@ -99,7 +99,7 @@ autoload -U zmv
 
 export EDITOR="$(which vim)"
 export VISUAL="$EDITOR"
-export FZF_DEFAULT_OPTS='--ansi --color=16 --cycle'
+export FZF_DEFAULT_OPTS='--ansi --color=16 --cycle --reverse'
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
