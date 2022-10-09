@@ -61,6 +61,7 @@
     output = compact
 [rebase]
     stat = true
+    updateRefs = true
 [status]
     showStash = true
 [pull]
