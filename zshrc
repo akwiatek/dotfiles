@@ -97,7 +97,7 @@ autoload -U compinit && compinit
 autoload -U zsh-mime-setup && zsh-mime-setup
 autoload -U zmv
 
-export EDITOR="$(which vim)"
+export EDITOR="$(which nvim)"
 export VISUAL="$EDITOR"
 export FZF_DEFAULT_OPTS='--ansi --color=16 --cycle --reverse'
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
