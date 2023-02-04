@@ -65,11 +65,13 @@ plugins=( \
         git-extra-commands \
         git-extras \
         golang \
+        rust \
         z \
         zsh-autosuggestions \
         zsh-completions \
     )
 plugins+=($(which \
+        cargo           \
         gradle          \
         gulp            \
         kubectl         \
