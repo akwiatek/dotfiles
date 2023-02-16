@@ -37,7 +37,10 @@ try_git_clone() {
 }
 
 vim_index_help() {
-    ! [ -d doc ] || vim -u NONE -c 'helptags doc' -c quit
+    if [ -d doc ] ; then
+        vim -u NONE -c 'helptags doc' -c quit || :
+        nvim -u NONE -c 'helptags doc' -c quit || :
+    fi
 }
 
 vim_index_help_each() {
