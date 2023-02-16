@@ -71,7 +71,6 @@ plugins=( \
         zsh-completions \
     )
 plugins+=($(which \
-        cargo           \
         gradle          \
         gulp            \
         kubectl         \
