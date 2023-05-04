@@ -178,8 +178,7 @@ vim_index_help_each
 
 if which make &> /dev/null; then
     safe_cd ~/src/pspg/
-    ./configure
-    #make
+    ./configure && make || :
 fi
 
 if which docker &> /dev/null && docker info &> /dev/null; then
