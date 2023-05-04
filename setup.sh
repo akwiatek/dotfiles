@@ -192,7 +192,7 @@ rm -rf autoload/build || :
 ./install.sh
 
 safe_cd ~/
-curl --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
+curl --insecure --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
 cat "$SCRIPT_DIR/gitignore_custom" >> .gitignore_global
 
 amend_path_content=''
