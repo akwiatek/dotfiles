@@ -88,7 +88,7 @@ set noundofile
 set   undolevels=10000
 " delay to save a swap file.
 " delay before Tagbar gets updated.
-set   updatetime=500
+set   updatetime=400
 set   wildmenu
 set   wildmode=full
 set   winheight=4
