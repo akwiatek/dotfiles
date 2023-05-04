@@ -150,6 +150,11 @@ highlight PmenuSel ctermfg=black ctermbg=yellow guifg=black guibg=yellow
 highlight Visual    ctermfg=white  ctermbg=blue  guifg=white  guibg=DodgerBlue4
 highlight Guideline                ctermbg=blue               guibg=purple4
 
+"" vim-matrix-screensaver
+"highlight FileStyleTrailingSpacesError ctermbg=black
+"set updatetime=15000
+"autocmd CursorHold * call Matrix()
+
 " Syntastic colors
 highlight link SyntasticErrorSign   SignColumn
 highlight link SyntasticWarningSign SignColumn
