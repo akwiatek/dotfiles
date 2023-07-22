@@ -339,7 +339,7 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 " Prettier 2.x support
 let g:prettier#config#arrow_parens = 'always'
-let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#trailing_comma = 'all'
 autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 
 let g:go_auto_type_info = 0
