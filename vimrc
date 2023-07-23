@@ -278,7 +278,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
 " Faster caching in git repositories
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep --invert-match /libs/']
-let g:ctrlp_line_prefix = ' »--► '
+let g:ctrlp_line_prefix = '-> '
 "let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_extensions = [
@@ -307,7 +307,7 @@ let g:CSApprox_hook_post = [
     \ 'highlight Normal           ctermbg=none',
     \ 'highlight NonText          ctermbg=none',
     \ 'highlight SignColumn       ctermbg=none',
-    \ 'highlight SpellBad         ctermfg=red',
+    \ 'highlight SpellBad         ctermfg=1',
     \ 'highlight SpellCap         ctermfg=yellow'
     \ ]
 
