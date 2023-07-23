@@ -301,7 +301,7 @@ let g:CSApprox_hook_post = [
     \ 'highlight CocErrorFloat    ctermfg=209',
     \ 'highlight CocInfoFloat     ctermfg=190',
     \ 'highlight CocWarningFloat  ctermfg=214',
-    \ 'highlight CursorLine       ctermbg=58        cterm=bold',
+    \ 'highlight CursorLine       ctermbg=58',
     \ 'highlight PreProc          ctermfg=11',
     \ 'highlight Pmenu            ctermbg=239',
     \ 'highlight Normal           ctermbg=none',
