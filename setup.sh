@@ -233,6 +233,11 @@ do
 done
 
 echo "export PATH=${amend_path_content/:}:node_modules/.bin" > ~/.zsh_path
-echo "export CHROME_BIN=$(which chromium | which chromium-browser)" >> .zsh_path
+if which chromium; then
+    echo "export CHROME_BIN=$(which chromium)" >> .zsh_path
+fi
+if which chromium-browser; then
+    echo "export CHROME_BIN=$(which chromium-browser)" >> .zsh_path
+fi
 
 echo 'Done.'
