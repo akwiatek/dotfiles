@@ -346,6 +346,8 @@ let g:go_auto_type_info = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+let g:ale_set_highlights = 0
+let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_typescript_eslint_options = ''

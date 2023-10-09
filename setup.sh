@@ -117,7 +117,6 @@ try_git_clone https://github.com/dylon/vim-antlr
 try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/farmergreg/vim-lastplace
 try_git_clone https://github.com/fatih/vim-go
-try_git_clone https://github.com/fladson/vim-kitty
 try_git_clone https://github.com/flazz/vim-colorschemes
 try_git_clone https://github.com/godlygeek/csapprox
 try_git_clone https://github.com/godlygeek/tabular
@@ -136,7 +135,6 @@ try_git_clone https://github.com/machakann/vim-highlightedyank
 try_git_clone https://github.com/machakann/vim-swap
 try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
-try_git_clone https://github.com/mhinz/vim-startify
 try_git_clone https://github.com/mileszs/ack.vim
 try_git_clone https://github.com/nathanaelkane/vim-indent-guides
 try_git_clone https://github.com/ompugao/ctrlp-history
