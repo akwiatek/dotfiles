@@ -46,7 +46,7 @@ DISABLE_AUTO_TITLE="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # tmux plugin: Automatically start tmux
-if [[ -z "$SSH_CONNECTION" ]]; then
+if [[ -z "$SSH_CONNECTION" && -n "$DISPLAY" ]]; then
         export ZSH_TMUX_AUTOSTART=true
 fi
 
@@ -104,10 +104,10 @@ export FZF_DEFAULT_OPTS='--ansi --color=16 --cycle --reverse'
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
-if [[ $terminfo[colors] == 256 ]]; then
+#if [[ $terminfo[colors] == 256 ]]; then
         [ "$TERM" = 'screen' ] && export TERM=screen-256color
         [ "$TERM" = 'xterm' ] && export TERM=xterm-256color
-fi
+#fi
 
 # red foreground color in grep output
 export GREP_COLORS='1;31:ln=1;33:fn=1;32'
@@ -125,6 +125,9 @@ export PAGER='less --quit-if-one-screen'
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# OpenJDK + Wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
