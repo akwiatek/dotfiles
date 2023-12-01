@@ -1,21 +1,35 @@
+-- Enable pspg
+\pset pager always
 \setenv PAGER '~/src/pspg/pspg --quit-if-one-screen'
-
-\timing on
 \x off
 
+-- How long each query takes?
+\timing on
+
+-- Forgiving mode. You can make typos in interactive mode.
 \set AUTOCOMMIT off
 \set ON_ERROR_ROLLBACK on
+
+-- Nicer TAB completion
 \set COMP_KEYWORD_CASE upper
+
+-- Verbose mode. Explains forward slash commands
 \set ECHO_HIDDEN on
+
+-- Persistent history like in Bash
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \set HISTSIZE 100000
+
+-- More info: which user, which server, is a transaction open?, etc.
 \set PROMPT1 '%[%033[1;33;40m%]%n@%m in %~%x%033[0m%]%#%012'
 
+-- Unicode styling
 \pset border 2
 \pset linestyle unicode
-\pset null '<NULL>'
-\pset pager always
 \pset unicode_border_linestyle single
 \pset unicode_column_linestyle single
 \pset unicode_header_linestyle double
+
+-- Human readable NULLs
+\pset null '<NULL>'
