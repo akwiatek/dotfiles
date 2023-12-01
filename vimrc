@@ -372,5 +372,6 @@ let g:ale_linters = {
             \         'tsserver'
             \     ]
             \ }
+let g:ale_typescript_tsserver_executable = 'tsserver --disableAutomaticTypingAcquisition'
 
 let g:highlightedyank_highlight_duration = 400
