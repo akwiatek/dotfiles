@@ -4,8 +4,10 @@
     name = Adam Kwiatek
 [clean]
     requireForce = false
+[diff]
+    tool = nvimdiff
 [merge]
-    tool = vimdiff
+    tool = nvimdiff
     ;conflictstyle = zdiff3
     log = 2
 [color]
