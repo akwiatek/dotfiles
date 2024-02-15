@@ -100,7 +100,6 @@ autoload -U zmv
 
 export EDITOR="$(which nvim)"
 export VISUAL="$EDITOR"
-export FZF_DEFAULT_OPTS='--ansi --color=16 --cycle --reverse'
 which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 
 # TERM inside tmux
@@ -113,9 +112,10 @@ which lesspipe.sh &> /dev/null && export LESSOPEN='|lesspipe.sh %s'
 export GREP_COLORS='1;31:ln=1;33:fn=1;32'
 
 export ANSIBLE_COW_SELECTION=moose
+export FZF_DEFAULT_OPTS='--cycle --reverse'
+export FZF_TMUX_OPTS='-p80%,80%'
 export FZF_DEFAULT_COMMAND='git ls-files'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-export FZF_TMUX=1
 export JSGC_DISABLE_POISONING=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
