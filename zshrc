@@ -129,6 +129,9 @@ export QT_IM_MODULE=ibus
 # OpenJDK + Wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Use fs.watch on the parent directories of included files (yielding a compromise that results in lower CPU usage than pure fs.watchFile but potentially lower accuracy).
+export TSC_WATCHFILE=UseFsEventsOnParentDirectory
+
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 setopt EXTENDED_GLOB
 # The pattern ‘**/*’ can be abbreviated to ‘**’ and the pattern ‘***/*’ can be abbreviated to *** .
