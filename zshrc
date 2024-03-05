@@ -45,7 +45,11 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-export COLOR_THEME=dark
+if [ "$(xfconf-query --channel xfce4-terminal --property /color-background)" = '#383838383838' ] ; then
+        export COLOR_THEME=dark
+else
+        export COLOR_THEME=light
+fi
 
 # tmux plugin: Automatically start tmux
 if [[ -z "$SSH_CONNECTION" && -n "$DISPLAY" ]]; then
