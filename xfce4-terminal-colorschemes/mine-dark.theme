@@ -1,0 +1,7 @@
+[Scheme]
+Name=Mine Dark
+ColorBackground=#383838383838
+ColorCursor=#dcdcdc
+ColorForeground=#dcdcdcdcdcdc
+ColorPalette=rgb(56,56,56);rgb(255,38,0);rgb(135,250,14);rgb(236,200,0);rgb(72,130,223);rgb(195,101,202);rgb(118,214,255);rgb(199,199,199);rgb(121,121,121);rgb(255,134,47);rgb(115,250,121);rgb(246,220,96);rgb(130,173,241);rgb(228,131,235);rgb(138,228,245);rgb(255,255,255)
+ColorCursorUseDefault=TRUE

@@ -1,0 +1,7 @@
+[Scheme]
+Name=Mine Light
+ColorForeground=#3B2322
+ColorBackground=#E2E0DB
+ColorCursor=#3B2322
+ColorPalette=#000000;#CC0000;#009600;#D06B00;#0000CC;#CC00CC;#0087CC;#CCCCCC;#808080;#CC0000;#009600;#D06B00;#0000CC;#CC00CC;#0087CC;#FFFFFF
+ColorCursorUseDefault=TRUE
