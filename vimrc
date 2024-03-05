@@ -5,7 +5,6 @@ set noautochdir
 set   autoindent
 set   autoread
 set   autowrite
-set   background=dark
 set   backspace=indent,eol,start
 set nobackup
 set   breakindent
@@ -19,8 +18,6 @@ catch /^E474:/
 endtry
 set   confirm
 set   copyindent
-" see 'highlight CursorLine'
-set   cursorline
 set   diffopt=filler,iwhite,vertical
 set   directory=~/.vim/swaps//
 set   display+=uhex
@@ -130,37 +127,53 @@ let g:polyglot_disabled = [
 
 execute pathogen#infect()
 
-colorscheme af
-
 " For a list of all available named colors see ':runtime syntax/colortest.vim'
 " Some colors have to changed later, after CSApprox is loaded. See 'CSApprox_hook_post'
 " For a list of all available highlight colors see ':help highlight-groups'
 
-" vimdiff colors
-highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
-highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
-highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
-highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
+if $COLOR_THEME == 'light'
+    set background=light
 
-" pop up menu
-highlight Pmenu    ctermfg=white ctermbg=brown  guifg=white guibg=brown
-highlight PmenuSel ctermfg=black ctermbg=yellow guifg=black guibg=yellow
+    colorscheme donbass
 
-" other colors
-highlight Visual    ctermfg=white  ctermbg=blue  guifg=white  guibg=DodgerBlue4
-highlight Guideline                ctermbg=blue               guibg=purple4
+    " pop up menu
+    " highlight Pmenu    ctermfg=white ctermbg=darkgray  guifg=white guibg=darkgray
+    highlight Pmenu    ctermfg=250 ctermbg=239 guifg=Black guibg=Grey65
+    highlight PmenuSel ctermfg=16 ctermbg=214 guifg=Black guibg=Yellow
 
-"" vim-matrix-screensaver
-"highlight FileStyleTrailingSpacesError ctermbg=black
-"set updatetime=15000
-"autocmd CursorHold * call Matrix()
+else
+    set background=dark
+    " see 'highlight CursorLine'
+    set   cursorline
 
-" Syntastic colors
-highlight link SyntasticErrorSign   SignColumn
-highlight link SyntasticWarningSign SignColumn
+    colorscheme af
 
-" filestyle plugin requires this color to be defined
-highlight Normal ctermbg=black
+    " vimdiff colors
+    highlight DiffAdd    term=bold cterm=bold ctermfg=green ctermbg=black gui=bold guifg=green  guibg=black
+    highlight DiffChange term=bold cterm=bold ctermfg=blue  ctermbg=black gui=bold guifg=yellow guibg=black
+    highlight DiffDelete term=bold cterm=bold ctermfg=red   ctermbg=black gui=bold guifg=red    guibg=black
+    highlight DiffText   term=bold cterm=bold ctermfg=white ctermbg=red   gui=bold guifg=white  guibg=red
+
+    " pop up menu
+    highlight Pmenu    ctermfg=white ctermbg=brown  guifg=white guibg=brown
+    highlight PmenuSel ctermfg=black ctermbg=yellow guifg=black guibg=yellow
+
+    " other colors
+    highlight Visual    ctermfg=white  ctermbg=blue  guifg=white  guibg=DodgerBlue4
+    highlight Guideline                ctermbg=blue               guibg=purple4
+
+    "" vim-matrix-screensaver
+    "highlight FileStyleTrailingSpacesError ctermbg=black
+    "set updatetime=15000
+    "autocmd CursorHold * call Matrix()
+
+    " Syntastic colors
+    highlight link SyntasticErrorSign   SignColumn
+    highlight link SyntasticWarningSign SignColumn
+
+    " filestyle plugin requires this color to be defined
+    highlight Normal ctermbg=black
+endif
 
 cnoreabbrev dt diffthis
 
@@ -300,21 +313,29 @@ let g:ackhighlight = 1
 " same as grepprg
 let g:ackprg = 'rg --vimgrep'
 
-" transparent background
-let g:CSApprox_hook_post = [
-    \ 'highlight Comment          ctermfg=lightGrey ctermbg=darkGrey',
-    \ 'highlight CocErrorFloat    ctermfg=209',
-    \ 'highlight CocInfoFloat     ctermfg=190',
-    \ 'highlight CocWarningFloat  ctermfg=214',
-    \ 'highlight CursorLine       ctermbg=58',
-    \ 'highlight PreProc          ctermfg=11',
-    \ 'highlight Pmenu            ctermbg=239',
-    \ 'highlight Normal           ctermbg=none',
-    \ 'highlight NonText          ctermbg=none',
-    \ 'highlight SignColumn       ctermbg=none',
-    \ 'highlight SpellBad         ctermfg=1',
-    \ 'highlight SpellCap         ctermfg=yellow'
-    \ ]
+if $COLOR_THEME == 'light'
+    " marks
+    let g:CSApprox_hook_post = [
+        \ 'highlight clear MarkologyHLo',
+        \ 'highlight link MarkologyHLo LineNr'
+        \ ]
+else
+    " transparent background
+    let g:CSApprox_hook_post = [
+        \ 'highlight Comment          ctermfg=lightGrey ctermbg=darkGrey',
+        \ 'highlight CocErrorFloat    ctermfg=209',
+        \ 'highlight CocInfoFloat     ctermfg=190',
+        \ 'highlight CocWarningFloat  ctermfg=214',
+        \ 'highlight CursorLine       ctermbg=58',
+        \ 'highlight PreProc          ctermfg=11',
+        \ 'highlight Pmenu            ctermbg=239',
+        \ 'highlight Normal           ctermbg=none',
+        \ 'highlight NonText          ctermbg=none',
+        \ 'highlight SignColumn       ctermbg=none',
+        \ 'highlight SpellBad         ctermfg=1',
+        \ 'highlight SpellCap         ctermfg=yellow'
+        \ ]
+endif
 
 let g:tagbar_width = 50
 " 0: Use the width of the longest currently visible tag.
