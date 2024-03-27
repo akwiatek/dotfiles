@@ -137,6 +137,7 @@ try_git_clone https://github.com/majutsushi/tagbar
 try_git_clone https://github.com/mbbill/undotree
 try_git_clone https://github.com/mileszs/ack.vim
 try_git_clone https://github.com/nathanaelkane/vim-indent-guides
+try_git_clone https://github.com/nvim-treesitter/nvim-treesitter
 try_git_clone https://github.com/ompugao/ctrlp-history
 try_git_clone https://github.com/othree/javascript-libraries-syntax.vim
 try_git_clone https://github.com/prettier/vim-prettier

@@ -396,3 +396,10 @@ let g:ale_linters = {
 let g:ale_typescript_tsserver_executable = 'tsserver --disableAutomaticTypingAcquisition'
 
 let g:highlightedyank_highlight_duration = 400
+
+lua require'nvim-treesitter.configs'.setup {
+            \   auto_install = true,
+            \   highlight = {
+            \       enable = true
+            \   }
+            \ }
