@@ -125,6 +125,7 @@ export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export JSGC_DISABLE_POISONING=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
+export NO_AT_BRIDGE=1
 export PAGER='less --quit-if-one-screen'
 
 # IBUS
