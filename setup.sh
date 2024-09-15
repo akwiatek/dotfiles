@@ -167,7 +167,6 @@ try_git_clone https://github.com/vim-scripts/camelcasemotion
 try_git_clone https://github.com/vim-scripts/matchit.zip
 try_git_clone https://github.com/vim-scripts/vim-human-dates
 try_git_clone https://github.com/wellle/tmux-complete.vim
-try_git_clone https://github.com/whatever555/npm-package-info
 
 try_git_clone https://dev.sanctum.geek.nz/code/vim-cursorline-current.git
 try_git_clone https://dev.sanctum.geek.nz/code/vim-insert-suspend-hlsearch.git
