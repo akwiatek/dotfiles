@@ -28,6 +28,7 @@ set   fixendofline
 set   foldenable
 set   foldlevelstart=99
 set   foldmethod=indent
+set   guifont=Fira\ Code:h9
 " same as g:ackprg
 set   grepprg=rg\ --vimgrep
 set   hidden
