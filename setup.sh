@@ -203,6 +203,7 @@ amend_path () {
     fi
 }
 
+amend_path '/snap/aws-cli/current/bin'
 amend_path '/usr/lib/jvm/default/bin'
 amend_path '/opt/node/bin'
 amend_path '/opt/gradle/bin'
