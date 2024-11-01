@@ -243,8 +243,8 @@ map <Leader>k :GoDoc <C-r><C-w><CR>
 map <Leader>m :TagbarOpen fj<CR>
 " r - Rename current word
 map <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>
-" st - Syntastic Toggle mode
-map <Leader>st :SyntasticToggleMode<CR>
+" st - ALE find references in other files
+map <Leader>s ::ALEFindReferences<CR>
 " t - Tab creation
 map <Leader>t :tabnew<CR>
 " u - UUID generator
