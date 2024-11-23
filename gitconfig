@@ -36,6 +36,7 @@
     compactionHeuristic = true
     indentHeuristic = true
     renames = copy
+	external = difft
 [alias]
     browser = "!tig"
     aliases = "!git config --list | sed --quiet '/^alias[.]/ { s/^alias[.]//; p }'"
