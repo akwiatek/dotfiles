@@ -186,6 +186,8 @@ alias magenta-grep="GREP_COLOR='1;35' grep --color=always"
 alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
 alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
+export NODE_COMPILE_CACHE=~/.cache/node/compile-cache/
+
 PATH="/home/adam/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/adam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/adam/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
