@@ -4,8 +4,6 @@
     name = Adam Kwiatek
 [clean]
     requireForce = false
-[diff]
-    tool = nvimdiff
 [merge]
     tool = nvimdiff
     ;conflictstyle = zdiff3
@@ -32,11 +30,18 @@
 [rerere]
     enabled = true
 [diff]
+    tool = difftastic
     algorithm = histogram
     compactionHeuristic = true
     indentHeuristic = true
     renames = copy
-	external = difft
+[difftool]
+    prompt = false
+[pager]
+    difftool = true
+[difftool "difftastic"]
+    # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
+    cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
 [alias]
     browser = "!tig"
     aliases = "!git config --list | sed --quiet '/^alias[.]/ { s/^alias[.]//; p }'"
