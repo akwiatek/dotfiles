@@ -68,7 +68,7 @@
     writeCommitGraph = true
     prune = true
     output = compact
-    pruneTags = true
+    pruneTags = false
 [rebase]
     stat = true
     updateRefs = true
