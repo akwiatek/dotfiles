@@ -65,6 +65,7 @@ autoload -U add-zsh-hook
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( \
         autoenv \
+        alias-finder \
         dircycle \
         fancy-ctrl-z \
         git \
@@ -103,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
 autoload -U zsh-mime-setup && zsh-mime-setup
 autoload -U zmv
+
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 
 export EDITOR="$(which nvim)"
 export VISUAL="$EDITOR"
