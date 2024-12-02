@@ -70,6 +70,7 @@ plugins=( \
         dircycle \
         fancy-ctrl-z \
         git \
+        git-auto-fetch \
         git-extra-commands \
         git-extras \
         golang \
@@ -126,6 +127,7 @@ export FZF_DEFAULT_OPTS='--cycle --reverse'
 export FZF_TMUX_OPTS='-p80%,80%'
 export FZF_DEFAULT_COMMAND='git ls-files'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export GIT_AUTO_FETCH_INTERVAL=900
 export JSGC_DISABLE_POISONING=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
