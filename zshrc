@@ -179,6 +179,9 @@ fi
 if [ -r ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
+if [ -r ~/.config/broot/launcher/bash/br ]; then
+        source /home/adam/.config/broot/launcher/bash/br
+fi
 
 alias grey-grep="GREP_COLOR='1;30' grep --color=always"
 alias red-grep="GREP_COLOR='1;31' grep --color=always"
