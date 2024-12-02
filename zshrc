@@ -66,6 +66,7 @@ autoload -U add-zsh-hook
 plugins=( \
         autoenv \
         alias-finder \
+        copypath \
         dircycle \
         fancy-ctrl-z \
         git \
