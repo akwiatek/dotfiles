@@ -118,6 +118,7 @@ try_git_clone https://github.com/easymotion/vim-easymotion
 try_git_clone https://github.com/farmergreg/vim-lastplace
 try_git_clone https://github.com/fatih/vim-go
 try_git_clone https://github.com/flazz/vim-colorschemes
+try_git_clone https://github.com/github/copilot.vim
 try_git_clone https://github.com/godlygeek/csapprox
 try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/google/vim-searchindex
