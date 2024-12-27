@@ -52,7 +52,7 @@ else
 fi
 
 # tmux plugin: Automatically start tmux
-if [[ -z "$SSH_CONNECTION" && -n "$DISPLAY" ]]; then
+if [[ -z "$SSH_CONNECTION" && ( -n "$DISPLAY" || -n "$WAYLAND_DISPLAY")  ]]; then
         export ZSH_TMUX_AUTOSTART=true
 fi
 
