@@ -368,6 +368,7 @@ let g:prettier#autoformat = 0
 " Prettier 2.x support
 let g:prettier#config#arrow_parens = 'always'
 let g:prettier#config#trailing_comma = 'all'
+let g:prettier#exec_cmd_path = 'corepack yarn prettier'
 autocmd BufWritePre *.html,*.js,*.scss,*.ts Prettier
 
 let g:go_auto_type_info = 0
