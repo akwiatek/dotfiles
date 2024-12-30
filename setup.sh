@@ -190,7 +190,7 @@ fi
 safe_cd ~/.vim/bundle/ctrlp-cmatcher/
 git checkout --track origin/python3 || git checkout python3
 rm -rf autoload/build || :
-./install.sh
+#./install.sh
 
 safe_cd ~/
 curl --insecure --silent --show-error 'https://www.toptal.com/developers/gitignore/api/vim,sbt,node,ruby,java,scala,linux,maven,gradle,angular,libreoffice,intellij+all,intellij+iml,visualstudiocode' > .gitignore_global
