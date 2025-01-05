@@ -1,6 +1,5 @@
 import = [
     "~/.config/alacritty/dark-theme.toml"
-    #"~/.config/alacritty/light-theme.toml"
 ]
 
 [window]
@@ -24,5 +23,13 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-    {key="F11", action="ToggleFullscreen"}
+    {mods = "Alt", key="F2", command={ program="sed", args=[
+        "--in-place",
+        """
+            s:dark-them\u0065:dark-disabled-them\u0065:
+            s:light-them\u0065:dark-them\u0065:
+            s:dark-disabled-them\u0065:light-them\u0065:
+        """,
+        "/home/adam/.config/alacritty/alacritty.toml"
+    ] }},
 ]
