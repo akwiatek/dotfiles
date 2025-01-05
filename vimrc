@@ -145,7 +145,7 @@ if $COLOR_THEME == 'light'
 else
     set background=dark
     " see 'highlight CursorLine'
-    set   cursorline
+    set nocursorline
 
     colorscheme af
 
