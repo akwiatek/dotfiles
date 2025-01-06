@@ -23,7 +23,8 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-    {mods = "Alt", key="F2", command={ program="sed", args=[
+    {mods = "Control | Shift", key = "+", action = "IncreaseFontSize"},
+    {mods = "Alt", key = "F2", command = { program = "sed", args = [
         "--in-place",
         """
             s:dark-them\u0065:dark-disabled-them\u0065:
