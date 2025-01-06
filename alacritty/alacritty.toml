@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/dark-theme.toml"
+    "~/.config/alacritty/light-theme.toml"
 ]
 
 [window]
@@ -11,7 +11,6 @@ size = 9
 offset = {x = 0, y = 3}
 
 [selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t."
 save_to_clipboard = true
 
 [cursor]
