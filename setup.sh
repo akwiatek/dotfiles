@@ -99,7 +99,7 @@ try_git_pull_each
 safe_cd ~/.vim/autoload/
 [ -L pathogen.vim ] || ln -s ../opt/vim-pathogen/autoload/pathogen.vim pathogen.vim
 
-safe_cd ~/.vim/bundle/
+safe_cd ~/.config/nvim/pack/default/start/
 try_git_clone https://github.com/ConradIrwin/vim-bracketed-paste
 try_git_clone https://github.com/DavidEGx/ctrlp-smarttabs
 try_git_clone https://github.com/FelikZ/ctrlp-py-matcher
@@ -187,7 +187,7 @@ if which docker &> /dev/null && docker info &> /dev/null; then
     docker build -t darold.net/pgformatter .
 fi
 
-safe_cd ~/.vim/bundle/ctrlp-cmatcher/
+safe_cd ~/.config/nvim/pack/default/start/ctrlp-cmatcher/
 git checkout --track origin/python3 || git checkout python3
 rm -rf autoload/build || :
 #./install.sh

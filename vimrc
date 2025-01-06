@@ -117,14 +117,14 @@ set wildignore+=*/libs/*
 
 let do_syntax_sel_menu=1
 
-syntax on
-filetype plugin on
-
 " Disable syntax files in Polyglot which are handled by separate plugins
 let g:polyglot_disabled = [
     \ 'java',
     \ 'tmux'
     \ ]
+
+syntax on
+filetype plugin indent on
 
 execute pathogen#infect()
 
