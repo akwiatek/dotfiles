@@ -406,3 +406,5 @@ lua require'nvim-treesitter.configs'.setup {
             \       enable = true
             \   }
             \ }
+
+lua require'lspconfig'.rust_analyzer.setup{}

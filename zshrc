@@ -194,6 +194,7 @@ alias cyan-grep="GREP_COLOR='1;36' grep --color=always"
 alias white-grep="GREP_COLOR='1;37' grep --color=always"
 
 export NODE_COMPILE_CACHE=~/.cache/node/compile-cache/
+export RUSTC_WRAPPER=sccache
 
 PATH="/home/adam/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/adam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
