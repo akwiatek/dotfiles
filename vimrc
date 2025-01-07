@@ -407,4 +407,8 @@ lua require'nvim-treesitter.configs'.setup {
             \   }
             \ }
 
-lua require'lspconfig'.rust_analyzer.setup{}
+lua require'lspconfig'.rust_analyzer.setup {
+            \ cmd = {
+            \     "rustup", "run", "stable", "rust-analyzer"
+            \   }
+            \ }
