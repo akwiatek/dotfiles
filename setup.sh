@@ -205,6 +205,7 @@ amend_path () {
 
 amend_path '/snap/aws-cli/current/bin'
 amend_path '/usr/lib/jvm/default/bin'
+amend_path '/opt/nvim-linux64/bin'
 amend_path '/opt/node/bin'
 amend_path '/opt/gradle/bin'
 amend_path '/opt/local/sbin'
