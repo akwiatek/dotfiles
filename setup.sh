@@ -104,6 +104,7 @@ try_git_clone https://github.com/ConradIrwin/vim-bracketed-paste
 try_git_clone https://github.com/DavidEGx/ctrlp-smarttabs
 try_git_clone https://github.com/FelikZ/ctrlp-py-matcher
 try_git_clone https://github.com/FooSoft/vim-argwrap
+try_git_clone https://github.com/MagicDuck/grug-far.nvim
 try_git_clone https://github.com/Shougo/vimproc.vim
 try_git_clone https://github.com/akwiatek/ctrlp-cmatcher
 try_git_clone https://github.com/alvan/vim-closetag
