@@ -144,7 +144,6 @@ try_git_clone https://github.com/nvim-treesitter/nvim-treesitter
 try_git_clone https://github.com/ompugao/ctrlp-history
 try_git_clone https://github.com/othree/javascript-libraries-syntax.vim
 try_git_clone https://github.com/prettier/vim-prettier
-try_git_clone https://github.com/romgrk/winteract.vim
 try_git_clone https://github.com/ruanyl/vim-gh-line
 try_git_clone https://github.com/rust-lang/rust.vim
 try_git_clone https://github.com/scrooloose/nerdcommenter
@@ -162,7 +161,6 @@ try_git_clone https://github.com/tpope/vim-obsession
 try_git_clone https://github.com/tpope/vim-rhubarb
 try_git_clone https://github.com/tpope/vim-speeddating
 try_git_clone https://github.com/tpope/vim-surround
-try_git_clone https://github.com/vim-scripts/Align
 try_git_clone https://github.com/vim-scripts/JavaDecompiler.vim
 try_git_clone https://github.com/vim-scripts/SQLUtilities
 try_git_clone https://github.com/vim-scripts/The-Old-Ones
