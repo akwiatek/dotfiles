@@ -123,7 +123,6 @@ try_git_clone https://github.com/github/copilot.vim
 try_git_clone https://github.com/godlygeek/csapprox
 try_git_clone https://github.com/godlygeek/tabular
 try_git_clone https://github.com/google/vim-searchindex
-try_git_clone https://github.com/gregsexton/gitv
 try_git_clone https://github.com/idanarye/vim-merginal
 try_git_clone https://github.com/ivalkeen/vim-ctrlp-tjump
 try_git_clone https://github.com/j5shi/SearchComplete
@@ -144,7 +143,6 @@ try_git_clone https://github.com/nvim-treesitter/nvim-treesitter
 try_git_clone https://github.com/ompugao/ctrlp-history
 try_git_clone https://github.com/othree/javascript-libraries-syntax.vim
 try_git_clone https://github.com/prettier/vim-prettier
-try_git_clone https://github.com/ruanyl/vim-gh-line
 try_git_clone https://github.com/rust-lang/rust.vim
 try_git_clone https://github.com/scrooloose/nerdcommenter
 try_git_clone https://github.com/scrooloose/nerdtree
