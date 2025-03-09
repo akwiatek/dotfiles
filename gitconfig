@@ -6,7 +6,7 @@
     requireForce = false
 [merge]
     tool = nvimdiff
-    ;conflictstyle = zdiff3
+    conflictstyle = zdiff3
     log = 2
 [color]
     ui = true
@@ -29,6 +29,7 @@
     writeToTemp = true
 [rerere]
     enabled = true
+    autoupdate = true
 [diff]
     tool = difftastic
     algorithm = histogram
@@ -85,3 +86,5 @@
     skippedCherryPicks = false
 [init]
     defaultBranch = main
+[commit]
+    verbose = true
