@@ -3,7 +3,7 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $filemanager thunar
-set $term alacritty
+set $term xfce4-terminal
 
 ### Output configuration
 #
@@ -210,8 +210,8 @@ bar {
 include /etc/sway/config.d/*
 
 # Call `swaymsg -t get_tree --raw` for the full tree
-for_window [app_id="xfce4-appfinder"] floating eable
 for_window [app_id="thunar" title="File Operation Progress"] floating enable
+for_window [app_id="thunar" title="^Rename .*"] floating enable
 for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
 for_window [app_id="firefox-nightly" title="About Firefox Nightly"] floating enable
 
@@ -238,4 +238,5 @@ workspace_layout tabbed
 
 exec gammastep
 exec xfsettingsd --replace --daemon
-exec_always systemctl --user start sway-random-background.service
+exec_always systemctl --user restart sway-random-background.service
+exec_always systemctl --user restart xfce4-notifyd.service
