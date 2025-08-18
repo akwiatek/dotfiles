@@ -88,3 +88,5 @@
     defaultBranch = main
 [commit]
     verbose = true
+[repack]
+    midxMustContainCruft = true
