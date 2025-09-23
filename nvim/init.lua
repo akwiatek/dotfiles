@@ -428,8 +428,8 @@ require'nvim-treesitter.configs'.setup {
                }
              }
 
-require'lspconfig'.rust_analyzer.setup {
-             cmd = {
-                 "rustup", "run", "stable", "rust-analyzer"
-               }
-             }
+vim.lsp.config.rust_analyzer = {
+  cmd = {"rustup", "run", "stable", "rust-analyzer"},
+}
+
+vim.lsp.enable("rust_analyzer")
