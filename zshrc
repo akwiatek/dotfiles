@@ -102,7 +102,7 @@ source ~/.zsh_path
 
 source $ZSH/oh-my-zsh.sh
 
-autoload -U compinit && compinit
+autoload -U compinit && compinit -C # The check performed to see if there are new functions can be omitted by giving the option -C.
 autoload -U zsh-mime-setup && zsh-mime-setup
 autoload -U zmv
 

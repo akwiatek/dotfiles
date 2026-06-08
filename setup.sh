@@ -79,6 +79,7 @@ try_git_clone https://github.com/zpm-zsh/autoenv
 try_git_pull_each
 
 rm -f ~/.zcompdump* || :
+compinit
 
 if which go &> /dev/null; then
     [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf ~/.fzf
